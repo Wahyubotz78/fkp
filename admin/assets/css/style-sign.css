@@ -1,0 +1,57 @@
+/* ALL */
+body{
+    font-family: 'Poppins', sans-serif;
+   
+    overflow-x: hidden;
+}
+/* Font-size */
+.f-48{
+    font-size: 48px;
+}
+.f-14{
+    font-size: 14px;
+}
+/* SIgn in  */
+.sign-background{
+    position: absolute;
+    z-index: -9;  
+    margin-top: -60px;
+    margin-left: -60px;
+}
+.position-icon{
+    margin-bottom: -25px;
+
+}
+.form-control{
+    background-color: #F9F9FB;
+    border-radius: 10px;
+    border-color: #F9F9FB;
+    
+}
+
+/* Responsive */
+@media only screen and (max-width: 991px) {
+    .sign-background{
+        display: none;
+    } 
+    .people-img{
+        display: none;
+    }  
+    .opening{
+        display: none;
+    }
+    .form-control{
+       background-color: #F9F9FB;
+       border-radius: 10px;
+       border-color: #F9F9FB; 
+       width: 100%;  
+   }
+   .text{
+       display: none;
+   }
+   .social{
+       display: none;
+       background-color: red;
+
+   }
+}

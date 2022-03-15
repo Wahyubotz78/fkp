@@ -1,0 +1,164 @@
+/* ALL */
+body{
+    font-family: 'Poppins', sans-serif;
+   
+    overflow-x: hidden;
+}
+/* Font-size */
+.f-48{
+    font-size: 48px;
+}
+.f-14{
+    font-size: 14px;
+}
+/* SIgn up  */
+ 
+.register{
+    margin-top: -200px;
+}
+ .sign-logo{
+     margin-top: 0px;
+ }
+ .sign-background{
+     position: relative;
+     z-index: -9;  
+    
+     margin-left: 0px;
+     margin-bottom: -140%;
+     height:800px;
+     
+ }
+ .people-img{
+     position: absolute;
+    margin-top: -412px;
+     height: 480px;
+     margin-left: 70px;
+    
+ }
+.position-icon{
+    margin-bottom: -37px;
+
+}
+.form-control{
+    background-color: #F9F9FB;
+    border-radius: 10px;
+    border-color: #F9F9FB;
+    width: 100%;
+}
+.border-custom{
+    border: transparent;
+  border-radius: 0px;
+  border-bottom: 5px solid red;
+ 
+  width: 40px;
+}
+
+
+/* Responsive */
+@media only screen and (min-width: 1400px) and (max-width: 10000px) {
+   body{
+       margin-top: 5%;
+       margin-bottom: 5%;
+   }
+    .register{
+        margin-top: -50px;
+    }
+    .registext{
+        margin-top: -100px;
+    }
+    .sign-logo{
+        margin-bottom: -300px;
+    }
+    .sign-background{
+        position: relative;
+        z-index: -9;  
+        margin-bottom: -100%;
+        margin-left: 0px;
+        
+        height:800px;
+        
+    }
+    .people-img{
+        position: absolute;
+       margin-top: -438px;
+        height: 480px;
+        margin-left: 70px;
+       
+    }
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+   
+    .register{
+       margin-top: -150px;
+   }
+   .registext{
+       margin-top: -100px;
+   }
+   .welcome{
+       margin-top: -30px;
+   }
+   
+    .sign-logo{
+        margin-bottom: -200px;
+    }
+    .sign-background{
+        position: relative;
+        z-index: -9;  
+        margin-bottom: -140%;
+        margin-left: 0px;
+        
+    }
+    .people-img{
+        position: absolute;
+       margin-top: -433px;
+        height: 480px;
+        margin-left: 70px;
+       
+    }
+}
+@media only screen and (min-width: 479px) and (max-width: 991px) {
+    .sign-background{
+        display: none;
+    } 
+    .people-img{
+        display: none;
+    }  
+    .opening{
+        display: none;
+    }
+    .form-control{
+       background-color: #F9F9FB;
+       border-radius: 10px;
+       border-color: #F9F9FB;   
+       
+       width: 100%;
+    }
+    .position-icon{
+        
+        margin-bottom: -40px;
+    }
+  
+}
+/* Mobile phone */
+@media only screen and (max-width: 478px) {
+    .sign-background{
+        display: none;
+    } 
+    .people-img{
+        display: none;
+    }  
+    .opening{
+        display: none;
+    }
+ 
+
+}
+.register{
+    margin-top: 10px;
+}
+.sign-logo{
+    margin-bottom: -50px;
+}
+
+
