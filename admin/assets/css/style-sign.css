@@ -23,10 +23,10 @@ body{
 
 }
 .form-control{
-    background-color: #F9F9FB;
+    background-color: #f3f3f4;
     border-radius: 10px;
-    border-color: #F9F9FB;
-    
+    border-color: transparent;
+    height: 40px;  
 }
 
 /* Responsive */
@@ -41,10 +41,11 @@ body{
         display: none;
     }
     .form-control{
-       background-color: #F9F9FB;
+       background-color: #f3f3f4;
        border-radius: 10px;
-       border-color: #F9F9FB; 
-       width: 100%;  
+       border-color: transparent; 
+       height: 40px;
+
    }
    .text{
        display: none;

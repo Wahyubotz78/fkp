@@ -21,6 +21,9 @@ a {
 }
 
 /* Utilities */
+.object-cover {
+  object-fit: cover;
+}
 .fz-15 {
   font-size: 15px;
 }
@@ -214,14 +217,24 @@ input[type="checkbox"] {
 }
 
 /* Hero */
+.scrollHero {
+  margin-top: -100px;
+}
+
+.decorHero {
+  width: 12rem;
+  top: 47%;
+}
+
 .bg-hero {
   background: url("../img/bg-hero.svg");
 }
 
 .decorHistory {
   z-index: -9;
-  top: 14%;
-  left: 40%;
+  width: 10rem;
+  top: 20%;
+  left: 45%;
 }
 
 .imgHero {
@@ -245,6 +258,7 @@ input[type="checkbox"] {
 }
 
 .scroll {
+  transform: rotate(-90deg);
   margin-left: -20px;
 }
 
@@ -393,7 +407,8 @@ input[type="checkbox"] {
 }
 
 .decorOrganization {
-  top: 15%;
+  width: 13rem;
+  top: 17%;
   right: 42%;
 }
 
@@ -443,8 +458,9 @@ input[type="checkbox"] {
 }
 
 .decorStructure {
-  top: 17%;
-  right: 35%;
+    width: 13rem;
+    top: 20%;
+    right: 42%;
 }
 
 /* Program */
@@ -461,14 +477,29 @@ input[type="checkbox"] {
 }
 
 .decorPrograms {
+  width: 13rem;
   top: 10%;
-  right: 35%;
+  right: 42%;
+}
+
+.imgProgramLeft {
+  left: 0;
+  top: 30%;
+}
+
+.imgProgramRight {
+  right: 0;
+   top: 30%;
 }
 
 /* News */
+.newList {
+  width: 7rem;
+}
+
 .decorNews {
-  width: 8rem;
-  top: 16%;
+  width: 7rem;
+  top: 17%;
   right: 46%;
 }
 
@@ -486,12 +517,32 @@ input[type="checkbox"] {
 }
 
 .btn-activies {
-  top: 60%;
+  top: 40%;
 }
 
 @media (max-width: 768px) {
   .btn-activies {
+    top: -20%;
+  }
+}
+@media (max-width: 400px) {
+  .btn-activies {
+    top: -20%;
+  }
+}
+@media (max-width: 346px) {
+  .btn-activies {
     top: -50%;
+  }
+}
+@media (max-width: 296px) {
+  .btn-activies {
+    top: -70%;
+  }
+}
+@media (max-width: 250px) {
+  .btn-activies {
+    top: -90%;
   }
 }
 
@@ -506,6 +557,6 @@ input[type="checkbox"] {
 
 .decorContact {
   width: 10rem;
-  top: 28%;
+  top: 26%;
   right: 44%;
 }

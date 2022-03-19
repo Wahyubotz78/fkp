@@ -2,8 +2,8 @@
 include("koneksi.php");
 session_start();
 
-// $nama = explode(" ", $_SESSION['nama']);
-$oleh = "Febrian";
+$nama = explode(" ", $_SESSION['nama']);
+$oleh = $nama[0];
 $judul = $_POST['judul'];
 $isi = $_POST['isi'];
 

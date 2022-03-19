@@ -1,6 +1,11 @@
 <?php
 include "../../server/koneksi.php";
 session_start();
+// if($_SESSION['role'] != 1){
+//     header('Location: ../anggota/');
+//     exit;
+// }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -226,8 +231,8 @@ session_start();
                                         <h5 class="mb-0"><?= $berita['judul'] ?></h5>
                                         <p class="text-sm mb-0">
                                             <?php
-                                                if (strlen($berita['isi']) >= 450) {
-                                                    echo strip_tags(substr($berita['isi'], 0, 450)) . "...";
+                                                if (strlen($berita['isi']) >= 200) {
+                                                    echo substr(strip_tags($berita['isi']), 0, 100) . "...";
                                                 } else {
                                                     echo strip_tags($berita['isi']);
                                                 }

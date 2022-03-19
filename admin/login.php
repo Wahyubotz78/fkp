@@ -27,17 +27,19 @@ if (isset($_GET['key'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- font awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <!-- icon bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
     <!-- remixicon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../admin/assets/css/style-sign.css?<?php echo time() ?>">
+    <link rel="stylesheet" href="../admin/assets/css/style-sign.css?<?php echo time ()?>">
 
     <title>Login </title>
 </head>
@@ -61,23 +63,30 @@ if (isset($_GET['key'])) {
 
 
                 <form class="mt-5" action="/server/login.php" method="post">
-                    <div class="col-md-12  col-lg-5 col-xs-6  mb-3">
+                    <div class="col-md-12  col-lg-8 col-xs-6  mb-3">
                         <label for="exampleInputEmail1" class="form-label fw-bold">Email</label>
-                        <input type="email" placeholder="Email" class="form-control f-14" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" required="true">
+                        <input type="email" class="form-control f-14" id="exampleInputEmail1"
+                            aria-describedby="emailHelp" name="email" required="true">
                     </div>
-                    <div class="col-md-12  col-lg-5 col-xs-6  pt-5">
+                    <div class="col-md-12  col-lg-8 col-xs-6  pt-2">
                         <label for="exampleInputPassword1" class="form-label fw-bold">Sandi</label>
                         <i class="position-icon  d-flex justify-content-end me-3 " onclick="password_show_hide();">
                             <i class="fas fa-eye" id="show_eye"></i>
                             <i class="fas fa-eye-slash d-none" id="hide_eye"></i>
                         </i>
-                        <input name="password" placeholder="Sandi" type="password" value="" class="input form-control f-14" id="password" required="true" aria-label="password" aria-describedby="basic-addon1" />
+                        <input name="password" type="password" value="" class="input form-control f-14" id="password"
+                            required="true" aria-label="password" aria-describedby="basic-addon1" />
                     </div>
-                    <div class="d-flex pt-5 mt-5">
-                        <button type="submit" class="btn btn-danger ms-3 me-5">Login</button>
-                        <p> Belum punya akun ? <a href="regis.php" class="text-decoration-none text-danger">Daftar
-                                sekarang</a></p>
+                    <div class="col-md-12 pt-5 ">
+                        <button type="submit" class="btn btn-danger  me-5">Login</button>
                     </div>
+                    <div class="col-md-12 pt-3">
+                        <small>
+                            <p> Belum punya akun ? <a href="regis.php" class="text-decoration-none text-danger">Daftar
+                                    sekarang</a></p>
+                        </small>
+                    </div>
+
                 </form>
             </div>
             <div class="col-md-6  ">
@@ -111,7 +120,8 @@ if (isset($_GET['key'])) {
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
