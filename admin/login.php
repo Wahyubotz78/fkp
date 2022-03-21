@@ -27,29 +27,26 @@ if (isset($_GET['key'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- font awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <!-- icon bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
     <!-- remixicon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../admin/assets/css/style-sign.css?<?php echo time ()?>">
+    <link rel="stylesheet" href="../admin/assets/css/style-sign.css?<?php echo time() ?>">
 
     <title>Login </title>
 </head>
 
 <body>
-
     <div class="container  ">
         <div class="row pb-5">
             <div class="col-md-6 pt-3">
-                <img src="../admin/assets/img/sign/sign-logo.png" alt="">
+                <a href=""><img src="../admin/assets/img/sign/sign-logo.png" alt=""></a>
             </div>
             <div class="col-md-6">
                 <img src="../admin/assets/img/sign/sign-bg-img.png" class=" sign-background" alt="">
@@ -60,13 +57,10 @@ if (isset($_GET['key'])) {
             <div class="col-md-6">
                 <h2 class="fw-bold">Login FKP </h2>
                 <h6>Masuk dengan akun FKP-mu</h6>
-
-
                 <form class="mt-5" action="/server/login.php" method="post">
                     <div class="col-md-12  col-lg-8 col-xs-6  mb-3">
                         <label for="exampleInputEmail1" class="form-label fw-bold">Email</label>
-                        <input type="email" class="form-control f-14" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" name="email" required="true">
+                        <input type="email" class="form-control f-14" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" required="true">
                     </div>
                     <div class="col-md-12  col-lg-8 col-xs-6  pt-2">
                         <label for="exampleInputPassword1" class="form-label fw-bold">Sandi</label>
@@ -74,8 +68,7 @@ if (isset($_GET['key'])) {
                             <i class="fas fa-eye" id="show_eye"></i>
                             <i class="fas fa-eye-slash d-none" id="hide_eye"></i>
                         </i>
-                        <input name="password" type="password" value="" class="input form-control f-14" id="password"
-                            required="true" aria-label="password" aria-describedby="basic-addon1" />
+                        <input name="password" type="password" value="" class="input form-control f-14" id="password" required="true" aria-label="password" aria-describedby="basic-addon1" />
                     </div>
                     <div class="col-md-12 pt-5 ">
                         <button type="submit" class="btn btn-danger  me-5">Login</button>
@@ -86,7 +79,6 @@ if (isset($_GET['key'])) {
                                     sekarang</a></p>
                         </small>
                     </div>
-
                 </form>
             </div>
             <div class="col-md-6  ">
@@ -107,9 +99,9 @@ if (isset($_GET['key'])) {
         <div class="row social">
             <div class="col-md-12  ">
                 <div class="d-flex justify-content-end">
-                    <img src="../admin/assets/img/sign/fb.png" alt="">
-                    <img src="../admin/assets/img/sign/yt.png" class="mx-4" alt="">
-                    <img src="../admin/assets/img/sign/ig.png" alt="">
+                    <a href=""><img src="../admin/assets/img/sign/fb.png" alt=""></a>
+                    <a href=""><img src="../admin/assets/img/sign/yt.png" class="mx-4" alt=""></a>
+                    <a href=""><img src="../admin/assets/img/sign/ig.png" alt=""></a>
                 </div>
             </div>
         </div>
@@ -120,8 +112,7 @@ if (isset($_GET['key'])) {
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->

@@ -63,6 +63,7 @@ include('../server/koneksi.php');
                                 <i class="btn  text-decoration-none ri-eye-line" id="hidePassword"></i>
                             </i>
                             <input type="password" class="form-control" aria-label="Password" aria-describedby="button-addon2" id="password" name="password" required />
+                            <span id="textConfirm" style="color: red; display: none;">Password Not Match</span>
                         </div>
                         <div class="col-md-5 col-sm-5 col-lg-5 col-12 ms-lg-5  ms-sm-5">
                             <label for="exampleInputPassword" class="form-label mt-1 fw-bold">Repeat Password</label>
@@ -71,6 +72,7 @@ include('../server/koneksi.php');
                                 </i>
                             </i>
                             <input type="password" class="form-control" aria-label="Confirm Password" aria-describedby="button-addon2" id="confirmPassword" name="password2" required />
+                            <span id="textConfirm2" style="color: red; display: none;">Password Not Match</span>
                         </div>
                     </div>
                     <div class="d-flex flex-wrap mt-lg-4">
@@ -80,7 +82,7 @@ include('../server/koneksi.php');
                         </div>
                         <div class="col-md-4 col-sm-5 col-lg-4 col-12 ms-lg-4 ms-sm-4">
                             <label for="exampleInputEmail1" class="form-label fw-bold">Tempat,Tanggal Lahir</label>
-                            <select name="tempat" placeholder="Pick a state..." required>
+                            <select name="tempat" placeholder="Pilih Kota..." required>
                                 <option value=""></option>
                                 <?php
                                 $sql = mysqli_query($koneksi, "SELECT name FROM regencies");
@@ -94,7 +96,6 @@ include('../server/koneksi.php');
                             <label for="exampleInputEmail1" class="form-label fw-bold "></label>
                             <input type="date" class="form-control f-14" id="exampleInputEmail1" aria-describedby="emailHelp" name="ttl" required>
                         </div>
-
                     </div>
                     <div class="d-flex flex-wrap mt-lg-4">
                         <div class="col-md-5 col-sm-5 col-lg-5 col-12">
@@ -118,10 +119,10 @@ include('../server/koneksi.php');
                     </div>
                     <div class="col-lg-6 col-md-6 me-3 pt-5">
                         <div class="d-flex">
-                            <a href="javascript:{}" class="text-decoration-none text-dark" onclick="document.getElementById('my_form').submit();">
+                            <!-- <a href="javascript:{}" class="text-decoration-none text-dark" onclick="document.getElementById('my_form').submit();">
                                 <h6 class="fw-bold border-custom" type="submit">Selanjutnya </h6>
-                            </a>
-                            <!-- <button class="fw-bold border-custom" type="submit" style="all:unset;">Selanjutnya</button> -->
+                            </a> -->
+                            <button class="fw-bold border-custom" type="submit" style="all:unset;" id="submit">Selanjutnya</button>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 mt-1">
@@ -167,6 +168,8 @@ include('../server/koneksi.php');
         var confirmPassword = document.getElementById("confirmPassword");
         var hidePassword = document.getElementById("hidePassword");
         var hideConfirmPassword = document.getElementById("hideConfirmPassword");
+        var text1 = document.getElementById("textConfirm");
+        var text2 = document.getElementById("textConfirm2");
 
         hidePassword.addEventListener("click", function() {
             if (password.type === "password") {
@@ -194,32 +197,24 @@ include('../server/koneksi.php');
         });
 
         confirmPassword.addEventListener("keyup", function() {
+            text1.style.display = "block";
+            text2.style.display = "block";
             if (password.value === confirmPassword.value) {
-                document.getElementById("textConfirm").innerHTML = "Password Match";
-                document.getElementById("textConfirm").style.color = "green";
+                text1.innerHTML = "Password Match";
+                text1.style.color = "green";
+                text2.innerHTML = "Password Match";
+                text2.style.color = "green";
+                document.getElementById("submit").disabled = false;
             } else {
-                document.getElementById("textConfirm").innerHTML =
+                text1.innerHTML =
                     "Password Not Match";
-                document.getElementById("textConfirm").style.color = "red";
+                text1.style.color = "red";
+                text2.innerHTML =
+                    "Password Not Match";
+                text2.style.color = "red";
+                document.getElementById("submit").disabled = true;
             }
         });
-
-        password.addEventListener("keyup", function() {
-            if (password.value === confirmPassword.value) {
-                document.getElementById("textConfirm").innerHTML = "Password Match";
-                document.getElementById("textConfirm").style.color = "green";
-            } else {
-                document.getElementById("textConfirm").innerHTML =
-                    "Password Not Match";
-                document.getElementById("textConfirm").style.color = "red";
-            }
-        });
-    </script>
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
 
     <script>
@@ -228,6 +223,12 @@ include('../server/koneksi.php');
                 sortField: 'text'
             });
         });
+    </script>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->

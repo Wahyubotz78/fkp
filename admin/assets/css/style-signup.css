@@ -2,7 +2,7 @@
 body{
     font-family: 'Poppins', sans-serif;
    
-    overflow-x: hidden;
+    
 }
 /* Font-size */
 .f-48{
@@ -12,28 +12,56 @@ body{
     font-size: 14px;
 }
 /* SIgn up  */
- 
-.register{
-    margin-top: -200px;
+ form{
+     z-index: 999999999;
+ }
+.opening{
+    position: absolute;
+    top: 100px;
+    right: -30px;
+    z-index: 9;
+   }
+.kanan{
+    right: -300px;
+   bottom: 0px;    
+    top: 0px;
+  position: fixed;
+    width: 900px;
+    height: 100vh;
 }
+.bg-kanan{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.founder{
+    right: 400px;
+    z-index: 999999999;
+    bottom: 0px;
+    right: -40%;
+}
+.people{
+    right: 130px;
+    position: relative;
+    z-index:99999999999;  
+    height: 400px;
+    bottom: 400px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+   
+}
+.text-kanan{
+    margin-top: -500px;
+}
+
  .sign-logo{
      margin-top: 0px;
  }
  .sign-background{
+     height: 100vh;
      position: relative;
      z-index: -9;  
-    
-     margin-left: 0px;
-     margin-bottom: -140%;
-     height:800px;
-     
- }
- .people-img{
-     position: absolute;
-    margin-top: -412px;
-     height: 480px;
-     margin-left: 70px;
-    
+     margin-left: 0px;   
  }
 .position-icon{
     margin-bottom: -37px;
@@ -43,7 +71,8 @@ body{
     background-color: #f3f3f4;
     border-radius: 10px;
     border-color: transparent;
-    height: 40px;  
+    height: 40px; 
+    z-index: 99999999; 
 }
 .border-custom{
     border: transparent;
@@ -115,13 +144,31 @@ body{
     outline: -webkit-focus-ring-color auto 2px;
   }
 
+  .social{
+      margin-top: -100px;
+  }
 
 /* Responsive */
-@media only screen and (min-width: 1400px) and (max-width: 10000px) {
+
+@media only screen and (min-width: 1800px) and (max-width: 10000px) {
+    .opening{
+        position: absolute;
+        top: 100px;
+        right: 100px;
+        z-index: 99999;
+    }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1799px) {
    body{
        margin-top: 5%;
        margin-bottom: 5%;
    }
+   .opening{
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    z-index: 99999;
+}
     .register{
         margin-top: -50px;
     }
@@ -149,6 +196,14 @@ body{
     }
 }
 
+@media only screen and (min-width: 1201px) and (max-width: 1399px) {
+    .opening{
+        position: absolute;
+        top: 100px;
+        right: 100px;
+        z-index: 99999;
+    }
+}
 @media only screen and (min-width: 991px) and (max-width: 1200px) {
    
     .register{

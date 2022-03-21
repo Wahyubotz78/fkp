@@ -10,7 +10,7 @@ $existEmail = mysqli_num_rows($data);
 
 if ($existEmail > 0) {
     $row = mysqli_fetch_assoc($data);
-    if ($password == $row['password']){
+    if (password_verify($password, $row['password'])){
         // setcookie("login", "#", time() + (86400 * 30), "/");
         $_SESSION['memberid'] = $row['memberid'];
         $_SESSION['role'] = $row['role'];

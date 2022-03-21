@@ -24,12 +24,15 @@ a {
 .object-cover {
   object-fit: cover;
 }
+
 .fz-15 {
   font-size: 15px;
 }
+
 .fz-14 {
   font-size: 14px;
 }
+
 .fz-13 {
   font-size: 13px;
 }
@@ -107,6 +110,7 @@ nav .logo a img {
   height: auto;
   object-fit: cover;
 }
+
 nav .logo-footer a img {
   width: 7rem;
   margin-top: -8px;
@@ -172,7 +176,8 @@ input[type="checkbox"] {
   nav .menu-btn i {
     display: block;
   }
-  #click:checked ~ .menu-btn i:before {
+
+  #click:checked~.menu-btn i:before {
     content: "\f00d";
   }
 
@@ -189,7 +194,7 @@ input[type="checkbox"] {
     z-index: 999;
   }
 
-  #click:checked ~ ul {
+  #click:checked~ul {
     left: 0;
   }
 
@@ -206,7 +211,7 @@ input[type="checkbox"] {
     transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
-  #click:checked ~ ul li a {
+  #click:checked~ul li a {
     margin-left: 0px;
   }
 
@@ -217,13 +222,33 @@ input[type="checkbox"] {
 }
 
 /* Hero */
+.bgLeft {
+  background: url(../img/bgLeft.svg);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: left;
+}
+
+.bgRight {
+  background: url(../img/bgRight.svg);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: right;
+}
+
 .scrollHero {
   margin-top: -100px;
 }
 
 .decorHero {
   width: 12rem;
-  top: 47%;
+  top: 45%;
+}
+
+@media(max-width: 991px) {
+  .decorHero {
+    top: 54%;
+  }
 }
 
 .bg-hero {
@@ -238,7 +263,7 @@ input[type="checkbox"] {
 }
 
 .imgHero {
-  margin-top: -160px;
+  margin-top: -100px;
   width: 30rem;
   height: 100vh;
 }
@@ -246,8 +271,7 @@ input[type="checkbox"] {
 @media (max-width: 768px) {
   .imgHero {
     margin-top: 0;
-    width: 20rem;
-    margin-left: -40px;
+    margin-left: -20px;
   }
 }
 
@@ -267,16 +291,19 @@ input[type="checkbox"] {
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
 }
+
 .scroll-prompt-arrow {
   animation-name: opacity;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
 }
+
 .scroll-prompt-arrow:last-child {
   animation-direction: reverse;
   margin-top: -6px;
 }
-.scroll-prompt-arrow > div {
+
+.scroll-prompt-arrow>div {
   width: 20px;
   height: 20px;
   border-right: 4px solid #000;
@@ -381,6 +408,22 @@ input[type="checkbox"] {
 }
 
 /* History */
+.carousel-item.carouselHistory {
+  height: 120px;
+}
+
+.carousel-indicators [data-bs-target] {
+  position: relative !important;
+  /* width: 10px !important; */
+  /* height: 2px !important; */
+  top: 80px !important;
+  background: rgba(225, 49, 45, 0.2) !important;
+}
+
+.carousel-indicators .active {
+  background-color: #E1312D !important;
+}
+
 .imgHistoryLeft {
   z-index: -9;
 }
@@ -401,6 +444,7 @@ input[type="checkbox"] {
   .descOrganization {
     width: 100%;
   }
+
   .imgActivies {
     margin-top: -150px;
   }
@@ -441,6 +485,19 @@ input[type="checkbox"] {
   height: 100vh;
 }
 
+.fz-list {
+  font-size: 15px;
+  padding-left: 0;
+  list-style: none;
+}
+
+@media(max-width: 768px) {
+  .fz-list {
+    font-size: 12px;
+    padding-left: 20px;
+  }
+}
+
 /* Structure */
 .accordion-flush {
   border: 2px solid #3c5190;
@@ -458,9 +515,9 @@ input[type="checkbox"] {
 }
 
 .decorStructure {
-    width: 13rem;
-    top: 20%;
-    right: 42%;
+  width: 13rem;
+  top: 20%;
+  right: 42%;
 }
 
 /* Program */
@@ -489,7 +546,32 @@ input[type="checkbox"] {
 
 .imgProgramRight {
   right: 0;
-   top: 30%;
+  top: 30%;
+}
+
+/* Merchandise */
+.decorMerchan {
+  width: 13rem;
+  top: 22%;
+  right: 42%;
+}
+
+.merchanCard {
+  border: 1px solid #3C5190;
+}
+
+.imgMerchan {
+  width: 100%;
+}
+
+.imgMerchanLeft {
+  left: 0;
+  top: 70%;
+}
+
+.imgMerchanRight {
+  right: 0;
+  top: 30%;
 }
 
 /* News */
@@ -525,21 +607,25 @@ input[type="checkbox"] {
     top: -20%;
   }
 }
+
 @media (max-width: 400px) {
   .btn-activies {
     top: -20%;
   }
 }
+
 @media (max-width: 346px) {
   .btn-activies {
     top: -50%;
   }
 }
+
 @media (max-width: 296px) {
   .btn-activies {
     top: -70%;
   }
 }
+
 @media (max-width: 250px) {
   .btn-activies {
     top: -90%;
@@ -552,7 +638,7 @@ input[type="checkbox"] {
 }
 
 .btn-contact {
-  top: 60%;
+  top: 70%;
 }
 
 .decorContact {
