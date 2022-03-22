@@ -58,7 +58,7 @@
     <section id="history" class="bgRight mx-auto position-relative">
         <div class="container">
             <h3 class="fw-700 text-center bgDecor">Our History</h3>
-            <img src="assets/img/decorHero.svg" alt="" class="position-absolute decorHistory d-none d-md-block">
+            <img src="assets/img/decorHero.svg" alt="" class="position-absolute decorHistory d-none d-md-flex">
             <div class="">
                 <!-- <img src="assets/img/imgHistoryRight.svg" class="imgHistoryRight position-absolute end-0" alt=""> -->
             </div>
@@ -81,30 +81,29 @@
                     <p class="fz-14 text-center">Melakukan kegiatan bisnis bertaraf ernasional dan membawa produk -
                         produk milik anggota FKP</p>
                 </div>
-                <div class="mb-5 pb-3 col-md-3 text-end d-none d-md-block">
+                <div class="mb-5 pb-3 col-md-3 text-end d-none d-xl-block">
                     <span class="me-1"><img src="assets/img/garisHistory.svg" alt=""></span>
                     <span class="me-1"><img src="assets/img/garisSmallHistory.svg" alt=""></span>
                 </div>
-                <div class="mb-5 pb-3 col-md-3 text-end d-none d-md-block">
+                <div class="mb-5 pb-3 col-md-3 text-end d-none d-xl-block">
                     <span class=" me-1"><img src="assets/img/garisSmallHistory.svg" alt=""></span>
                     <span class="me-1"><img src="assets/img/garisHistory.svg" alt=""></span>
                     <span class="me-1"><img src="assets/img/garisSmallHistory.svg" alt=""></span>
                 </div>
-                <div class="mb-5 pb-3 col-md-3 text-end d-none d-md-block">
+                <div class="mb-5 pb-3 col-md-3 text-end d-none d-xl-block">
                     <span class=" me-1"><img src="assets/img/garisSmallHistory.svg" alt=""></span>
                     <span class="me-1"><img src="assets/img/garisHistory.svg" alt=""></span>
                     <span class="me-1"><img src="assets/img/garisSmallHistory.svg" alt=""></span>
                 </div>
-                <div class="mb-5 pb-3 col-md-3 text-start d-none d-md-block">
+                <div class="mb-5 pb-3 col-md-3 text-start d-none d-xl-block">
                     <span class=" me-1"><img src="assets/img/garisSmallHistory.svg" alt=""></span>
                     <span class="me-1"><img src="assets/img/garisHistory.svg" alt=""></span>
                 </div>
 
                 <div class="">
-                    <img src="assets/img/imgHistoryLeft.svg" class="imgHistoryLeft position-absolute bottom-cus start-0"
-                        alt="">
+                    <img src="assets/img/imgHistoryLeft.svg" class="imgHistoryLeft position-absolute  start-0" alt="">
                     <img src="assets/img/imgHistoryRight.svg"
-                        class="imgHistoryRight position-absolute bottom-cus end-0 d-none d-md-block" alt="">
+                        class="imgHistoryRight position-absolute  end-0 d-none d-md-block" alt="">
                 </div>
 
                 <div class="col-md-3">
@@ -126,21 +125,21 @@
                     <p class="fz-14 text-center">telah memiliki anggota aktif di setiap provinsi, kota dan kabupaten ±
                         sekitar 12.000 anggota aktif berwirausaha</p>
                 </div>
-                <div class="mb-5 pb-3 col-md-3 d-none d-md-block text-end">
+                <div class="mb-5 pb-3 col-md-3 d-none d-xl-block text-end">
                     <span class="me-1"><img src="assets/img/garisHistory.svg" alt=""></span>
                     <span class="me-1"><img src="assets/img/garisSmallHistory.svg" alt=""></span>
                 </div>
-                <div class="mb-5 pb-3 col-md-3 d-none d-md-block text-end">
-                    <span class="me-1"><img src="assets/img/garisSmallHistory.svg" alt=""></span>
-                    <span class="me-1"><img src="assets/img/garisHistory.svg" alt=""></span>
-                    <span class="me-1"><img src="assets/img/garisSmallHistory.svg" alt=""></span>
-                </div>
-                <div class="mb-5 pb-3 col-md-3 d-none d-md-block text-end">
+                <div class="mb-5 pb-3 col-md-3 d-none d-xl-block text-end">
                     <span class="me-1"><img src="assets/img/garisSmallHistory.svg" alt=""></span>
                     <span class="me-1"><img src="assets/img/garisHistory.svg" alt=""></span>
                     <span class="me-1"><img src="assets/img/garisSmallHistory.svg" alt=""></span>
                 </div>
-                <div class="mb-5 pb-3 col-md-3 d-none d-md-block text-start">
+                <div class="mb-5 pb-3 col-md-3 d-none d-xl-block text-end">
+                    <span class="me-1"><img src="assets/img/garisSmallHistory.svg" alt=""></span>
+                    <span class="me-1"><img src="assets/img/garisHistory.svg" alt=""></span>
+                    <span class="me-1"><img src="assets/img/garisSmallHistory.svg" alt=""></span>
+                </div>
+                <div class="mb-5 pb-3 col-md-3 d-none d-xl-block text-start">
                     <span class="me-1"><img src="assets/img/garisSmallHistory.svg" alt=""></span>
                     <span class="me-1"><img src="assets/img/garisHistory.svg" alt=""></span>
                 </div>
@@ -148,6 +147,10 @@
 
             <!-- Carousel History -->
             <div class="row mt-5 pt-5 d-block d-md-none">
+                <div class="">
+                    <img src="assets/img/imgHistoryLeft.svg" class="imgHistoryLeft position-absolute  start-0" alt="">
+                    <img src="assets/img/imgHistoryRight.svg" class="imgHistoryRight position-absolute  end-0" alt="">
+                </div>
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
@@ -167,43 +170,43 @@
                             aria-label="Slide 8"></button>
                     </div>
                     <div class="carousel-inner">
-                        <div class="carousel-item carouselHistory active">
+                        <div class="carousel-item pb-5 carouselHistory active">
                             <h3 class="fw-600 text-center">2010</h3>
                             <p class="fz-14 text-center">Didirikan pada tgl 1 November 2010 di Anyer, Provinsi
                                 Banten</p>
                         </div>
-                        <div class="carousel-item carouselHistory">
+                        <div class="carousel-item pb-5 carouselHistory">
                             <h3 class="fw-600 text-center">2011</h3>
                             <p class="fz-14 text-center">Pertama kali membentuk Pengurus Wilayah di 3 Provinsi</p>
                         </div>
-                        <div class="carousel-item carouselHistory">
+                        <div class="carousel-item pb-5 carouselHistory">
                             <h3 class="fw-600 text-center">2012</h3>
                             <p class="fz-14 text-center">Pertama kali membentuk Pengurus Daeah FKP beberapa Kota dan
                                 Kabupaten di Indonesia</p>
                         </div>
-                        <div class="carousel-item carouselHistory">
+                        <div class="carousel-item pb-5 carouselHistory">
                             <h3 class="fw-600 text-center">2014</h3>
                             <p class="fz-14 text-center">Melakukan kegiatan bisnis bertaraf ernasional dan membawa
                                 produk - produk milik anggota FKP</p>
                         </div>
-                        <div class="carousel-item carouselHistory">
+                        <div class="carousel-item pb-5 carouselHistory">
                             <h3 class="fw-600 text-center">2016</h3>
                             <p class="fz-14 text-center">Menyelenggarakan Silaturahmi Pengusaha Muda Nasional dalam
                                 kegiatan
                                 Gaya Muda 2016</p>
                         </div>
-                        <div class="carousel-item carouselHistory">
+                        <div class="carousel-item pb-5 carouselHistory">
                             <h3 class="fw-600 text-center">2017</h3>
                             <p class="fz-14 text-center">Melakukan pemilihan ketua pertama kali dengan dukungan DPW dari
                                 setiap
                                 provinsi di indonesia</p>
                         </div>
-                        <div class="carousel-item carouselHistory">
+                        <div class="carousel-item pb-5 carouselHistory">
                             <h3 class="fw-600 text-center">2020</h3>
                             <p class="fz-14 text-center">Memiliki pengurus wilayah tersebar di 30 Provinsi di Indonesia
                             </p>
                         </div>
-                        <div class="carousel-item carouselHistory">
+                        <div class="carousel-item pb-5 carouselHistory">
                             <h3 class="fw-600 text-center">2021</h3>
                             <p class="fz-14 text-center">telah memiliki anggota aktif di setiap provinsi, kota dan
                                 kabupaten ±
@@ -268,19 +271,19 @@
                             aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
-                        <div class="carousel-item bg-1 active">
+                        <div class="carousel-item pb-5 bg-1 active">
                             <p class="fz-14 mt-5 pt-5">Menjadi wadah dalam peningkatan kewirausahaan pemuda baik anggota
                                 maupun
                                 masyarakat melalui program kerja organisasi</p>
                             <img src="assets/img/garisHistory.svg" alt="" class="d-none d-md-flex">
                         </div>
-                        <div class="carousel-item bg-2">
+                        <div class="carousel-item pb-5 bg-2">
                             <p class="fz-14 mt-5 pt-5">Menjadi organisasi yang berperan aktif dan ikut serta dalam
                                 program
                                 kewirausahaan di internal maupun eksternal</p>
                             <img src="assets/img/garisHistory.svg" alt="" class="d-none d-md-flex">
                         </div>
-                        <div class="carousel-item bg-3">
+                        <div class="carousel-item pb-5 bg-3">
                             <p class="fz-14 mt-5 pt-5">Menjalin komunkasi dan hubungan dengan para mitra strategis dalam
                                 peningkatan kerjasama positif untuk kemajuan organisasi</p>
                             <img src="assets/img/garisHistory.svg" alt="" class="d-none d-md-flex">
@@ -574,7 +577,7 @@
                 </div>
 
                 <div class="carousel-inner">
-                    <div class="carousel-item bg-1 active">
+                    <div class="carousel-item pb-5 bg-1 active">
                         <div class="accordion accordion-flush" id="accordionFlushExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="flush-heading1">
@@ -658,7 +661,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item bg-2">
+                    <div class="carousel-item pb-5 bg-2">
                         <div class="accordion accordion-flush" id="accordionFlushExample2">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="flush-heading6">
@@ -710,7 +713,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item bg-2">
+                    <div class="carousel-item pb-5 bg-2">
                         <div class="accordion accordion-flush" id="accordionFlushExample3">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="flush-heading9">
@@ -809,7 +812,7 @@
             <h3 class="fw-700 text-center">Our Programs</h3>
             <div class="row mt-5 pt-5 gap-1 d-flex justify-content-center d-none d-md-flex">
                 <img src="assets/img/bgGarisProgram.svg" alt="" class="position-absolute w-100 start-0 end-0">
-                <div class="col-md-3 position-relative mb-5 pb-5">
+                <div class="col-md-4 col-xl-3 position-relative mb-5 pb-5">
                     <div class="bg-blue-young px-4 pt-5 pb-3">
                         <img src="assets/img/garisProgram.svg" alt=""
                             class="position-absolute top-cus start-cus w-100" />
@@ -824,7 +827,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 position-relative mb-5 pb-5">
+                <div class="col-md-4 col-xl-3 position-relative mb-5 pb-5">
                     <div class="bg-blue-young px-4 pt-5 pb-3">
                         <img src="assets/img/garisProgram.svg" alt=""
                             class="position-absolute top-cus start-cus w-100" />
@@ -839,7 +842,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 position-relative mb-5 pb-5">
+                <div class="col-md-4 col-xl-3 position-relative mb-5 pb-5">
                     <div class="bg-blue-young px-4 pt-5 pb-3">
                         <img src="assets/img/garisProgram.svg" alt=""
                             class="position-absolute top-cus start-cus w-100" />
@@ -854,7 +857,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 position-relative mb-5 pb-5">
+                <div class="col-md-4 col-xl-3 position-relative mb-5 pb-5">
                     <div class="bg-blue-young px-4 pt-5 pb-3">
                         <img src="assets/img/garisProgram.svg" alt=""
                             class="position-absolute top-cus start-cus w-100" />
@@ -869,7 +872,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 position-relative mb-5 pb-5">
+                <div class="col-md-4 col-xl-3 position-relative mb-5 pb-5">
                     <div class="bg-blue-young px-4 pt-5 pb-3">
                         <img src="assets/img/garisProgram.svg" alt=""
                             class="position-absolute top-cus start-cus w-100" />
@@ -884,7 +887,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 position-relative mb-5 pb-5">
+                <div class="col-md-4 col-xl-3 position-relative mb-5 pb-5">
                     <div class="bg-blue-young px-4 pt-5 pb-3">
                         <img src="assets/img/garisProgram.svg" alt=""
                             class="position-absolute top-cus start-cus w-100" />
@@ -899,7 +902,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 position-relative mb-5 pb-5">
+                <div class="col-md-4 col-xl-3 position-relative mb-5 pb-5">
                     <div class="bg-blue-young px-4 pt-5 pb-3">
                         <img src="assets/img/garisProgram.svg" alt=""
                             class="position-absolute top-cus start-cus w-100" />
@@ -914,7 +917,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 position-relative mb-5 pb-5">
+                <div class="col-md-4 col-xl-3 position-relative mb-5 pb-5">
                     <div class="bg-blue-young px-4 pt-5 pb-3">
                         <img src="assets/img/garisProgram.svg" alt=""
                             class="position-absolute top-cus start-cus w-100" />
@@ -929,7 +932,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 position-relative mb-5 pb-5">
+                <div class="col-md-4 col-xl-3 position-relative mb-5 pb-5">
                     <div class="bg-blue-young px-4 pt-5 pb-3">
                         <img src="assets/img/garisProgram.svg" alt=""
                             class="position-absolute top-cus start-cus w-100" />
@@ -972,10 +975,10 @@
                     </div>
 
                     <div class="carousel-inner">
-                        <div class="carousel-item bg-1 active">
+                        <div class="carousel-item pb-5 bg-1 active">
                             <div class="bg-blue-young px-4 pt-5 pb-3">
                                 <img src="assets/img/garisProgram.svg" alt=""
-                                    class="position-absolute top-cus start-cus w-100" />
+                                    class="position-absolute top-cus start-cus w-100 d-none d-md-flex" />
                                 <p class="fw-600"><img src="assets/img/garisSmallProgram.svg" alt="">&nbsp; First
                                     Program</p>
                                 <h5 class="fw-700 mt-4 mb-4">Inkubator Bisnis</h5>
@@ -989,10 +992,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item bg-2">
+                        <div class="carousel-item pb-5 bg-2">
                             <div class="bg-blue-young px-4 pt-5 pb-3">
                                 <img src="assets/img/garisProgram.svg" alt=""
-                                    class="position-absolute top-cus start-cus w-100" />
+                                    class="position-absolute top-cus start-cus w-100 d-none d-md-flex" />
                                 <p class="fw-600"><img src="assets/img/garisSmallProgram.svg" alt="">&nbsp; Second
                                     Program</p>
                                 <h5 class="fw-700 mt-4 mb-4">Pelatihan Bisnis Teknis & Non Teknis</h5>
@@ -1006,10 +1009,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item bg-2">
+                        <div class="carousel-item pb-5 bg-2">
                             <div class="bg-blue-young px-4 pt-5 pb-3">
                                 <img src="assets/img/garisProgram.svg" alt=""
-                                    class="position-absolute top-cus start-cus w-100" />
+                                    class="position-absolute top-cus start-cus w-100 d-none d-md-flex" />
                                 <p class="fw-600"><img src="assets/img/garisSmallProgram.svg" alt="">&nbsp; Third
                                     Program</p>
                                 <h5 class="fw-700 mt-4 mb-4">Coaching & Mentoring Bisnis</h5>
@@ -1023,10 +1026,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item bg-2">
+                        <div class="carousel-item pb-5 bg-2">
                             <div class="bg-blue-young px-4 pt-5 pb-3">
                                 <img src="assets/img/garisProgram.svg" alt=""
-                                    class="position-absolute top-cus start-cus w-100" />
+                                    class="position-absolute top-cus start-cus w-100 d-none d-md-flex" />
                                 <p class="fw-600"><img src="assets/img/garisSmallProgram.svg" alt="">&nbsp; Fourth
                                     Program</p>
                                 <h5 class="fw-700 mt-4 mb-4">Pameran Onine dan Offline</h5>
@@ -1040,10 +1043,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item bg-2">
+                        <div class="carousel-item pb-5 bg-2">
                             <div class="bg-blue-young px-4 pt-5 pb-3">
                                 <img src="assets/img/garisProgram.svg" alt=""
-                                    class="position-absolute top-cus start-cus w-100" />
+                                    class="position-absolute top-cus start-cus w-100 d-none d-md-flex" />
                                 <p class="fw-600"><img src="assets/img/garisSmallProgram.svg" alt="">&nbsp; Fifth
                                     Program</p>
                                 <h5 class="fw-700 mt-4 mb-4">Konsultasi Legalitas & Keuangan</h5>
@@ -1057,10 +1060,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item bg-2">
+                        <div class="carousel-item pb-5 bg-2">
                             <div class="bg-blue-young px-4 pt-5 pb-3">
                                 <img src="assets/img/garisProgram.svg" alt=""
-                                    class="position-absolute top-cus start-cus w-100" />
+                                    class="position-absolute top-cus start-cus w-100 d-none d-md-flex" />
                                 <p class="fw-600"><img src="assets/img/garisSmallProgram.svg" alt="">&nbsp; Sixth
                                     Program</p>
                                 <h5 class="fw-700 mt-4 mb-4">Akses Permodalan</h5>
@@ -1074,10 +1077,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item bg-2">
+                        <div class="carousel-item pb-5 bg-2">
                             <div class="bg-blue-young px-4 pt-5 pb-3">
                                 <img src="assets/img/garisProgram.svg" alt=""
-                                    class="position-absolute top-cus start-cus w-100" />
+                                    class="position-absolute top-cus start-cus w-100 d-none d-md-flex" />
                                 <p class="fw-600"><img src="assets/img/garisSmallProgram.svg" alt="">&nbsp; Seventh
                                     Program</p>
                                 <h5 class="fw-700 mt-4 mb-4">Ekspor Bisnis</h5>
@@ -1091,10 +1094,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item bg-2">
+                        <div class="carousel-item pb-5 bg-2">
                             <div class="bg-blue-young px-4 pt-5 pb-3">
                                 <img src="assets/img/garisProgram.svg" alt=""
-                                    class="position-absolute top-cus start-cus w-100" />
+                                    class="position-absolute top-cus start-cus w-100 d-none d-md-flex" />
                                 <p class="fw-600"><img src="assets/img/garisSmallProgram.svg" alt="">&nbsp; Eighth
                                     Program</p>
                                 <h5 class="fw-700 mt-4 mb-4">Study Tour dan Magang Bisnis</h5>
@@ -1108,10 +1111,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item bg-2">
+                        <div class="carousel-item pb-5 bg-2">
                             <div class="bg-blue-young px-4 pt-5 pb-3">
                                 <img src="assets/img/garisProgram.svg" alt=""
-                                    class="position-absolute top-cus start-cus w-100" />
+                                    class="position-absolute top-cus start-cus w-100 d-none d-md-flex" />
                                 <p class="fw-600"><img src="assets/img/garisSmallProgram.svg" alt="">&nbsp; Nineth
                                     Program</p>
                                 <h5 class="fw-700 mt-4 mb-4">Charity</h5>
@@ -1132,7 +1135,7 @@
     </section>
 
     <!-- Merchandise -->
-    <section id="program" class="bgLeft mx-auto position-relative">
+    <section id="program" class="bgLeft mx-auto position-relative mb-5 pb-5">
         <div class="container text-center">
             <img src="assets/img/imgMerchanLeft.svg" class="position-absolute imgMerchanLeft" alt="">
             <img src="assets/img/imgMerchanRight.svg" class="position-absolute imgMerchanRight" alt="">
@@ -1140,23 +1143,23 @@
             <h3 class="fw-700 text-center mb-5">Our Merchandise</h3>
             <img src="assets/img/garisHistory.svg" alt="">
             <div class="row mt-5 pt-5 gap-1 d-flex justify-content-center d-none d-md-flex">
-                <div class="col-md-3 position-relative mb-5 pb-5">
+                <div class="col-md-4 col-xl-3 position-relative mb-5 pb-5">
                     <div class="merchanCard p-3">
                         <img src="assets/img/merchan1.svg" alt="" class="imgMerchan object-cover">
                     </div>
                 </div>
-                <div class="col-md-3 position-relative mb-5 pb-5">
+                <div class="col-md-4 col-xl-3 position-relative mb-5 pb-5">
                     <div class="merchanCard p-3">
                         <img src="assets/img/merchan2.svg" alt="" class="imgMerchan object-cover">
                     </div>
                 </div>
-                <div class="col-md-3 position-relative mb-5 pb-5">
+                <div class="col-md-4 col-xl-3 position-relative mb-5 pb-5">
                     <div class="merchanCard p-3">
                         <img src="assets/img/merchan3.svg" alt="" class="imgMerchan object-cover">
                     </div>
                 </div>
             </div>
-            <div class="row mt-5 pt-5 gap-1 d-flex justify-content-center d-block d-md-none">
+            <div class="row mt-5 pt-5 pb-5 mb-5 gap-1 d-flex justify-content-center d-block d-md-none">
                 <div id="carouselExampleIndicators5" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="0"
@@ -1168,17 +1171,17 @@
                     </div>
 
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
+                        <div class="carousel-item pb-5 active">
                             <div class="merchanCard p-3">
                                 <img src="assets/img/merchan1.svg" alt="" class="imgMerchan object-cover">
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item pb-5">
                             <div class="merchanCard p-3">
                                 <img src="assets/img/merchan2.svg" alt="" class="imgMerchan object-cover">
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item pb-5">
                             <div class="merchanCard p-3">
                                 <img src="assets/img/merchan3.svg" alt="" class="imgMerchan object-cover">
                             </div>
@@ -1186,13 +1189,15 @@
                     </div>
                 </div>
             </div>
+            <button class="btn btn-danger">Beli Sekarang</button>
         </div>
     </section>
 
     <!-- Activies -->
     <section id="activies" class="bgRight mx-auto text-center">
         <div class="position-relative d-flex flex-column align-items-center">
-            <img src="assets/img/imgActivies.svg" alt="" class="w-100 h-100 img-fluid imgActivies">
+            <img src="assets/img/imgActivies.svg" alt="" class="d-none d-md-block w-100 h-100 imgActivies">
+            <img src="assets/img/imgActiviesM.svg" alt="" class="d-block d-md-none w-100 h-200 imgActivies">
             <button class="btn btn-danger fs-6 mt-md-3 position-absolute btn-activies">View More</button>
             <p class="fw-600 mt-5 pt-5">Saat ini kami telah memiliki</p>
         </div>
@@ -1213,30 +1218,30 @@
         </div>
 
         <div class="row d-flex justify-content-center mt-4 d-block d-md-none">
-            <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel">
+            <div id="carouselExampleIndicators6" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0"
+                    <button type="button" data-bs-target="#carouselExampleIndicators6" data-bs-slide-to="0"
                         class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1"
+                    <button type="button" data-bs-target="#carouselExampleIndicators6" data-bs-slide-to="1"
                         aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2"
+                    <button type="button" data-bs-target="#carouselExampleIndicators6" data-bs-slide-to="2"
                         aria-label="Slide 3"></button>
                 </div>
 
                 <div class="carousel-inner">
-                    <div class="carousel-item bg-1 active">
+                    <div class="carousel-item pb-5 bg-1 active">
                         <div class="col-md-3 mx-5 px-5">
                             <h2 class="fw-800 fz-20">28</h2>
                             <p class="fz-14">Dewan Pengurus Wilayah ( DPW ) Provinsi</p>
                         </div>
                     </div>
-                    <div class="carousel-item bg-2">
+                    <div class="carousel-item pb-5 bg-2">
                         <div class="col-md-3 mx-5 px-5">
                             <h2 class="fw-800 fz-20">12.000</h2>
                             <p class="fz-14">Anggota Aktif FKP se - Indonesia</p>
                         </div>
                     </div>
-                    <div class="carousel-item bg-2">
+                    <div class="carousel-item pb-5 bg-2">
                         <div class="col-md-3 mx-5 px-5">
                             <h2 class="fw-800 fz-20">148</h2>
                             <p class="fz-14">Dewan Pengurus Daerah ( DPD )
@@ -1253,8 +1258,10 @@
         <img src="assets/img/decorOrganization.svg" class="position-absolute  decorNews d-none d-md-block" alt="">
         <div class="container">
             <h3 class="fw-700 text-center">News</h3>
-            <img src="assets/img/imgNewsLeft.svg" class="imgNewsLeft position-absolute top-25 start-0" alt="">
-            <img src="assets/img/imgNewsRight.svg" class="imgNewsRight position-absolute top-50 end-0" alt="">
+            <img src="assets/img/imgNewsLeft.svg" class="imgNewsLeft position-absolute top-25 start-0 d-none d-md-flex"
+                alt="">
+            <img src="assets/img/imgNewsRight.svg" class="imgNewsRight position-absolute top-50 end-0 d-none d-md-flex"
+                alt="">
             <div class="row mx-auto gap-3 gap-xl-0 mt-5 pt-5 d-flex align-items-center">
                 <div class="col-xl-1 d-none d-xl-flex">
                     <a href="#contact" class="scrollHero d-flex align-items-center text-dark">
@@ -1288,7 +1295,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-xl-6 col-12 ps-5 pt-5">
+                <div class="col-xl-6 col-12 ps-md-5 pt-5">
                     <div class="row mb-4 d-flex align-items-center">
                         <div class="col-12 col-md-4">
                             <img src="assets/img/newsList1.svg" alt="" class="newList">
@@ -1417,19 +1424,20 @@
     </div> -->
 
     <div class="position-relative d-flex flex-column align-items-center mt-5">
-        <img src="assets/img/imgKontak.png" alt="" class="img-fluid object-cover">
+        <img src="assets/img/imgKontak.png" alt="" class="img-fluid object-cover d-none d-md-block">
+        <img src="assets/img/imgKontakM.svg" alt="" class="img-fluid object-cover w-100 d-block d-md-none">
         <a href="admin/regis.php" class="btn btn-danger fs-6 mt-md-3 position-absolute btn-contact">Gabung Sekarang</a>
     </div>
 
-    <footer class="bgLeft container mx-auto mt-5 pt-5 pt-md-0 text-center text-md-start">
+    <footer class="bgLeft container mx-auto mt-5 pt-5 pt-md-0 text-start">
         <div class="row">
             <div class="col-md-3">
                 <img src="assets/img/logoFkp.svg" alt="">
                 <p class="fw-600 mt-4">Muda Berkompetisi, Berkolaborasi & Berkontribusi</p>
-                <div class="mt-3 fz-14">FKP, 2022 Allright reserved</div>
+                <div class="mt-3 fz-14 d-none d-md-block">FKP, 2022 Allright reserved</div>
                 <img src="assets/img/arrowFooter.svg" class="position-absolute start-0 d-none d-md-block" alt="">
             </div>
-            <div class="col-md-3 fz-14">
+            <div class="col-5 col-md-3 fz-14">
                 <ul class="ps-0" style="list-style: none; line-height: 40px">
                     <li class="fw-600">Home</li>
                     <li>History</li>
@@ -1440,7 +1448,7 @@
                     <li>Activies</li>
                 </ul>
             </div>
-            <div class="col-md-3 fz-14">
+            <div class="col-5 col-md-3 fz-14">
                 <ul class="ps-0" style="list-style: none; line-height: 40px">
                     <li class="fw-600">Contact Us</li>
                     <li>+62 812 6909 7223</li>
@@ -1449,7 +1457,7 @@
                     <li>Komplek Departemen Keuangan C70, Kembangan Jakarta Barat, Indonesia 11610</li>
                 </ul>
             </div>
-            <div class="col-md-3 fz-14">
+            <div class="col-12 col-md-3 fz-14 text-center text-md-start">
                 <ul class="ps-0" style="list-style: none; line-height: 40px">
                     <li class="fw-600">Social Media</li>
                     <li>
@@ -1458,6 +1466,7 @@
                         <a href="#"><img src="assets/img/igFooter.svg" class="me-4" alt=""></a>
                     </li>
                 </ul>
+                <div class="mt-3 fz-14 d-block d-md-none">FKP, 2022 Allright reserved</div>
             </div>
         </div>
     </footer>

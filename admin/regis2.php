@@ -19,10 +19,12 @@ $TTL = $_POST['tempat'] . ", " . $newttl;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- font awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <!-- icon bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
     <!-- remixicon -->
@@ -37,10 +39,8 @@ $TTL = $_POST['tempat'] . ", " . $newttl;
 </head>
 
 <body>
-    <div class="container  ">
-
-
-        <div class="row ">
+    <div class="container">
+        <div class="row">
             <div class="col-lg-6 register">
                 <img src="../admin/assets/img/sign/sign-logo.png" class="sign-logo" alt="">
 
@@ -67,7 +67,7 @@ $TTL = $_POST['tempat'] . ", " . $newttl;
                                 $daerah = mysqli_query($koneksi, "SELECT * FROM provinces ORDER BY name ASC");
                                 while ($d = mysqli_fetch_array($daerah)) {
                                 ?>
-                                    <option value="<?php echo $d['id']; ?>"><?php echo $d['name']; ?></option>
+                                <option value="<?php echo $d['id']; ?>"><?php echo $d['name']; ?></option>
                                 <?php
                                 }
                                 ?>
@@ -85,7 +85,8 @@ $TTL = $_POST['tempat'] . ", " . $newttl;
                         <div class="col-md-11 col-sm-11 col-lg-11 col-12">
                             <label for="exampleInputPassword" class="form-label mt-1 fw-bold">Alamat</label>
 
-                            <input type="alamat" class="form-control form-lebih" aria-label="alamat" aria-describedby="button-addon2" id="alamat" name="alamat" />
+                            <input type="alamat" class="form-control form-lebih" aria-label="alamat"
+                                aria-describedby="button-addon2" id="alamat" name="alamat" />
                         </div>
 
                     </div>
@@ -93,10 +94,10 @@ $TTL = $_POST['tempat'] . ", " . $newttl;
                         <div class="col-md-11 col-sm-11 col-lg-11 col-12">
                             <label for="exampleInputPassword" class="form-label mt-1 fw-bold">Alasan Bergabung
                                 Fkp</label>
-
-                            <input type="alasan" class="form-control form-lebih" aria-label="alasan" aria-describedby="button-addon2" id="alasan" name="alasan" />
+                            <textarea type="alasan" class="form-control form-lebih" aria-label="alasan"
+                                aria-describedby="button-addon2" id="alasan" name="alasan"
+                                placeholder="Alasan"></textarea>
                         </div>
-
                     </div>
                     <div class="d-flex">
 
@@ -110,7 +111,9 @@ $TTL = $_POST['tempat'] . ", " . $newttl;
                                 </label>
                             </div>
                             <small>
-                                <p class="pt-4 mt-3 ms-2">*max ukurun file 2mb dan ukuran resolusi photo 4x4</p>
+                                <p class="pt-4 mt-3 ms-2" id="max">*max ukurun file 2mb dan ukuran resolusi photo 4x4
+                                </p>
+                                <p class="pt-4 mt-3 ms-2" id="file-name"></p>
                             </small>
 
                         </div>
@@ -129,8 +132,9 @@ $TTL = $_POST['tempat'] . ", " . $newttl;
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 pt-3">
-
-                        <button type="submit" class="btn btn-danger fw-bold  me-5" style="border-radius: 10px; width:100px; font-size:14px; height:40px;">Daftar</button>
+                        <button type="submit" class="btn btn-danger fw-bold  me-5"
+                            style="border-radius: 10px; width:100px; font-size:14px; height:40px;"
+                            id="submit">Daftar</button>
                     </div>
                     <div class="col-lg-6 col-md-6 mt-2">
                         <small>
@@ -173,7 +177,8 @@ $TTL = $_POST['tempat'] . ", " . $newttl;
     <div class="container-fluid">
         <div class="row ">
             <div class="kanan">
-                <img src="../admin/assets/img/sign/back.svg" class="bg-kanan d-flex-justify-content-end align-items-end   " alt="">
+                <img src="../admin/assets/img/sign/back.svg"
+                    class="bg-kanan d-flex-justify-content-end align-items-end   " alt="">
                 <img src="../admin/assets/img/sign/founder.svg" class="people" alt="">
 
             </div>
@@ -181,53 +186,86 @@ $TTL = $_POST['tempat'] . ", " . $newttl;
     </div>
 
 
-    <!-- pw -->
     <script>
-        const file = document.querySelector('#file');
-        file.addEventListener('change', (e) => {
-            // Get the selected file
-            const [file] = e.target.files;
-            // Get the file name and size
-            const {
-                name: fileName,
-                size
-            } = file;
+    const file = document.querySelector('#file');
+    file.addEventListener('change', (e) => {
+        // Get the selected file
+        const [file] = e.target.files;
+        // Get the file name and size
+        const {
+            name: fileName,
+            size
+        } = file;
+
+        const allowedExt = ["png", "jpg", "svg", "jpeg"];
+
+        const myArray = fileName.split(".");
+        let ext = myArray[myArray.length - 1];
+
+        if (allowedExt.includes(ext)) {
             // Convert size in bytes to kilo bytes
             const fileSize = (size / 1000).toFixed(2);
             // Set the text content
             const fileNameAndSize = `${fileName} - ${fileSize}KB`;
-            document.querySelector('.file-name').textContent = fileNameAndSize;
-        });
+            document.querySelector('#max').innerHTML = fileNameAndSize;
+            document.getElementById("submit").disabled = false;
+        } else {
+            document.querySelector('#max').innerHTML = "File harus berupa foto";
+            document.getElementById("submit").disabled = true;
+        }
+    });
     </script>
+
+    <!-- preview -->
     <script>
-        var loadFoto = function(event) {
-            var output = document.getElementById('foto');
-            var icon = document.getElementById('tambah');
-            icon.style.display = "none";
-            output.style.display = "block";
+    var loadFoto = function(event) {
+        var output = document.getElementById('foto');
+        var icon = document.getElementById('tambah');
+        icon.style.display = "none";
+        output.style.display = "block";
 
-            output.src = URL.createObjectURL(event.target.files[0]);
-            output.onload = function() {
-                URL.revokeObjectURL(output.src) // free memory
-            }
-        };
-        var loadKTP = function(event) {
-            var output = document.getElementById('ktp');
-            var icon = document.getElementById('tambah2');
-            icon.style.display = "none";
-            output.style.display = "block";
+        output.src = URL.createObjectURL(event.target.files[0]);
+        output.onload = function() {
+            URL.revokeObjectURL(output.src) // free memory
+        }
+    };
+    var loadKTP = function(event) {
+        var output = document.getElementById('ktp');
+        var icon = document.getElementById('tambah2');
+        icon.style.display = "none";
+        output.style.display = "block";
 
-            output.src = URL.createObjectURL(event.target.files[0]);
-            output.onload = function() {
-                URL.revokeObjectURL(output.src) // free memory
-            }
-        };
+        output.src = URL.createObjectURL(event.target.files[0]);
+        output.onload = function() {
+            URL.revokeObjectURL(output.src) // free memory
+        }
+    };
+    </script>
+
+    <!-- Get Daerah -->
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('body').on("change", "#provinsi", function() {
+            var id = $(this).val();
+            var data = "id=" + id + "&data=kabupaten";
+            $.ajax({
+                type: 'POST',
+                url: "/server/get-daerah.php",
+                data: data,
+                success: function(hasil) {
+                    $("#form_kab").html(hasil);
+
+                }
+            });
+        });
+    });
     </script>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
@@ -235,29 +273,6 @@ $TTL = $_POST['tempat'] . ", " . $newttl;
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
-    <script type="text/javascript">
-        $(document).ready(function() {
-
-            // sembunyikan form kabupaten, kecamatan dan desa
-
-
-            // ambil data kabupaten ketika data memilih provinsi
-            $('body').on("change", "#provinsi", function() {
-                var id = $(this).val();
-                var data = "id=" + id + "&data=kabupaten";
-                $.ajax({
-                    type: 'POST',
-                    url: "/server/get-daerah.php",
-                    data: data,
-                    success: function(hasil) {
-                        $("#form_kab").html(hasil);
-
-                    }
-                });
-            });
-
-        });
-    </script>
 </body>
 
 </html>
