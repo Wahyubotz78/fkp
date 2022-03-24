@@ -17,6 +17,13 @@ if (isset($_GET['key'])) {
             $a = "";
     }
 }
+if($_SESSION['role'] == '0'){
+    header('location:anggota/index.php');
+}elseif($_SESSION['role'] == '1'){
+    header('location:pengurus/index.php');
+}else{
+
+}
 ?>
 <!doctype html>
 <html lang="en">
@@ -27,48 +34,48 @@ if (isset($_GET['key'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- font awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <!-- icon bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
     <!-- remixicon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../admin/assets/css/style-sign.css?<?php echo time() ?>">
+    <link rel="stylesheet" href="../admin/assets/css/style-signup.css?<?php echo time() ?>">
+    <link rel="icon" type="image/" href="../assets/img/logoFkp.svg">
 
     <title>Login </title>
 </head>
 
 <body>
-    <div class="container  ">
-        <div class="row pb-5">
-            <div class="col-md-6 pt-3">
-                <a href=""><img src="../admin/assets/img/sign/sign-logo.png" alt=""></a>
-            </div>
-            <div class="col-md-6">
-                <img src="../admin/assets/img/sign/sign-bg-img.png" class=" sign-background" alt="">
-            </div>
-        </div>
-
-        <div class="row pt-3">
-            <div class="col-md-6">
-                <h2 class="fw-bold">Login FKP </h2>
+    <div class="container">
+        <div class="row row-responsive">
+            <div class="col-12 col-xl-6 register px-3 px-xl-0">
+                <a href="../index.php"><img src="../admin/assets/img/sign/sign-logo.png" class="mt-4" alt=""></a>
+                <h2 class="fw-bold pt-5 mt-2">Login FKP </h2>
                 <h6>Masuk dengan akun FKP-mu</h6>
                 <form class="mt-5" action="/server/login.php" method="post">
-                    <div class="col-md-12  col-lg-8 col-xs-6  mb-3">
+                    <div class="col-12 col-xl-8">
                         <label for="exampleInputEmail1" class="form-label fw-bold">Email</label>
-                        <input type="email" class="form-control f-14" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" required="true">
+                        <input type="email" class="form-control f-14" id="exampleInputEmail1"
+                            aria-describedby="emailHelp" name="email" required="true">
                     </div>
-                    <div class="col-md-12  col-lg-8 col-xs-6  pt-2">
+                    <div class="col-12 col-xl-8 mt-4">
                         <label for="exampleInputPassword1" class="form-label fw-bold">Sandi</label>
-                        <i class="position-icon  d-flex justify-content-end me-3 " onclick="password_show_hide();">
-                            <i class="fas fa-eye" id="show_eye"></i>
-                            <i class="fas fa-eye-slash d-none" id="hide_eye"></i>
-                        </i>
-                        <input name="password" type="password" value="" class="input form-control f-14" id="password" required="true" aria-label="password" aria-describedby="basic-addon1" />
+                        <div class="position-relative">
+                            <i class="position-icon position-absolute top-cus d-flex justify-content-end me-3"
+                                onclick="password_show_hide();">
+                                <i class="fas fa-eye" id="show_eye"></i>
+                                <i class="fas fa-eye-slash d-none" id="hide_eye"></i>
+                            </i>
+                            <input name="password" type="password" value="" class="input form-control f-14 mt-3"
+                                id="password" required="true" aria-label="password" aria-describedby="basic-addon1" />
+                        </div>
                     </div>
                     <div class="col-md-12 pt-5 ">
                         <button type="submit" class="btn btn-danger  me-5">Login</button>
@@ -81,45 +88,20 @@ if (isset($_GET['key'])) {
                     </div>
                 </form>
             </div>
-            <div class="col-md-6  ">
-                <div class="text ms-5">
-                    <h1 class="ms-5 text-light fw-bold f-48">Selamat datang kembali </h1>
-                    <h6 class="ms-5 ps-5 mt-4 text-light">Bersama kita wujudkan Muda Berkompetisi, Berkolaborasi &
-                        Berkontribusi</h6>
-                </div>
-            </div>
-        </div>
-        <div class="row social">
-            <div class="col-md-12  ">
-                <div class="d-flex justify-content-end">
-                    <h6 class="text-light me-4 ">Social Media</h6>
-                </div>
-            </div>
-        </div>
-        <div class="row social">
-            <div class="col-md-12  ">
-                <div class="d-flex justify-content-end">
-                    <a href=""><img src="../admin/assets/img/sign/fb.png" alt=""></a>
-                    <a href=""><img src="../admin/assets/img/sign/yt.png" class="mx-4" alt=""></a>
-                    <a href=""><img src="../admin/assets/img/sign/ig.png" alt=""></a>
-                </div>
+            <div class="bgRegister d-none d-xl-flex col-xl-6 h-100 position-fixed top-0 bottom-0 end-0">
+                <img src="../admin/assets/img/sign/back2.svg"
+                    class="bg-kanan d-flex-justify-content-end align-items-end position-absolute end-0" alt="">
+                <img src="../admin/assets/img/sign/founder.svg" class="people" alt="">
             </div>
         </div>
     </div>
-    <!-- pw -->
+
+
+
     <script src="../admin/assets/js/sign/pw.js"></script>
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
 </body>
 
 </html>

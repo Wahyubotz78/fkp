@@ -34,16 +34,15 @@ $TTL = $_POST['tempat'] . ", " . $newttl;
     <link rel="stylesheet" href="../admin/assets/css/style-signup.css?<?php echo time() ?>">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <link rel="icon" type="image/" href="../assets/img/logoFkp.svg">
     <title>Register </title>
 </head>
 
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6 register">
-                <img src="../admin/assets/img/sign/sign-logo.png" class="sign-logo" alt="">
-
+        <div class="row row-responsive">
+            <div class="col-12 col-xl-6 register px-3 px-xl-0">
+                <a href="../index.php"><img src="../admin/assets/img/sign/sign-logo.png" class="mt-4" alt=""></a>
                 <h2 class="fw-bold registext pt-5 mt-2">Register FKP </h2>
                 <h6>Buat akunmu dan jadilah member FKP</h6>
                 <form class="mt-5" action="../server/register.php" method="post" enctype="multipart/form-data">
@@ -58,8 +57,8 @@ $TTL = $_POST['tempat'] . ", " . $newttl;
                         <input type="hidden" value="<?= $_POST['ig'] ?>" name="ig">
                         <input type="hidden" value="<?= $_POST['nomer'] ?>" name="nomer">
                     </div>
-                    <div class="d-flex flex-wrap ">
-                        <div class="col-md-5 col-sm-5 col-lg-5 col-12 mb-lg-4">
+                    <div class="d-flex flex-wrap row">
+                        <div class="col-12 col-xl-5 mt-4">
                             <label for="nama" class="form-label fw-bold">DPW (Provinsi)</label>
                             <select name="provinsi" class="form-control form-control-signup f-14" id="provinsi">
                                 <option value="">Provinsi</option>
@@ -73,7 +72,8 @@ $TTL = $_POST['tempat'] . ", " . $newttl;
                                 ?>
                             </select>
                         </div>
-                        <div class="col-md-5 col-sm-5 col-lg-5 col-12 ms-lg-5 ms-sm-5  mb-lg-4">
+
+                        <div class="col-12 col-xl-5 ms-xl-5 mt-4">
                             <label for="exampleInputEmail1" class="form-label fw-bold">DPD (Kota/Kab)</label>
 
                             <select name="kota" class="form-control f-14" id="form_kab">
@@ -81,29 +81,25 @@ $TTL = $_POST['tempat'] . ", " . $newttl;
                             </select>
                         </div>
                     </div>
-                    <div class="d-flex flex-wrap ">
-                        <div class="col-md-11 col-sm-11 col-lg-11 col-12">
-                            <label for="exampleInputPassword" class="form-label mt-1 fw-bold">Alamat</label>
-
-                            <input type="alamat" class="form-control form-lebih" aria-label="alamat"
-                                aria-describedby="button-addon2" id="alamat" name="alamat" />
+                    <div class="d-flex flex-wrap row">
+                        <div class="col-12 col-xl-11 mt-4">
+                            <label for="exampleInputPassword" class="form-label fw-bold">Alamat</label>
+                            <textarea type="text" class="form-control form-lebih" aria-label="alamat"
+                                aria-describedby="button-addon2" id="alamat" name="alamat"></textarea>
                         </div>
-
                     </div>
-                    <div class="d-flex flex-wrap mt-lg-3">
-                        <div class="col-md-11 col-sm-11 col-lg-11 col-12">
-                            <label for="exampleInputPassword" class="form-label mt-1 fw-bold">Alasan Bergabung
+                    <div class="d-flex flex-wrap row">
+                        <div class="col-12 col-xl-11 mt-4">
+                            <label for="exampleInputPassword" class="form-label fw-bold">Alasan Bergabung
                                 Fkp</label>
                             <textarea type="alasan" class="form-control form-lebih" aria-label="alasan"
-                                aria-describedby="button-addon2" id="alasan" name="alasan"
-                                placeholder="Alasan"></textarea>
+                                aria-describedby="button-addon2" id="alasan" name="alasan"></textarea>
                         </div>
                     </div>
-                    <div class="d-flex">
-
-                        <div class="col-lg-5 pt-4 d-flex">
+                    <div class="d-flex row">
+                        <div class="col-12 col-xl-5 pt-4 d-flex flex-column flex-xl-row">
                             <div class="file-input">
-                                <p class="fw-bold">Pas photo</p>
+                                <p class="fw-bold">Pas Foto</p>
                                 <input type="file" id="file" class="file" name="foto" onchange="loadFoto(event)">
                                 <label for="file" class="label-1">
                                     <img src="" id="foto" width="100px" height="100px" style="display: none;">
@@ -111,13 +107,13 @@ $TTL = $_POST['tempat'] . ", " . $newttl;
                                 </label>
                             </div>
                             <small>
-                                <p class="pt-4 mt-3 ms-2" id="max">*max ukurun file 2mb dan ukuran resolusi photo 4x4
+                                <p class="pt-xl-4 mt-xl-3 mt-2 ms-2" id="max">*max ukurun file 2mb dan ukuran resolusi
+                                    foto 4x4
                                 </p>
                                 <p class="pt-4 mt-3 ms-2" id="file-name"></p>
                             </small>
-
                         </div>
-                        <div class="col-lg-4 pt-4 ms-5 ">
+                        <div class="col-12 col-xl-4 pt-4 ms-xl-5">
                             <div class="file-input">
                                 <p class="fw-bold">KTP</p>
                                 <input type="file" id="file2" class="file" name="ktp" onchange="loadKTP(event)">
@@ -144,46 +140,43 @@ $TTL = $_POST['tempat'] . ", " . $newttl;
                     </div>
                 </form>
             </div>
-        </div>
-        <div class="text-kanan">
+            <!-- <div class="text-kanan">
             <div class="col-lg-6 col-xl-4 col-xxl-4 opening ms-5 ">
                 <h1 class="ms-1 text-light fw-bold f-48">Selamat datang kembali </h1>
                 <h6 class="ms-1 ps-3 mt-4 text-light">Bersama kita wujudkan Muda Berkompetisi, Berkolaborasi &
                     Berkontribusi</h6>
             </div>
-        </div>
+        </div> -->
 
-        <div class="social">
+            <!-- <div class="social">
 
-            <div class="row">
-                <div class="col-md-12  ">
-                    <div class="d-flex justify-content-end">
-                        <h6 class="text-light me-4">Social Media</h6>
+                <div class="row">
+                    <div class="col-md-12  ">
+                        <div class="d-flex justify-content-end">
+                            <h6 class="text-light me-4">Social Media</h6>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
+                <div class="row">
 
-                <div class="col-md-12 ">
-                    <div class="d-flex justify-content-end">
-                        <img src="../admin/assets/img/sign/fb.png" alt="">
-                        <img src="../admin/assets/img/sign/yt.png" class="mx-4" alt="">
-                        <img src="../admin/assets/img/sign/ig.png" alt="">
+                    <div class="col-md-12 ">
+                        <div class="d-flex justify-content-end">
+                            <img src="../admin/assets/img/sign/fb.png" alt="">
+                            <img src="../admin/assets/img/sign/yt.png" class="mx-4" alt="">
+                            <img src="../admin/assets/img/sign/ig.png" alt="">
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid">
-        <div class="row ">
-            <div class="kanan">
-                <img src="../admin/assets/img/sign/back.svg"
-                    class="bg-kanan d-flex-justify-content-end align-items-end   " alt="">
+            </div> -->
+            <div class="bgRegister d-none d-xl-flex col-xl-6 h-100 position-fixed top-0 bottom-0 end-0">
+                <img src="../admin/assets/img/sign/back2.svg"
+                    class="bg-kanan d-flex-justify-content-end align-items-end position-absolute end-0" alt="">
+                <!-- <img src="../admin/assets/img/star.png" class="star" alt=""> -->
                 <img src="../admin/assets/img/sign/founder.svg" class="people" alt="">
-
             </div>
         </div>
     </div>
+
 
 
     <script>

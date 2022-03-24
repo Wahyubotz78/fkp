@@ -75,6 +75,14 @@ session_start();
                         <span class="nav-link-text ms-1">User</span>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="pesan.php">
+                        <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">list</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Pesan</span>
+                    </a>
+                </li>
             </ul>
         </div>
     </aside>
@@ -229,18 +237,18 @@ session_start();
                         <div class="card-header p-3 pt-2">
                             <div
                                 class="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
-                                <i class="material-icons opacity-10">paid</i>
+                                <i class="material-icons opacity-10">person</i>
                             </div>
                             <div class="text-end pt-1">
-                                <p class="text-sm mb-0 text-capitalize">Egpay Balance</p>
+                                <p class="text-sm mb-0 text-capitalize">Fkp User</p>
                                 <h4 class="mb-0">
-                                    20K
+                                    100
                                 </h4>
                             </div>
                         </div>
                         <hr class="dark horizontal my-0" />
                         <div class="card-footer p-3">
-                            <p class="mb-0">Easy Pay With Egpay</p>
+                            <p class="mb-0">Jumlah Anggota</p>
                         </div>
                     </div>
                 </div>
@@ -249,16 +257,16 @@ session_start();
                         <div class="card-header p-3 pt-2">
                             <div
                                 class="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
-                                <i class="material-icons opacity-10">money</i>
+                                <i class="material-icons opacity-10">newspaper</i>
                             </div>
                             <div class="text-end pt-1">
-                                <p class="text-sm mb-0 text-capitalize">Smile Balance</p>
+                                <p class="text-sm mb-0 text-capitalize">Fkp News</p>
                                 <h4 class="mb-0">30</h4>
                             </div>
                         </div>
                         <hr class="dark horizontal my-0" />
                         <div class="card-footer p-3">
-                            <p class="mb-0">Dont Forget To Buy</p>
+                            <p class="mb-0">Jumlah Berita</p>
                         </div>
                     </div>
                 </div>
@@ -270,13 +278,13 @@ session_start();
                                 <i class="material-icons opacity-10">favorite</i>
                             </div>
                             <div class="text-end pt-1">
-                                <p class="text-sm mb-0 text-capitalize">Success Order</p>
+                                <p class="text-sm mb-0 text-capitalize">Visitor</p>
                                 <h4 class="mb-0">3,462</h4>
                             </div>
                         </div>
                         <hr class="dark horizontal my-0" />
                         <div class="card-footer p-3">
-                            <p class="mb-0">Good Order With Us</p>
+                            <p class="mb-0">Jumlah Pengunjung</p>
                         </div>
                     </div>
                 </div>
@@ -288,13 +296,13 @@ session_start();
                                 <i class="material-icons opacity-10">weekend</i>
                             </div>
                             <div class="text-end pt-1">
-                                <p class="text-sm mb-0 text-capitalize">Pending Egpay</p>
-                                <h4 class="mb-0">100K</h4>
+                                <p class="text-sm mb-0 text-capitalize">Pending User</p>
+                                <h4 class="mb-0">100</h4>
                             </div>
                         </div>
                         <hr class="dark horizontal my-0" />
                         <div class="card-footer p-3">
-                            <p class="mb-0">H+3 To Move</p>
+                            <p class="mb-0">User belum bayar</p>
                         </div>
                     </div>
                 </div>
@@ -355,7 +363,7 @@ session_start();
                             style="width: 100px; top:50px; right: 30px;" class="position-absolute">
                         <div class="position-absolute" style="top:200px; right:20px">
                             <h6 class="text-light mb-0" style="font-weight: 600;"><?= $data['nama'] ?></h6>
-                            <span class="text-light text-sm">Sekertaris Wilayah</span>
+                            <span class="text-light text-sm">Tasikmalaya , Jawabarat</span>
                         </div>
                     </div>
                     <?php } else { ?>
@@ -367,7 +375,7 @@ session_start();
                             style="width: 100px; top:50px; right: 30px;" class="position-absolute">
                         <div class="position-absolute" style="top:200px; right:20px">
                             <h6 class="text-light mb-0" style="font-weight: 600;">Eka Agus S</h6>
-                            <span class="text-light text-sm">Sekertaris Wilayah</span>
+                            <span class="text-light text-sm">Tasikmalaya , Jawabarat</span>
                         </div>
                         <div class="foot-member position-absolute" style="bottom: -160px; right:25px;">
                             <h2 class="text-light mb-0" style="font-weight: 700;">DPW</h2>

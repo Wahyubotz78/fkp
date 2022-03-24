@@ -37,6 +37,18 @@ a {
   font-size: 13px;
 }
 
+.fz-12 {
+  font-size: 12px;
+}
+
+.fz-11 {
+  font-size: 11px;
+}
+
+.fz-10 {
+  font-size: 10px;
+}
+
 .fw-500 {
   font-weight: 500;
 }
@@ -66,17 +78,6 @@ section {
 #dynamic {
   width: 100%;
 }
-
-/* .active-menu {
-  display: flex;
-  padding-bottom: 3px;
-  background: linear-gradient(to left, #dd4c44 34.68%, #e37901 115.3%);
-  background-size: 50px 3px;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  font-weight: 600;
-  color: #000;
-} */
 
 .active {
   border-bottom: 3px solid #dd4c44;
@@ -172,7 +173,7 @@ input[type="checkbox"] {
   display: none;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
   nav .menu-btn i {
     display: block;
   }
@@ -731,8 +732,14 @@ input[type="checkbox"] {
 /* Merchandise */
 .decorMerchan {
   width: 13rem;
-  top: 24%;
-  right: 38%;
+  top: 18%;
+  right: 42%;
+}
+
+@media(max-width: 991px) {
+  .decorMerchan {
+    right: 40%;
+  }
 }
 
 @media(max-width: 1199px) {
@@ -794,13 +801,13 @@ input[type="checkbox"] {
 
 .decorNews {
   width: 7rem;
-  top: 17%;
+  top: 14%;
   right: 46%;
 }
 
 @media(max-width: 1199px) {
   .decorNews {
-    top: 11%;
+    top: 10%;
     right: 46%;
   }
 }
@@ -840,30 +847,6 @@ input[type="checkbox"] {
   }
 }
 
-/* @media (max-width: 400px) {
-  .btn-activies {
-    top: -20%;
-  }
-}
-
-@media (max-width: 346px) {
-  .btn-activies {
-    top: -50%;
-  }
-}
-
-@media (max-width: 296px) {
-  .btn-activies {
-    top: -70%;
-  }
-}
-
-@media (max-width: 250px) {
-  .btn-activies {
-    top: -90%;
-  }
-} */
-
 /* Contact Us */
 .bg-abu {
   background-color: #f9f9fb;
@@ -878,3 +861,33 @@ input[type="checkbox"] {
   top: 26%;
   right: 44%;
 }
+
+/* Pilih Merchan */
+.form-control {
+  background-color: #f3f3f4 !important;
+  border-radius: 10px !important;
+  border-color: transparent !important;
+  height: 40px !important;
+  z-index: 99999999 !important;
+}
+
+.bg-biru {
+  background-color: #3C5190;
+  height: 100%;
+}
+
+.bg-abuMerchan {
+  background-color: #E5E5E5;
+}
+
+/* .rightProduct {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media(max-width: 1046px) {
+  .rightProduct {
+    display: none;
+  }
+} */

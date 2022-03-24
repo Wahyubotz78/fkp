@@ -252,6 +252,8 @@ session_start();
                     if (isset($_SESSION['memberid'])) {
                         $memberid = $_SESSION['memberid'];
                         $data = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT * FROM user WHERE memberid = '$memberid'"));
+                        $provinsi = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT * FROM provinces WHERE id = '$data[provinsi]'"))['name'];
+                        $kota = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT * FROM regencies WHERE id = '$data[kota]'"))['name'];
                     ?>
                     <div class="img-wrapper h-100 position-relative">
                         <img src="../assets/img/card-member.jpeg" alt="card-member" class="w-100 position-absolute">
@@ -262,7 +264,9 @@ session_start();
                             style="width: 100px; top:50px; right: 30px;" class="position-absolute">
                         <div class="position-absolute" style="top:200px; right:20px">
                             <h6 class="text-light mb-0" style="font-weight: 600;"><?= $data['nama'] ?></h6>
-                            <span class="text-light text-sm">Sekertaris Wilayah</span>
+                            <span class="text-light text-sm"><?= $provinsi ?> /</span>
+                            <br>
+                            <span class="text-light text-sm"><?= $kota ?></span>
                         </div>
                     </div>
                     <?php } else { ?>

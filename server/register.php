@@ -1,7 +1,7 @@
 <?php
 include "koneksi.php";
 
-$memberid = rand(1,9999);
+$memberid = "FKP-".rand();
 $email = $_POST['email'];
 $password = $_POST['password'];
 $nama = $_POST['nama'];

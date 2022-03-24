@@ -1,58 +1,101 @@
 /* ALL */
-body{
+body {
     font-family: 'Poppins', sans-serif;
-   
     overflow-x: hidden;
 }
+
 /* Font-size */
-.f-48{
+.f-48 {
     font-size: 48px;
 }
-.f-14{
+
+.f-14 {
     font-size: 14px;
 }
+
 /* SIgn in  */
-.sign-background{
+.sign-background {
     position: absolute;
-    z-index: -9;  
+    z-index: -9;
     margin-top: -60px;
     margin-left: -60px;
 }
-.position-icon{
+
+.position-icon {
     margin-bottom: -25px;
 
 }
-.form-control{
+
+.form-control {
     background-color: #f3f3f4;
     border-radius: 10px;
     border-color: transparent;
-    height: 40px;  
+    height: 40px;
 }
 
 /* Responsive */
 @media only screen and (max-width: 991px) {
-    .sign-background{
-        display: none;
-    } 
-    .people-img{
-        display: none;
-    }  
-    .opening{
+    .sign-background {
         display: none;
     }
-    .form-control{
-       background-color: #f3f3f4;
-       border-radius: 10px;
-       border-color: transparent; 
-       height: 40px;
 
-   }
-   .text{
-       display: none;
-   }
-   .social{
-       display: none;
-       background-color: red;
+    .people-img {
+        display: none;
+    }
 
-   }
+    .opening {
+        display: none;
+    }
+
+    .form-control {
+        background-color: #f3f3f4;
+        border-radius: 10px;
+        border-color: transparent;
+        height: 40px;
+
+    }
+
+    .text {
+        display: none;
+    }
+
+    .social {
+        display: none;
+        background-color: red;
+
+    }
+}
+
+.row-responsive {
+    display: flex;
+    justify-content: start;
+}
+
+.bgRegister {
+    z-index: -999;
+}
+
+@media(min-height: 769px) {
+    .bgRegister {
+        margin-right: -150px;
+    }
+}
+
+
+@media(max-width: 1199px) {
+    .row-responsive {
+        justify-content: center;
+        padding: 0 20px;
+    }
+
+    .col-Ttl {
+        margin-top: -20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .col-Ttl {
+        margin-top: 1.5rem;
+    }
 }

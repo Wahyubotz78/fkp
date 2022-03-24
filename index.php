@@ -1,3 +1,40 @@
+<?php
+include('server/koneksi.php');
+
+function tanggal($data)
+{
+    $tanggal = explode(" ", $data);
+    $date = date("d-m-Y", strtotime($tanggal[0]));
+    $date = str_replace("-", "/", $date);
+    $hasil = $date . ", " . $tanggal[1];
+    return $hasil;
+}
+
+if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+    $ip = $_SERVER['HTTP_CLIENT_IP'];
+}
+//whether ip is from proxy
+elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+    $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+}
+//whether ip is from remote address
+else {
+    $ip = $_SERVER['REMOTE_ADDR'];
+}
+$date = date("Y-m-d");
+
+$check = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT * FROM viewer WHERE ip = '$ip' ORDER BY id DESC"));
+if ($ip == $check['ip']) {
+    if ($date != $check['tanggal']) {
+        mysqli_query($koneksi, "INSERT INTO viewer (ip, tanggal) VALUES ('$ip', '$date')");
+    }
+} else {
+    mysqli_query($koneksi, "INSERT INTO viewer (ip, tanggal) VALUES ('$ip', '$date')");
+}
+
+$viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,6 +51,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="icon" type="image/" href="assets/img/logoFkp.svg">
 </head>
 
 <body>
@@ -58,7 +96,8 @@
     <section id="history" class="bgRight mx-auto position-relative">
         <div class="container">
             <h3 class="fw-700 text-center bgDecor">Our History</h3>
-            <img src="assets/img/decorHero.svg" alt="" class="position-absolute decorHistory d-none d-md-flex">
+            <img src="assets/img/decorHero.svg" alt=""
+                class="position-absolute decorHistory d-none d-md-flex d-xxl-none">
             <div class="">
                 <!-- <img src="assets/img/imgHistoryRight.svg" class="imgHistoryRight position-absolute end-0" alt=""> -->
             </div>
@@ -222,8 +261,8 @@
     <!-- Organization Values -->
     <section id="organization" class="bgLeft mx-auto text-center position-relative">
         <div class="container">
-            <img src="assets/img/decorOrganization.svg" class="position-absolute decorOrganization  d-none d-md-block"
-                alt="">
+            <img src="assets/img/decorOrganization.svg"
+                class="position-absolute decorOrganization  d-none d-md-block d-xxl-none" alt="">
             <h3 class="fw-700 text-center">Our Organization Values</h3>
             <div class="d-flex align-items-center justify-content-center mb-5">
                 <img src="assets/img/arrowLeft.svg" class="arrowOrganization position-absolute start-0" alt="">
@@ -340,7 +379,8 @@
 
     <!-- Structure -->
     <section id="structure" class="bgLeft container mx-auto position-relative">
-        <img src="assets/img/decorOrganization.svg" class="position-absolute decorStructure d-none d-md-block" alt="">
+        <img src="assets/img/decorOrganization.svg"
+            class="position-absolute decorStructure d-none d-md-block d-xxl-none" alt="">
         <h3 class="fw-700 text-center">Our Structure</h3>
         <div class="row d-flex justify-content-center text-center">
             <div class="col-12 col-md-10">
@@ -807,8 +847,8 @@
         <div class="container">
             <img src="assets/img/imgProgramLeft.svg" class="position-absolute imgProgramLeft" alt="">
             <img src="assets/img/imgProgramRight.svg" class="position-absolute imgProgramRight" alt="">
-            <img src="assets/img/decorOrganization.svg" class="position-absolute decorPrograms d-none d-md-block"
-                alt="">
+            <img src="assets/img/decorOrganization.svg"
+                class="position-absolute decorPrograms d-none d-md-block d-xxl-none" alt="">
             <h3 class="fw-700 text-center">Our Programs</h3>
             <div class="row mt-5 pt-5 gap-1 d-flex justify-content-center d-none d-md-flex">
                 <img src="assets/img/bgGarisProgram.svg" alt="" class="position-absolute w-100 start-0 end-0">
@@ -1135,28 +1175,35 @@
     </section>
 
     <!-- Merchandise -->
-    <section id="program" class="bgLeft mx-auto position-relative mb-5 pb-5">
+    <section id="merchan" class="bgLeft mx-auto position-relative mb-5 pb-5">
         <div class="container text-center">
             <img src="assets/img/imgMerchanLeft.svg" class="position-absolute imgMerchanLeft" alt="">
             <img src="assets/img/imgMerchanRight.svg" class="position-absolute imgMerchanRight" alt="">
-            <img src="assets/img/decorOrganization.svg" class="position-absolute decorMerchan d-none d-md-block" alt="">
+            <img src="assets/img/decorOrganization.svg"
+                class="position-absolute decorMerchan d-none d-md-block d-xxl-none" alt="">
             <h3 class="fw-700 text-center mb-5">Our Merchandise</h3>
             <img src="assets/img/garisHistory.svg" alt="">
             <div class="row mt-5 pt-5 gap-1 d-flex justify-content-center d-none d-md-flex">
                 <div class="col-md-4 col-xl-3 position-relative mb-5 pb-5">
-                    <div class="merchanCard p-3">
-                        <img src="assets/img/merchan1.svg" alt="" class="imgMerchan object-cover">
-                    </div>
+                    <a href="pilihMerchan.php">
+                        <div class="merchanCard p-3">
+                            <img src="assets/img/merchan1.svg" alt="" class="imgMerchan object-cover">
+                        </div>
+                    </a>
                 </div>
                 <div class="col-md-4 col-xl-3 position-relative mb-5 pb-5">
-                    <div class="merchanCard p-3">
-                        <img src="assets/img/merchan2.svg" alt="" class="imgMerchan object-cover">
-                    </div>
+                    <a href="pilihMerchan.php">
+                        <div class="merchanCard p-3">
+                            <img src="assets/img/merchan2.svg" alt="" class="imgMerchan object-cover">
+                        </div>
+                    </a>
                 </div>
                 <div class="col-md-4 col-xl-3 position-relative mb-5 pb-5">
-                    <div class="merchanCard p-3">
-                        <img src="assets/img/merchan3.svg" alt="" class="imgMerchan object-cover">
-                    </div>
+                    <a href="pilihMerchan.php">
+                        <div class="merchanCard p-3">
+                            <img src="assets/img/merchan3.svg" alt="" class="imgMerchan object-cover">
+                        </div>
+                    </a>
                 </div>
             </div>
             <div class="row mt-5 pt-5 pb-5 mb-5 gap-1 d-flex justify-content-center d-block d-md-none">
@@ -1172,24 +1219,30 @@
 
                     <div class="carousel-inner">
                         <div class="carousel-item pb-5 active">
-                            <div class="merchanCard p-3">
-                                <img src="assets/img/merchan1.svg" alt="" class="imgMerchan object-cover">
-                            </div>
+                            <a href="pilihMerchan.php">
+                                <div class="merchanCard p-3">
+                                    <img src="assets/img/merchan1.svg" alt="" class="imgMerchan object-cover">
+                                </div>
+                            </a>
                         </div>
                         <div class="carousel-item pb-5">
-                            <div class="merchanCard p-3">
-                                <img src="assets/img/merchan2.svg" alt="" class="imgMerchan object-cover">
-                            </div>
+                            <a href="pilihMerchan.php">
+                                <div class="merchanCard p-3">
+                                    <img src="assets/img/merchan2.svg" alt="" class="imgMerchan object-cover">
+                                </div>
+                            </a>
                         </div>
                         <div class="carousel-item pb-5">
-                            <div class="merchanCard p-3">
-                                <img src="assets/img/merchan3.svg" alt="" class="imgMerchan object-cover">
-                            </div>
+                            <a href="pilihMerchan.php">
+                                <div class="merchanCard p-3">
+                                    <img src="assets/img/merchan3.svg" alt="" class="imgMerchan object-cover">
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <button class="btn btn-danger">Beli Sekarang</button>
+            <a href="pilihMerchan.php" class="btn btn-danger">Beli Sekarang</a>
         </div>
     </section>
 
@@ -1255,7 +1308,8 @@
 
     <!-- News -->
     <section id="news" class="bgLeft mx-auto position-relative">
-        <img src="assets/img/decorOrganization.svg" class="position-absolute  decorNews d-none d-md-block" alt="">
+        <img src="assets/img/decorOrganization.svg" class="position-absolute decorNews d-none d-md-block d-xxl-none"
+            alt="">
         <div class="container">
             <h3 class="fw-700 text-center">News</h3>
             <img src="assets/img/imgNewsLeft.svg" class="imgNewsLeft position-absolute top-25 start-0 d-none d-md-flex"
@@ -1278,8 +1332,19 @@
                         <span class="scroll fw-600">scroll</span>
                     </a>
                 </div>
+                <?php
+                $news = mysqli_query($koneksi, "SELECT * FROM berita ORDER BY id DESC LIMIT 5");
+                $berita = mysqli_fetch_assoc($news);
+                $i = 0;
+                // foreach ($news as $b) {
+                //     if ($i != 0) {
+                //         var_dump($b);
+                //     }
+                //     $i++;
+                // }
+                ?>
                 <div class="col-xl-5 col-12 ps-0 ms-0">
-                    <p class="fz-14">Kompas.com - 08/03/2022, 07:00 WIB
+                    <p class="fz-14"><?= $berita['oleh'] ?> - <?= tanggal($berita['tanggal']) ?> WIB
                     </p>
                     <h4 class="fw-600">Menepis Pandangan Berbisnis yang Menyesatkan
                     </h4>
@@ -1296,6 +1361,10 @@
                     </a>
                 </div>
                 <div class="col-xl-6 col-12 ps-md-5 pt-5">
+                    <!-- <?php
+                            foreach ($news as $n) {
+                                if ($i != 0) {
+                            ?> -->
                     <div class="row mb-4 d-flex align-items-center">
                         <div class="col-12 col-md-4">
                             <img src="assets/img/newsList1.svg" alt="" class="newList">
@@ -1312,6 +1381,12 @@
                             </a>
                         </div>
                     </div>
+                    <!-- <?php
+                                } else {
+                                    $i++;
+                                }
+                            }
+                            ?> -->
                     <div class="row mb-4 d-flex align-items-center">
                         <div class="col-12 col-md-4">
                             <img src="assets/img/newsList1.svg" alt="" class="newList">
@@ -1367,7 +1442,8 @@
 
     <!-- Contact -->
     <section id="contact" class="bgRight mx-auto position-relative">
-        <img src="assets/img/decorOrganization.svg" class="position-absolute decorContact d-none d-md-block" alt="">
+        <img src="assets/img/decorOrganization.svg" class="position-absolute decorContact d-none d-md-block d-xxl-none"
+            alt="">
         <div class="container">
             <h3 class="fw-700 text-center">Contact Us</h3>
             <div class="row mt-5 pt-3">
@@ -1395,21 +1471,21 @@
                     </div>
                 </div>
                 <div class="col-md-6 mt-5">
-                    <form class="fz-14">
+                    <form class="fz-14" action="server/pesan.php" method="post">
                         <div class="mb-3">
                             <label for="text" class="form-label">Your Name</label>
                             <input style="background-color: #f9f9fb; border:none" type="text"
-                                class="form-control bg-abu" id="text" placeholder="Name">
+                                class="form-control bg-abu" id="text" name="nama" placeholder="Name">
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Your Email</label>
                             <input style="background-color: #f9f9fb; border:none" type="email"
-                                class="form-control bg-abu" id="email" placeholder="Email">
+                                class="form-control bg-abu" id="email" name="email" placeholder="Email">
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Messages</label>
                             <textarea style="background-color: #f9f9fb; border: none" class="form-control bg-abu"
-                                placeholder="Messages" id="floatingTextarea"></textarea>
+                                placeholder="Messages" name="pesan" id="floatingTextarea"></textarea>
                         </div>
                         <button type="submit" class="btn btn-danger float-end fz-14">Submit</button>
                     </form>

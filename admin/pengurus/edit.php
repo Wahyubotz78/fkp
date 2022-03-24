@@ -69,14 +69,6 @@ include "../../server/koneksi.php";
                         <span class="nav-link-text ms-1">User</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="pesan.php">
-                        <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="material-icons opacity-10">list</i>
-                        </div>
-                        <span class="nav-link-text ms-1">Pesan</span>
-                    </a>
-                </li>
             </ul>
         </div>
     </aside>
@@ -225,74 +217,64 @@ include "../../server/koneksi.php";
         </nav>
         <!-- End Navbar -->
         <div class="container-fluid py-4">
-
+            <?php
+            $id = $_GET['id'];
+            $data = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT * FROM user WHERE id = '$id'"));
+            ?>
             <div class="row">
                 <div class="col-lg-12 col-md-12 mb-md-0 mb-4">
                     <div class="card">
-                        <div class="table-responsive">
-                            <table class="table align-items-center mb-0">
-                                <thead>
-                                    <tr>
-                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Nama</th>
-                                        <th
-                                            class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                                            Daerah</th>
-                                        <th
-                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Role</th>
-                                        <th
-                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Nomor Anggota</th>
-                                        <th class="text-secondary opacity-7"></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                        $users = mysqli_query($koneksi, "SELECT * FROM user");
-                                        while ($user = mysqli_fetch_array($users)) {
-                                        if($user['role'] == '1'){
-                                            $role = 'Pengurus';
-                                        }else{
-                                            $role = 'Anggota';
-                                        }
-                                    ?>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex px-2 py-1">
-                                                <div>
-                                                    <img src="https://demos.creative-tim.com/test/material-dashboard-pro/assets/img/team-2.jpg"
-                                                        class="avatar avatar-sm me-3">
-                                                </div>
-                                                <div class="d-flex flex-column justify-content-center">
-                                                    <h6 class="mb-0 text-xs"><?= $user['nama'] ?></h6>
-                                                    <p class="text-xs text-secondary mb-0"><?= $user['email'] ?></p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p class="text-xs font-weight-bold mb-0"><?= $user['provinsi'] ?></p>
-                                            <p class="text-xs text-secondary mb-0"><?= $user['kota'] ?></p>
-                                        </td>
-                                        <td class="align-middle text-center text-sm">
-                                            <span
-                                                class="badge badge-sm badge-success bg-gradient-success"><?= $role ?></span>
-                                        </td>
-                                        <td class="align-middle text-center">
-                                            <span
-                                                class="text-secondary text-xs font-weight-normal"><?= $user['memberid'] ?></span>
-                                        </td>
-                                        <td class="align-middle">
-                                            <a href="edit.php?id=<?=$user['id']?>"
-                                                class="badge badge-sm bg-gradient-danger" data-toggle="tooltip"
-                                                data-original-title="Edit user">
-                                                Edit
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <?php } ?>
-                                </tbody>
-                            </table>
+                        <div class="card-body">
+                            <h6>Edit User</h6>
+                            <form action="#" method="POST">
+                                <div class="input-group input-group-outline my-3">
+                                    <input type="text" class="form-control" value="<?= $data['memberid'] ?>" disabled>
+                                </div>
+                                <div class="input-group input-group-outline my-2">
+                                    <input type="email" class="form-control" value="<?= $data['email'] ?>">
+                                </div>
+                                <div class="input-group input-group-outline my-2">
+                                    <input type="text" class="form-control" value="<?= $data['nama'] ?>">
+                                </div>
+                                <div class="input-group input-group-outline my-2">
+                                    <input type="text" class="form-control" value="<?= $data['nik'] ?>">
+                                </div>
+                                <div class="input-group input-group-outline my-2">
+                                    <input type="text" class="form-control" value="<?= $data['usia'] ?>">
+                                </div>
+                                <div class="input-group input-group-outline my-2">
+                                    <input type="text" class="form-control" value="<?= $data['ttl'] ?>">
+                                </div>
+                                <div class="input-group input-group-outline my-2">
+                                    <input type="text" class="form-control" value="<?= $data['alamat'] ?>">
+                                </div>
+                                <div class="input-group input-group-outline my-2">
+                                    <input type="text" class="form-control" value="<?= $data['nomer'] ?>">
+                                </div>
+                                <div class="input-group input-group-outline my-2">
+                                    <input type="text" class="form-control" value="<?= $data['ig'] ?>">
+                                </div>
+                                <div class="input-group input-group-outline my-2">
+                                    <input type="text" class="form-control" value="<?= $data['usaha'] ?>">
+                                </div>
+                                <div class="input-group input-group-outline my-3">
+                                    <input type="text" class="form-control" value="<?= $data['provinsi'] ?>" disabled>
+                                </div>
+                                <div class="input-group input-group-outline my-3">
+                                    <input type="text" class="form-control" value="<?= $data['kota'] ?>" disabled>
+                                </div>
+                                <div class="input-group input-group-outline my-3">
+                                    <input type="text" class="form-control" value="<?= $data['alasan'] ?>" disabled>
+                                </div>
+                                <div class="input-group input-group-outline mb-4">
+                                    <select class="form-control" id="exampleFormControlSelect1">
+                                        <option disabled>Anggota</option>
+                                        <option value="anggota">anggota</option>
+                                        <option value="pengurus">pengurus</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn bg-gradient-info">SUBMIT</button>
+                            </form>
                         </div>
                     </div>
                 </div>

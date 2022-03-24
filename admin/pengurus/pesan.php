@@ -62,7 +62,7 @@ include "../../server/koneksi.php";
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark active bg-gradient-info" href="user.php">
+                    <a class="nav-link text-dark " href="user.php">
                         <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="material-icons opacity-10">person</i>
                         </div>
@@ -70,7 +70,7 @@ include "../../server/koneksi.php";
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="pesan.php">
+                    <a class="nav-link text-dark active bg-gradient-info" href="pesan.php">
                         <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="material-icons opacity-10">list</i>
                         </div>
@@ -236,26 +236,14 @@ include "../../server/koneksi.php";
                                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                             Nama</th>
                                         <th
-                                            class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                                            Daerah</th>
-                                        <th
                                             class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Role</th>
-                                        <th
-                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Nomor Anggota</th>
-                                        <th class="text-secondary opacity-7"></th>
+                                            Pesan</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
-                                        $users = mysqli_query($koneksi, "SELECT * FROM user");
-                                        while ($user = mysqli_fetch_array($users)) {
-                                        if($user['role'] == '1'){
-                                            $role = 'Pengurus';
-                                        }else{
-                                            $role = 'Anggota';
-                                        }
+                                        $pesan = mysqli_query($koneksi, "SELECT * FROM pesan");
+                                        while ($msg = mysqli_fetch_array($pesan)) {
                                     ?>
                                     <tr>
                                         <td>
@@ -265,29 +253,13 @@ include "../../server/koneksi.php";
                                                         class="avatar avatar-sm me-3">
                                                 </div>
                                                 <div class="d-flex flex-column justify-content-center">
-                                                    <h6 class="mb-0 text-xs"><?= $user['nama'] ?></h6>
-                                                    <p class="text-xs text-secondary mb-0"><?= $user['email'] ?></p>
+                                                    <h6 class="mb-0 text-xs"><?= $msg['nama'] ?></h6>
+                                                    <p class="text-xs text-secondary mb-0"><?= $msg['email'] ?></p>
                                                 </div>
                                             </div>
                                         </td>
                                         <td>
-                                            <p class="text-xs font-weight-bold mb-0"><?= $user['provinsi'] ?></p>
-                                            <p class="text-xs text-secondary mb-0"><?= $user['kota'] ?></p>
-                                        </td>
-                                        <td class="align-middle text-center text-sm">
-                                            <span
-                                                class="badge badge-sm badge-success bg-gradient-success"><?= $role ?></span>
-                                        </td>
-                                        <td class="align-middle text-center">
-                                            <span
-                                                class="text-secondary text-xs font-weight-normal"><?= $user['memberid'] ?></span>
-                                        </td>
-                                        <td class="align-middle">
-                                            <a href="edit.php?id=<?=$user['id']?>"
-                                                class="badge badge-sm bg-gradient-danger" data-toggle="tooltip"
-                                                data-original-title="Edit user">
-                                                Edit
-                                            </a>
+                                            <p class="text-xs font-weight-light mb-0"><?= $msg['pesan'] ?></p>
                                         </td>
                                     </tr>
                                     <?php } ?>

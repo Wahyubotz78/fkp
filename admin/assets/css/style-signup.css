@@ -1,7 +1,7 @@
 /* ALL */
 body {
     font-family: 'Poppins', sans-serif;
-
+    overflow-x: hidden;
 
 }
 
@@ -27,7 +27,7 @@ form {
 }
 
 .kanan {
-    right: -300px;
+    /* right: -300px; */
     bottom: 0px;
     top: 0px;
     position: fixed;
@@ -37,7 +37,7 @@ form {
 
 .bg-kanan {
     height: 100%;
-    width: 100%;
+    width: auto;
     object-fit: cover;
 }
 
@@ -49,14 +49,11 @@ form {
 }
 
 .people {
-    right: 130px;
-    position: relative;
+    position: fixed;
     z-index: 99999999999;
     height: 400px;
-    bottom: 400px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-
+    bottom: 0;
+    right: 30%;
 }
 
 .text-kanan {
@@ -76,7 +73,12 @@ form {
 
 .position-icon {
     margin-bottom: -37px;
+}
 
+.top-cus {
+    top: 13px;
+    right: 3px;
+    cursor: pointer;
 }
 
 .form-control {
@@ -86,6 +88,7 @@ form {
     height: 40px;
     z-index: 99999999;
 }
+
 
 .border-custom {
     border: transparent;
@@ -113,7 +116,7 @@ form {
     height: 100px;
     border-radius: 10px;
     background: #f3f3f4;
-    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+    /* box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4); */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -130,7 +133,7 @@ form {
     height: 60px;
     border-radius: 10px;
     background: #f3f3f4;
-    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+    /* box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4); */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -161,6 +164,12 @@ input:focus+label {
 
 .social {
     margin-top: -100px;
+}
+
+.star {
+    position: fixed;
+    top: 10px;
+    margin-left: -60px;
 }
 
 /* Responsive */
@@ -304,6 +313,40 @@ input:focus+label {
     }
 
 
+}
+
+.row-responsive {
+    display: flex;
+    justify-content: start;
+}
+
+.bgRegister {
+    z-index: -999;
+}
+
+@media(min-height: 769px) {
+    .bgRegister {
+        margin-right: -150px;
+    }
+}
+
+
+@media(max-width: 1199px) {
+    .row-responsive {
+        justify-content: center;
+        padding: 0 20px;
+    }
+
+    .col-Ttl {
+        margin-top: -20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .col-Ttl {
+        margin-top: 1.5rem;
+    }
 }
 
 .register {
