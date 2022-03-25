@@ -23,11 +23,11 @@ if ($existEmail > 0) {
             exit;
         }
     } else {
-        header('Location: /admin/login.php?key=1');
+        header('Location: /admin/login.php?p=Password%20Salah');
         exit;
     }
 } else {
-    header('Location: /admin/login.php?key=2');
+    header('Location: /admin/login.php?p=Email%20Tidak%20Terdaftar');
     exit;
 }
 

@@ -1,5 +1,10 @@
 <?php
+session_start();
 include "../../server/koneksi.php";
+if ($_SESSION['role'] != '1') {
+    header('Location: ../login.php');
+    exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

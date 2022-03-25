@@ -1,5 +1,10 @@
 <?php
+session_start();
 include "../../server/koneksi.php";
+if ($_SESSION['role'] != '1') {
+    header('Location: ../login.php');
+    exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -256,6 +261,8 @@ include "../../server/koneksi.php";
                                         }else{
                                             $role = 'Anggota';
                                         }
+                                        $provinsi = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT * FROM provinces WHERE id = '$user[provinsi]'"))['name'];
+                        $kota = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT * FROM regencies WHERE id = '$user[kota]'"))['name'];
                                     ?>
                                     <tr>
                                         <td>
@@ -271,8 +278,8 @@ include "../../server/koneksi.php";
                                             </div>
                                         </td>
                                         <td>
-                                            <p class="text-xs font-weight-bold mb-0"><?= $user['provinsi'] ?></p>
-                                            <p class="text-xs text-secondary mb-0"><?= $user['kota'] ?></p>
+                                            <p class="text-xs font-weight-bold mb-0"><?= $provinsi ?></p>
+                                            <p class="text-xs text-secondary mb-0"><?= $kota ?></p>
                                         </td>
                                         <td class="align-middle text-center text-sm">
                                             <span

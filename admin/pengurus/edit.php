@@ -1,5 +1,10 @@
 <?php
+session_start();
 include "../../server/koneksi.php";
+if ($_SESSION['role'] != '1') {
+    header('Location: ../login.php');
+    exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -67,6 +72,14 @@ include "../../server/koneksi.php";
                             <i class="material-icons opacity-10">person</i>
                         </div>
                         <span class="nav-link-text ms-1">User</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="pesan.php">
+                        <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">list</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Pesan</span>
                     </a>
                 </li>
             </ul>

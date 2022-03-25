@@ -1316,8 +1316,8 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                 alt="">
             <img src="assets/img/imgNewsRight.svg" class="imgNewsRight position-absolute top-50 end-0 d-none d-md-flex"
                 alt="">
-            <div class="row mx-auto gap-3 gap-xl-0 mt-5 pt-5 d-flex align-items-center">
-                <div class="col-xl-1 d-none d-xl-flex">
+            <div class="row mx-auto gap-3 gap-xl-0 mt-5 pt-5 d-flex align-items-start">
+                <!-- <div class="col-xl-1 d-none d-xl-flex">
                     <a href="#contact" class="scrollHero d-flex align-items-center text-dark">
                         <div class="scroll-prompt" scroll-prompt="" ng-show="showPrompt" style="opacity: 1;">
                             <div class="scroll-prompt-arrow-container">
@@ -1331,7 +1331,7 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                         </div>
                         <span class="scroll fw-600">scroll</span>
                     </a>
-                </div>
+                </div> -->
                 <?php
                 $news = mysqli_query($koneksi, "SELECT * FROM berita ORDER BY id DESC LIMIT 5");
                 $berita = mysqli_fetch_assoc($news);
@@ -1343,7 +1343,7 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                 //     $i++;
                 // }
                 ?>
-                <div class="col-xl-5 col-12 ps-0 ms-0">
+                <div class="col-xl-5 col-12 ps-0 ms-0 mt-5">
                     <p class="fz-14"><?= $berita['oleh'] ?> - <?= tanggal($berita['tanggal']) ?> WIB
                     </p>
                     <h4 class="fw-600">Menepis Pandangan Berbisnis yang Menyesatkan
@@ -1355,8 +1355,9 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                         dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in ornare quam viverra</p>
                     <a class="text-dark" class="text-dark" href="#">
                         <div class="d-flex-align-items-center">
-                            <span class="fz-14 fw-600">Read More</span>
-                            <img src="assets/img/arrowNews.svg" alt="">
+                            <a href="news.php" class="text-dark"><span class="fz-14 fw-600">Read More</span>
+                                <img src="assets/img/arrowNews.svg" alt="">
+                            </a>
                         </div>
                     </a>
                 </div>
@@ -1371,12 +1372,14 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                         </div>
                         <div class="col-12 col-md-8">
                             <p class="fz-14">Kompas.com - 08/03/2022, 07:00 WIB</p>
-                            <h6 class="fw-600">Cetak Wirausaha Baru Lewat Pesantren, KemenKopUKM Kerjasama dengan PBNU
+                            <h6 class="fz-14 fw-600">Cetak Wirausaha Baru Lewat Pesantren, KemenKopUKM Kerjasama dengan
+                                PBNU
                             </h6>
                             <a class="text-dark" class="#" href="#">
-                                <div class="d-flex-align-items-center mt-4">
-                                    <span class="fz-14 fw-600">Read More</span>
-                                    <img src="assets/img/arrowNews.svg" alt="">
+                                <div class="d-flex-align-items-center">
+                                    <a href="news.php" class="text-dark"><span class="fz-14 fw-600">Read More</span>
+                                        <img src="assets/img/arrowNews.svg" alt="">
+                                    </a>
                                 </div>
                             </a>
                         </div>
@@ -1393,12 +1396,14 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                         </div>
                         <div class="col-12 col-md-8">
                             <p class="fz-14">Kompas.com - 08/03/2022, 07:00 WIB</p>
-                            <h6 class="fw-600">Cetak Wirausaha Baru Lewat Pesantren, KemenKopUKM Kerjasama dengan PBNU
+                            <h6 class="fz-14 fw-600">Cetak Wirausaha Baru Lewat Pesantren, KemenKopUKM Kerjasama dengan
+                                PBNU
                             </h6>
                             <a class="text-dark" class="#" href="#">
-                                <div class="d-flex-align-items-center mt-4">
-                                    <span class="fz-14 fw-600">Read More</span>
-                                    <img src="assets/img/arrowNews.svg" alt="">
+                                <div class="d-flex-align-items-center">
+                                    <a href="news.php" class="text-dark"><span class="fz-14 fw-600">Read More</span>
+                                        <img src="assets/img/arrowNews.svg" alt="">
+                                    </a>
                                 </div>
                             </a>
                         </div>
@@ -1409,12 +1414,14 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                         </div>
                         <div class="col-12 col-md-8">
                             <p class="fz-14">Kompas.com - 08/03/2022, 07:00 WIB</p>
-                            <h6 class="fw-600">Cetak Wirausaha Baru Lewat Pesantren, KemenKopUKM Kerjasama dengan PBNU
+                            <h6 class="fz-14 fw-600">Cetak Wirausaha Baru Lewat Pesantren, KemenKopUKM Kerjasama dengan
+                                PBNU
                             </h6>
                             <a class="text-dark" class="#" href="#">
-                                <div class="d-flex-align-items-center mt-4">
-                                    <span class="fz-14 fw-600">Read More</span>
-                                    <img src="assets/img/arrowNews.svg" alt="">
+                                <div class="d-flex-align-items-center">
+                                    <a href="news.php" class="text-dark"><span class="fz-14 fw-600">Read More</span>
+                                        <img src="assets/img/arrowNews.svg" alt="">
+                                    </a>
                                 </div>
                             </a>
                         </div>
@@ -1425,12 +1432,14 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                         </div>
                         <div class="col-12 col-md-8">
                             <p class="fz-14">Kompas.com - 08/03/2022, 07:00 WIB</p>
-                            <h6 class="fw-600">Cetak Wirausaha Baru Lewat Pesantren, KemenKopUKM Kerjasama dengan PBNU
+                            <h6 class="fz-14 fw-600">Cetak Wirausaha Baru Lewat Pesantren, KemenKopUKM Kerjasama dengan
+                                PBNU
                             </h6>
                             <a class="text-dark" class="#" href="#">
-                                <div class="d-flex-align-items-center mt-4">
-                                    <span class="fz-14 fw-600">Read More</span>
-                                    <img src="assets/img/arrowNews.svg" alt="">
+                                <div class="d-flex-align-items-center">
+                                    <a href="news.php" class="text-dark"><span class="fz-14 fw-600">Read More</span>
+                                        <img src="assets/img/arrowNews.svg" alt="">
+                                    </a>
                                 </div>
                             </a>
                         </div>
@@ -1505,47 +1514,7 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
         <a href="admin/regis.php" class="btn btn-danger fs-6 mt-md-3 position-absolute btn-contact">Gabung Sekarang</a>
     </div>
 
-    <footer class="bgLeft container mx-auto mt-5 pt-5 pt-md-0 text-start">
-        <div class="row">
-            <div class="col-md-3">
-                <img src="assets/img/logoFkp.svg" alt="">
-                <p class="fw-600 mt-4">Muda Berkompetisi, Berkolaborasi & Berkontribusi</p>
-                <div class="mt-3 fz-14 d-none d-md-block">FKP, 2022 Allright reserved</div>
-                <img src="assets/img/arrowFooter.svg" class="position-absolute start-0 d-none d-md-block" alt="">
-            </div>
-            <div class="col-5 col-md-3 fz-14">
-                <ul class="ps-0" style="list-style: none; line-height: 40px">
-                    <li class="fw-600">Home</li>
-                    <li>History</li>
-                    <li>Organization Values</li>
-                    <li>Structure</li>
-                    <li>Programs</li>
-                    <li>News</li>
-                    <li>Activies</li>
-                </ul>
-            </div>
-            <div class="col-5 col-md-3 fz-14">
-                <ul class="ps-0" style="list-style: none; line-height: 40px">
-                    <li class="fw-600">Contact Us</li>
-                    <li>+62 812 6909 7223</li>
-                    <li>+62 813 1094 7775</li>
-                    <li>fkppusat@gmail.com</li>
-                    <li>Komplek Departemen Keuangan C70, Kembangan Jakarta Barat, Indonesia 11610</li>
-                </ul>
-            </div>
-            <div class="col-12 col-md-3 fz-14 text-center text-md-start">
-                <ul class="ps-0" style="list-style: none; line-height: 40px">
-                    <li class="fw-600">Social Media</li>
-                    <li>
-                        <a href="#"><img src="assets/img/fbFooter.svg" class="me-4" alt=""></a>
-                        <a href="#"><img src="assets/img/ytFooter.svg" class="me-4" alt=""></a>
-                        <a href="#"><img src="assets/img/igFooter.svg" class="me-4" alt=""></a>
-                    </li>
-                </ul>
-                <div class="mt-3 fz-14 d-block d-md-none">FKP, 2022 Allright reserved</div>
-            </div>
-        </div>
-    </footer>
+    <?php include "components/Footer.php"; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">

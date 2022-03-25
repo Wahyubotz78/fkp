@@ -1,10 +1,10 @@
 <?php
 include "../../server/koneksi.php";
 session_start();
-// if($_SESSION['role'] != 1){
-//     header('Location: ../anggota/');
-//     exit;
-// }
+if ($_SESSION['role'] != '0') {
+    header('Location: ../login.php');
+    exit;
+}
 
 ?>
 <!DOCTYPE html>
@@ -238,6 +238,8 @@ session_start();
                                                 }
                                                 ?>
                                         </p>
+                                        <a href="../../news-detail.php?id=<?= $berita['id'] ?>"
+                                            class="badge bg-gradient-success">baca</a>
                                     </div>
                                 </div>
                             </div>

@@ -1,5 +1,10 @@
 <?php
 include('../server/koneksi.php');
+session_start();
+if ($_SESSION['role']) {
+    header('location: login.php');
+    exit;
+}
 ?>
 <!doctype html>
 <html lang="en">
@@ -24,12 +29,14 @@ include('../server/koneksi.php');
     <!-- CSS -->
     <link rel="stylesheet" href="../admin/assets/css/style-signup.css?<?php echo time() ?>">
 
+    <!-- Selectize -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js"
         integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css"
         integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
+
     <link rel="icon" type="image/" href="../assets/img/logoFkp.svg">
     <title>Register </title>
 </head>
@@ -82,14 +89,13 @@ include('../server/koneksi.php');
                             <input type="number" class="form-control form-control-signup f-14" id="exampleInputEmail1"
                                 aria-describedby="nama" name="usia" required>
                         </div>
-                        <label for="exampleInputEmail1" class="d-flex d-xl-none form-label fw-bold mt-4">Tempat,Tanggal
+                        <label for="nama" class="d-flex d-xl-none form-label fw-bold mt-4">Tempat,Tanggal
                             Lahir</label>
                         <div class="col-12 col-xl-5 mt-4">
-                            <label for="exampleInputEmail1" class="d-none d-xl-flex form-label fw-bold">Tempat,Tanggal
+                            <label for="nama" class="d-none d-xl-flex form-label fw-bold">Tempat,Tanggal
                                 Lahir</label>
-                            <select style="background-color: #f3f3f4 !important;border-color:transparent;"
-                                class="form-control form-control-signup " name="tempat" placeholder="Pilih Kota"
-                                required>
+                            <select class="form-control form-control-signup" id="select" name="tempat"
+                                placeholder="Pilih Kota" required>
                                 <option value=""></option>
                                 <?php
                                 $sql = mysqli_query($koneksi, "SELECT name FROM regencies");
@@ -157,6 +163,7 @@ include('../server/koneksi.php');
 
 
 
+
     <script>
     var password = document.getElementById("password");
     var confirmPassword = document.getElementById("confirmPassword");
@@ -211,10 +218,16 @@ include('../server/koneksi.php');
     });
     </script>
 
+    <!-- Selectize -->
     <script>
     $(document).ready(function() {
         $('select').selectize({
-            sortField: 'text'
+            create: true,
+            sortField: {
+                field: 'text',
+                direction: 'asc'
+            },
+            dropdownParent: 'body'
         });
     });
     </script>

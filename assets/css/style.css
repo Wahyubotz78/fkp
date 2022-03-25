@@ -25,6 +25,18 @@ a {
   object-fit: cover;
 }
 
+.fz-18 {
+  font-size: 18px;
+}
+
+.fz-17 {
+  font-size: 17px;
+}
+
+.fz-16 {
+  font-size: 16px;
+}
+
 .fz-15 {
   font-size: 15px;
 }
@@ -796,12 +808,12 @@ input[type="checkbox"] {
 
 /* News */
 .newList {
-  width: 7rem;
+  width: 8rem;
 }
 
 .decorNews {
   width: 7rem;
-  top: 14%;
+  top: 16%;
   right: 46%;
 }
 
@@ -880,14 +892,6 @@ input[type="checkbox"] {
   background-color: #E5E5E5;
 }
 
-/* .rightProduct {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.modal-content {
+  border: none;
 }
-
-@media(max-width: 1046px) {
-  .rightProduct {
-    display: none;
-  }
-} */

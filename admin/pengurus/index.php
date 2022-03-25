@@ -1,10 +1,14 @@
 <?php
 include "../../server/koneksi.php";
 session_start();
-// if($_SESSION['role'] != 1){
-//     header('Location: ../anggota/');
-//     exit;
-// }
+if ($_SESSION['role'] != '1') {
+    header('Location: ../login.php');
+    exit;
+}
+$jumlahUser = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM user"));
+$jumlahBerita = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM berita"));
+$jumlahVisitor = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
+$pendingUser = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM user WHERE status = '0'"));
 
 ?>
 <!DOCTYPE html>
@@ -242,7 +246,7 @@ session_start();
                             <div class="text-end pt-1">
                                 <p class="text-sm mb-0 text-capitalize">Fkp User</p>
                                 <h4 class="mb-0">
-                                    100
+                                    <?= $jumlahUser ?>
                                 </h4>
                             </div>
                         </div>
@@ -261,7 +265,7 @@ session_start();
                             </div>
                             <div class="text-end pt-1">
                                 <p class="text-sm mb-0 text-capitalize">Fkp News</p>
-                                <h4 class="mb-0">30</h4>
+                                <h4 class="mb-0"><?= $jumlahBerita ?></h4>
                             </div>
                         </div>
                         <hr class="dark horizontal my-0" />
@@ -279,7 +283,7 @@ session_start();
                             </div>
                             <div class="text-end pt-1">
                                 <p class="text-sm mb-0 text-capitalize">Visitor</p>
-                                <h4 class="mb-0">3,462</h4>
+                                <h4 class="mb-0"><?= $jumlahVisitor ?></h4>
                             </div>
                         </div>
                         <hr class="dark horizontal my-0" />
@@ -297,7 +301,7 @@ session_start();
                             </div>
                             <div class="text-end pt-1">
                                 <p class="text-sm mb-0 text-capitalize">Pending User</p>
-                                <h4 class="mb-0">100</h4>
+                                <h4 class="mb-0"><?= $pendingUser ?></h4>
                             </div>
                         </div>
                         <hr class="dark horizontal my-0" />
@@ -339,6 +343,12 @@ session_start();
                                                 }
                                                 ?>
                                         </p>
+                                        <div class="col-4 mt-1">
+                                            <a href="../../server/hapusBerita.php?id=<?= $berita['id'] ?>"
+                                                class="badge bg-gradient-danger">Hapus</a>
+                                            <a href="../../news-detail.php?id=<?= $berita['id'] ?>"
+                                                class="badge bg-gradient-success">baca</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -353,6 +363,8 @@ session_start();
                     if (isset($_SESSION['memberid'])) {
                         $memberid = $_SESSION['memberid'];
                         $data = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT * FROM user WHERE memberid = '$memberid'"));
+                        $provinsi = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT * FROM provinces WHERE id = '$data[provinsi]'"))['name'];
+                        $kota = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT * FROM regencies WHERE id = '$data[kota]'"))['name'];
                     ?>
                     <div class="img-wrapper h-100 position-relative">
                         <img src="../assets/img/card-member.jpeg" alt="card-member" class="w-100 position-absolute">
@@ -363,7 +375,9 @@ session_start();
                             style="width: 100px; top:50px; right: 30px;" class="position-absolute">
                         <div class="position-absolute" style="top:200px; right:20px">
                             <h6 class="text-light mb-0" style="font-weight: 600;"><?= $data['nama'] ?></h6>
-                            <span class="text-light text-sm">Tasikmalaya , Jawabarat</span>
+                            <span class="text-light text-sm"><?= $provinsi ?></span>
+                            <br>
+                            <span class="text-light text-sm"><?= $kota ?></span>
                         </div>
                     </div>
                     <?php } else { ?>

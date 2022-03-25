@@ -11,7 +11,7 @@
 
         <!-- Desktop -->
         <ul class="pt-3 ps-0 ms-0 d-none d-xl-flex menu-desktop" id="nav">
-            <li><a class="me-3 menu-desktop-list active" href="#">Home</a></li>
+            <li><a class="me-3 menu-desktop-list" href="#">Home</a></li>
             <li><a class="me-3 menu-desktop-list" href="#history">History</a></li>
             <li><a class="me-3 menu-desktop-list" href="#program">Program</a></li>
             <li><a class="me-3 menu-desktop-list" href="#news">News</a></li>
@@ -24,13 +24,13 @@
         <!-- Mobile -->
         <ul class="pt-3 ps-0 ms-0 d-block d-xl-none menu-mobile">
             <li><a class="me-3" href="#">Home</a></li>
-            <li><a class="me-3" href="#">History</a></li>
-            <li><a class="me-3" href="#">Organization Values</a></li>
-            <li><a class="me-3" href="#">Structure</a></li>
-            <li><a class="me-3" href="#">Program</a></li>
-            <li><a class="me-3" href="#">News</a></li>
-            <li><a class="me-3" href="#">Activies</a></li>
-            <li><a class="me-3" href="#">Contact Us</a></li>
+            <li><a class="me-3" href="#history">History</a></li>
+            <li><a class="me-3" href="#organization">Organization Values</a></li>
+            <li><a class="me-3" href="#structure">Structure</a></li>
+            <li><a class="me-3" href="#program">Program</a></li>
+            <li><a class="me-3" href="#news">News</a></li>
+            <li><a class="me-3" href="#activies">Activies</a></li>
+            <li><a class="me-3" href="#contact">Contact Us</a></li>
             <a href="admin/login.php" class="btn btn-danger">Login</a>
         </ul>
 

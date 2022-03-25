@@ -1,6 +1,11 @@
 <?php
+session_start();
 include "../../server/koneksi.php";
-if(isset($_GET['key'])){
+// if ($_SESSION['role'] != '1') {
+//     header('Location: ../login.php');
+//     exit;
+// }
+if (isset($_GET['key'])) {
     switch ($_GET['key']) {
         case 1:
             echo "  <script>
@@ -54,10 +59,22 @@ if(isset($_GET['key'])){
     <!-- CSS Files -->
     <link rel="stylesheet" href="../assets/css/style-signup.css?<?php echo time() ?>">
     <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.0.0" rel="stylesheet" />
-    <script src="https://cdn.ckeditor.com/ckeditor5/33.0.0/classic/ckeditor.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/trix.css">
+    <script type="text/javascript" src="../assets/js/trix.js"></script>
 
 </head>
+<style>
+.trix-editor img {
+    height: 200px;
+    width: 200px;
+
+}
+
+progress {
+    display: none;
+}
+</style>
 
 <body class="g-sidenav-show bg-gray-200">
     <aside
@@ -278,9 +295,12 @@ if(isset($_GET['key'])){
                                 </div>
                             </div>
                             <div class="card-body pb-2">
-                                <textarea name="isi" id="editor" cols="50" rows="3">
 
-                                </textarea>
+                                <input type=" hidden" name="isi" id="editor">
+                                <trix-editor class="trix-editor" input="editor"></trix-editor>
+                                <div class="trix-editor">
+
+                                </div>
                             </div>
                             <div class="d-flex mx-4">
 
@@ -290,7 +310,8 @@ if(isset($_GET['key'])){
                                         <input type="file" id="file" class="file" name="foto"
                                             onchange="loadFoto(event)">
                                         <label for="file" class="label-1">
-                                            <img src="" id="foto" width="100px" height="100px" style="display: none;">
+                                            <img src="" id="foto" width="100px" height="100px"
+                                                style="display: none; border-radius: 10px;">
                                             <i class="ri-add-circle-fill fs-1 text-danger" id="tambah"></i>
                                         </label>
                                     </div>
@@ -304,6 +325,54 @@ if(isset($_GET['key'])){
                             </div>
                             <button class="btn bg-gradient-success mx-4 float-end" name="submit">Submit</button>
                         </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-lg-12 col-md-12 mb-md-0 mb-4">
+                    <div class="card">
+                        <div class="card-header pb-0">
+                            <div class="row">
+                                <div class="col-lg-6 col-7">
+                                    <h6>Berita Terbaru</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body pb-2">
+                            <?php
+                            $data_berita = mysqli_query($koneksi, "SELECT * FROM berita ORDER BY id DESC");
+                            while ($berita = mysqli_fetch_array($data_berita)) {
+                            ?>
+                            <div class="row mb-2">
+                                <div class="col-12 d-flex">
+                                    <img src="../../server/berita/img/<?php echo $berita['foto']; ?>" alt="news-img"
+                                        class="rounded">
+                                    <div class="text-wrapper mx-2">
+                                        <a href="#">
+                                            <h5 class="mb-0"><?= $berita['judul']; ?></h5>
+                                        </a>
+                                        <p class="text-sm mb-0">
+                                            <?php
+                                                if (strlen($berita['isi']) >= 200) {
+                                                    echo substr(strip_tags($berita['isi']), 0, 100) . "...";
+                                                } else {
+                                                    echo strip_tags($berita['isi']);
+                                                }
+                                                ?>
+                                        </p>
+                                        <div class="col-4 mt-1">
+                                            <a href="../../server/hapusBerita.php?id=<?= $berita['id'] ?>"
+                                                class="badge bg-gradient-danger">Hapus</a>
+                                            <a href="../../news-detail.php?id=<?= $berita['id'] ?>"
+                                                class="badge bg-gradient-success">baca</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php
+                            }
+                            ?>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -345,14 +414,17 @@ if(isset($_GET['key'])){
     }
     </script>
     <script>
-    ClassicEditor
-        .create(document.querySelector('#editor'))
-        .then(editor => {
-            console.log(editor);
-        })
-        .catch(error => {
-            console.error(error);
-        });
+    var loadFoto = function(event) {
+        var output = document.getElementById('foto');
+        var icon = document.getElementById('tambah');
+        icon.style.display = "none";
+        output.style.display = "block";
+
+        output.src = URL.createObjectURL(event.target.files[0]);
+        output.onload = function() {
+            URL.revokeObjectURL(output.src) // free memory
+        }
+    };
     </script>
     <!-- Github buttons -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>

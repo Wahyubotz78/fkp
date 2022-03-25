@@ -75,7 +75,6 @@ $TTL = $_POST['tempat'] . ", " . $newttl;
 
                         <div class="col-12 col-xl-5 ms-xl-5 mt-4">
                             <label for="exampleInputEmail1" class="form-label fw-bold">DPD (Kota/Kab)</label>
-
                             <select name="kota" class="form-control f-14" id="form_kab">
                                 <option> Kota/Kabupaten</option>
                             </select>
@@ -128,9 +127,9 @@ $TTL = $_POST['tempat'] . ", " . $newttl;
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 pt-3">
-                        <button type="submit" class="btn btn-danger fw-bold  me-5"
-                            style="border-radius: 10px; width:100px; font-size:14px; height:40px;"
-                            id="submit">Daftar</button>
+                        <a class="btn btn-danger fw-bold me-5" data-bs-toggle="modal" href="#exampleModalToggle"
+                            role="button"
+                            style="border-radius: 10px; width:100px; font-size:14px; height:40px;">Daftar</a>
                     </div>
                     <div class="col-lg-6 col-md-6 mt-2">
                         <small>
@@ -138,46 +137,43 @@ $TTL = $_POST['tempat'] . ", " . $newttl;
                                     sekarang</a></p>
                         </small>
                     </div>
+                    <div class="modal fade" id="exampleModalToggle" aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                        <div class="modal-dialog p-4 p-sm-0 modal-dialog-centered position-relative">
+                            <div class="modal-content container">
+                                <div class="modal-header">
+                                    <img src="../admin/assets/img/starSmall.png" class="star position-absolute" alt="">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body fz-15 bg-abu">
+                                    <p>Dengan ini saya menyatakan untuk mendaftar menjadi anggota Forum Kewirausahaan
+                                        Pemuda dan setuju dengan segala peraturan organisasi yang berlaku. Apabila saya
+                                        melanggar peraturan organisasi dan hukum yang berlaku di Republik Indonesia maka
+                                        saya siap untuk dikeluarkan dari organisasi *
+                                    </p>
+                                </div>
+                                <div class="form-check mt-3">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Setuju dengan ketentuan dan
+                                        peraturan yang ada </label>
+                                </div>
+                                <div class="modal-footer mb-4">
+                                    <button type="submit" class="w-100 btn btn-danger fw-bold"
+                                        style="border-radius: 10px; font-size:14px;" id="submit">Lanjutkan</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </form>
             </div>
-            <!-- <div class="text-kanan">
-            <div class="col-lg-6 col-xl-4 col-xxl-4 opening ms-5 ">
-                <h1 class="ms-1 text-light fw-bold f-48">Selamat datang kembali </h1>
-                <h6 class="ms-1 ps-3 mt-4 text-light">Bersama kita wujudkan Muda Berkompetisi, Berkolaborasi &
-                    Berkontribusi</h6>
-            </div>
-        </div> -->
-
-            <!-- <div class="social">
-
-                <div class="row">
-                    <div class="col-md-12  ">
-                        <div class="d-flex justify-content-end">
-                            <h6 class="text-light me-4">Social Media</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-
-                    <div class="col-md-12 ">
-                        <div class="d-flex justify-content-end">
-                            <img src="../admin/assets/img/sign/fb.png" alt="">
-                            <img src="../admin/assets/img/sign/yt.png" class="mx-4" alt="">
-                            <img src="../admin/assets/img/sign/ig.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div> -->
             <div class="bgRegister d-none d-xl-flex col-xl-6 h-100 position-fixed top-0 bottom-0 end-0">
                 <img src="../admin/assets/img/sign/back2.svg"
                     class="bg-kanan d-flex-justify-content-end align-items-end position-absolute end-0" alt="">
-                <!-- <img src="../admin/assets/img/star.png" class="star" alt=""> -->
                 <img src="../admin/assets/img/sign/founder.svg" class="people" alt="">
             </div>
         </div>
     </div>
-
-
 
     <script>
     const file = document.querySelector('#file');

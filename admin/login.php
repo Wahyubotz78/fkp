@@ -1,28 +1,10 @@
 <?php
-if (isset($_GET['key'])) {
-    switch ($_GET['key']) {
-        case 1:
-            echo "  <script>
-                        alert('Password salah');
-                        window.location = 'login.php';
-                    </script>";
-            break;
-        case 2:
-            echo "  <script>
-                        alert('Email tidak terdaftar');
-                        window.location = 'login.php';
-                    </script>";
-            break;
-        default:
-            $a = "";
-    }
-}
-if($_SESSION['role'] == '0'){
+session_start();
+if ($_SESSION['role'] == '0') {
     header('location:anggota/index.php');
-}elseif($_SESSION['role'] == '1'){
+} elseif ($_SESSION['role'] == '1') {
     header('location:pengurus/index.php');
-}else{
-
+} else {
 }
 ?>
 <!doctype html>
@@ -95,7 +77,23 @@ if($_SESSION['role'] == '0'){
             </div>
         </div>
     </div>
+    <div class="position-fixed top-0 end-0 p-3" style="z-index: 110">
+        <div id="notifToast" class="toast fade hide" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#007aff"></rect>
+                </svg>
 
+                <strong class="me-auto">FKP</strong>
+                <small>Just Now</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body" id="msgNotif">
+
+            </div>
+        </div>
+    </div>
 
 
     <script src="../admin/assets/js/sign/pw.js"></script>
@@ -103,5 +101,24 @@ if($_SESSION['role'] == '0'){
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
 </body>
+<?php
+if(isset($_GET['p'])){
+    echo'
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var btn = document.getElementById("myBtn");
+    var element = document.getElementById("notifToast");
+    var msg = document.getElementById("msgNotif");
+
+    // Create toast instance
+    var myToast = new bootstrap.Toast(element);
+    msg.innerHTML = "'.$_GET['p'].'";
+
+    myToast.show();
+});
+</script>
+';
+}
+?>
 
 </html>

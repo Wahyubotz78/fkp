@@ -36,26 +36,22 @@
                 <hr class="w-100">
                 <p class="fz-14">Rekening Pembayaran</p>
                 <div class="row d-flex align-items-center">
-                    <div class="col-3">
-                        <h3 class="fw-600">102329324</h3>
-                    </div>
-                    <div class="col-2 mt-2">
-                        <p class="fz-14 fw-600 text-end"><img src="assets/img/copy.svg" alt=""></p>
-                    </div>
-                    <div class="col-2">
+                    <div class="d-flex align-items-center flex-wrap gap-3">
+                        <h5 class="fw-600">102329324</h5>
+                        <img src="assets/img/copy.svg" alt="">
                         <p class="fz-14"><img src="assets/img/bni.svg" alt=""></p>
                     </div>
                 </div>
                 <p class="fz-14">Atas Nama</p>
                 <div class="row d-flex align-items-center">
                     <div class="col-12">
-                        <h3 class="fw-600">Mochamad Naufal</h3>
+                        <h5 class="fw-600">Mochamad Naufal</h5>
                     </div>
                 </div>
                 <p class="fz-14">Jumlah yang harus dibayar</p>
                 <div class="row d-flex align-items-center">
                     <div class="col-12">
-                        <h3 class="fw-600">Rp150.000,-</h3>
+                        <h5 class="fw-600">Rp150.000,-</h5>
                     </div>
                 </div>
                 <hr class="w-100 my-4">
