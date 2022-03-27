@@ -1251,7 +1251,7 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
         <div class="position-relative d-flex flex-column align-items-center">
             <img src="assets/img/imgActivies.svg" alt="" class="d-none d-md-block w-100 h-100 imgActivies">
             <img src="assets/img/imgActiviesM.svg" alt="" class="d-block d-md-none w-100 h-200 imgActivies">
-            <button class="btn btn-danger fs-6 mt-md-3 position-absolute btn-activies">View More</button>
+            <a href="gallery.php" class="btn btn-danger fs-6 mt-md-3 position-absolute btn-activies">View More</a>
             <p class="fw-600 mt-5 pt-5">Saat ini kami telah memiliki</p>
         </div>
         <div class="row d-flex justify-content-center mt-4 d-none d-md-flex">
