@@ -32,11 +32,13 @@ if(move_uploaded_file($_FILES['foto']['tmp_name'], 'user/foto/'.$fotoBaru)){
     if(move_uploaded_file($_FILES['ktp']['tmp_name'], 'user/ktp/'.$ktpBaru)){
         $sql = "INSERT INTO user (memberid, role, email, password, nama, nik, usia, ttl, alamat, nomer, ig, usaha, provinsi, kota, alasan, foto, ktp) VALUES ('$memberid', 0, '$email', '$password', '$nama', '$nik', '$usia', '$ttl', '$alamat', '$nomer', '$ig', '$usaha', '$provinsi', '$kota', '$alasan', '$fotoBaru', '$ktpBaru')";
         $query = mysqli_query($koneksi, $sql);
-        if($query){
-           header('Location: ../admin/login.php?p=Akun%20Anda%20Berhasil%20Dibuat');
+        $unix = rand(1,999);
+        $trx = mysqli_query($koneksi, "INSERT INTO regisTrx (id_user, unix) VALUES ('$memberid', '$unix')");
+        if($query && $trx){
+           header('Location: ../pembayaran-daftar.php?id='.$memberid);
            exit;
         }else{
-            var_dump($sql);
+            var_dump("INSERT INTO regisTrx (id_user, unix) VALUES ('$memberid', '$unix')");
         }
     }else{
         echo "Gagal upload ktp";

@@ -52,6 +52,7 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="icon" type="image/" href="assets/img/logoFkp.svg">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -64,16 +65,20 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
             <img src="assets/img/decorHero.svg" class="decorHero position-absolute" alt="">
             <div class="row mt-5 pt-5 d-flex justify-content-center mx-auto justify-content-md-between gap-4 flex-wrap">
                 <div class="col-12 col-md-3 bg-hero">
-                    <h6 class="text-uppercase fw-700">selamat datang di</h6>
-                    <h1 class="text-capitalize fw-bold lh-base">forum kewirausahaan pemuda</h1>
-                    <p class="mt-5 fs-6">
+                    <h6 class="text-uppercase fw-700" data-aos="fade-down" data-aos-once="true">selamat datang di</h6>
+                    <h1 class="text-capitalize fw-bold lh-base" data-aos="fade-down" data-aos-once="true">forum
+                        kewirausahaan
+                        pemuda
+                    </h1>
+                    <p class="mt-5 fs-6" data-aos="fade-up" data-aos-once="true">
                         Ayo gabung jadi anggota FKP sekarang juga!
                     </p>
                     <a href="admin/regis.php " class="btn btn-danger fs-6">Gabung Sekarang </a>
 
                 </div>
                 <div class="col-12 col-md-7 d-flex mt-5 mt-md-0 pt-5 pt-md-0 d-none d-md-flex">
-                    <img src="assets/img/imgHero.png" alt="Hero Image" class="imgHero object-cover img-fluid">
+                    <img src="assets/img/imgHero.png" alt="Hero Image" class="imgHero object-cover img-fluid"
+                        data-aos="fade-left" data-aos-once="true" data-aos-once="true">
                     <a href="#history" class="scrollHero d-flex align-items-center text-dark d-none d-md-flex">
                         <div class="scroll-prompt" scroll-prompt="" ng-show="showPrompt" style="opacity: 1;">
                             <div class="scroll-prompt-arrow-container">
@@ -102,20 +107,20 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                 <!-- <img src="assets/img/imgHistoryRight.svg" class="imgHistoryRight position-absolute end-0" alt=""> -->
             </div>
             <div class="row mt-5 pt-5 d-none d-md-flex">
-                <div class="col-md-3">
+                <div class="col-md-3" data-aos="fade-left" data-aos-once="true">
                     <h3 class="fw-600 text-center">2010</h3>
                     <p class="fz-14 text-center">Didirikan pada tgl 1 November 2010 di Anyer, Provinsi Banten</p>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3" data-aos="fade-left" data-aos-once="true">
                     <h3 class="fw-600 text-center">2011</h3>
                     <p class="fz-14 text-center">Pertama kali membentuk Pengurus Wilayah di 3 Provinsi</p>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3" data-aos="fade-left" data-aos-once="true">
                     <h3 class="fw-600 text-center">2012</h3>
                     <p class="fz-14 text-center">Pertama lali membentuk Pengurus Daeah FKP beberapa Kota dan Kabupaten
                         di Indonesia</p>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3" data-aos="fade-left" data-aos-once="true">
                     <h3 class="fw-600 text-center">2014</h3>
                     <p class="fz-14 text-center">Melakukan kegiatan bisnis bertaraf ernasional dan membawa produk -
                         produk milik anggota FKP</p>
@@ -145,21 +150,21 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                         class="imgHistoryRight position-absolute  end-0 d-none d-md-block" alt="">
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-3" data-aos="fade-right" data-aos-once="true">
                     <h3 class="fw-600 text-center">2016</h3>
                     <p class="fz-14 text-center">Menyelenggarakan Silaturahmi Pengusaha Muda Nasional dalam kegiatan
                         Gaya Muda 2016</p>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3" data-aos="fade-right" data-aos-once="true">
                     <h3 class="fw-600 text-center">2017</h3>
                     <p class="fz-14 text-center">Melakukan pemilihan ketua pertama kali dengan dukungan DPW dari setiap
                         provinsi di indonesia</p>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3" data-aos="fade-right" data-aos-once="true">
                     <h3 class="fw-600 text-center">2020</h3>
                     <p class="fz-14 text-center">Memiliki pengurus wilayah tersebar di 30 Provinsi di Indonesia</p>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3" data-aos="fade-right" data-aos-once="true">
                     <h3 class="fw-600 text-center">2021</h3>
                     <p class="fz-14 text-center">telah memiliki anggota aktif di setiap provinsi, kota dan kabupaten ±
                         sekitar 12.000 anggota aktif berwirausaha</p>
@@ -272,7 +277,8 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                 </div>
                 <img src="assets/img/arrowRight.svg" class="arrowOrganization position-absolute end-0" alt="">
             </div>
-            <p class="mx-auto descOrganization">Menjadi organisasi terdepan dalam mengembangkan semangat kewirausahawaan
+            <p class="mx-auto descOrganization" data-aos="fade-up" data-aos-once="true">Menjadi organisasi terdepan
+                dalam mengembangkan semangat kewirausahawaan
                 di kalangan pemuda</p>
             <div class="d-flex align-items-center justify-content-center mb-md-5">
                 <div class="d-flex flex-column justify-content-center align-items-center">
@@ -281,17 +287,17 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                 </div>
             </div>
             <div class="row d-flex justify-content-between mx-auto d-none d-md-flex">
-                <div class="col-md-3 bg-1">
+                <div class="col-md-3 bg-1" data-aos="zoom-out-down" data-aos-once="true">
                     <p class="fz-14 mt-5 pt-5">Menjadi wadah dalam peningkatan kewirausahaan pemuda baik anggota maupun
                         masyarakat melalui program kerja organisasi</p>
                     <img src="assets/img/garisHistory.svg" alt="">
                 </div>
-                <div class="col-md-3 bg-2">
+                <div class="col-md-3 bg-2" data-aos="zoom-out-up" data-aos-once="true">
                     <p class="fz-14 mt-5 pt-5">Menjadi organisasi yang berperan aktif dan ikut serta dalam program
                         kewirausahaan di internal maupun eksternal</p>
                     <img src="assets/img/garisHistory.svg" alt="">
                 </div>
-                <div class="col-md-3 bg-3">
+                <div class="col-md-3 bg-3" data-aos="zoom-out-down" data-aos-once="true">
                     <p class="fz-14 mt-5 pt-5">Menjalin komunkasi dan hubungan dengan para mitra strategis dalam
                         peningkatan kerjasama positif untuk kemajuan organisasi</p>
                     <img src="assets/img/garisHistory.svg" alt="">
@@ -337,12 +343,12 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
         <div
             class="row mt-md-5 pt-md-5 d-flex justify-content-center justify-content-md-btween gap-4 text-center text-md-start">
             <div class="col-12 col-md-5">
-                <p class="fz-15">Slogan FKP Periode 2021 -2024</p>
+                <p class="fz-15" data-aos="fade-in" data-aos-once="true">Slogan FKP Periode 2021 -2024</p>
                 <h1 class="text-capitalize fw-bold lh-base">Muda Berkompetisi, Berkolaborasi & Berkontribusi</h1>
-                <p class="mt-5 fz-15">
+                <p class="mt-5 fz-15" data-aos="fade-in" data-aos-once="true">
                     Seluruh pengurus tahun 2021 - 2024 telah berkomitmen untuk mencapai tujuan FKP, yaitu:
                 </p>
-                <ul class="fz-list">
+                <ul class="fz-list" data-aos="fade-in" data-aos-once="true">
                     <li class="fw-600 d-flex align-items-center my-3">
                         <img src="assets/img/imgList.svg" alt="" class="imgList me-2">
                         <span>80% Anggota FKP Omset Meningkat</span>
@@ -359,7 +365,7 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
             </div>
             <div class="col-12 col-md-6 d-flex">
                 <img src="assets/img/imgOrganisasi.png" alt="Hero Image"
-                    class="imgOrganization img-fluid me-5 object-cover">
+                    class="imgOrganization img-fluid me-5 object-cover" data-aos="fade-left" data-aos-once="true">
                 <a href="#structure" class="d-none d-md-flex align-items-center text-dark">
                     <div class="scroll-prompt" scroll-prompt="" ng-show="showPrompt" style="opacity: 1;">
                         <div class="scroll-prompt-arrow-container">
@@ -384,7 +390,8 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
         <h3 class="fw-700 text-center">Our Structure</h3>
         <div class="row d-flex justify-content-center text-center">
             <div class="col-12 col-md-10">
-                <p class="text-center mt-5">Komitmen kami dalam menjalankan fungsi organisasi yang baik, maka kami
+                <p class="text-center mt-5" data-aos="fade-in" data-aos-once="true">Komitmen kami dalam menjalankan
+                    fungsi organisasi yang baik, maka kami
                     membentuk kepengurusan yang kuat dan berkompeten sebagai berikut</p>
                 <img src="assets/img/garisHistory.svg" alt="">
             </div>
@@ -403,7 +410,7 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                         <div id="flush-collapse1" class="accordion-collapse collapse" aria-labelledby="flush-heading1"
                             data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body d-flex align-items-start justify-content-between">
-                                <span class="fz-14">Mikail Rakhimi - Ketua Umum</span>
+                                <span class="fz-14">Ali Hosna</span>
                                 <img src="assets/img/imgList.svg" alt="">
                             </div>
                         </div>
@@ -418,7 +425,7 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                         <div id="flush-collapse2" class="accordion-collapse collapse" aria-labelledby="flush-heading2"
                             data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body d-flex align-items-start justify-content-between">
-                                <span class="fz-14">Mikail Rakhimi - Ketua Umum</span>
+                                <span class="fz-14">Rifan</span>
                                 <img src="assets/img/imgList.svg" alt="">
                             </div>
                         </div>
@@ -433,7 +440,7 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                         <div id="flush-collapse3" class="accordion-collapse collapse" aria-labelledby="flush-heading3"
                             data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body d-flex align-items-start justify-content-between">
-                                <span class="fz-14">Mikail Rakhimi - Ketua Umum</span>
+                                <span class="fz-14">Imam</span>
                                 <img src="assets/img/imgList.svg" alt="">
                             </div>
                         </div>
@@ -448,7 +455,7 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                         <div id="flush-collapse4" class="accordion-collapse collapse" aria-labelledby="flush-heading4"
                             data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body d-flex align-items-start justify-content-between">
-                                <span class="fz-14">Mikail Rakhimi - Ketua Umum</span>
+                                <span class="fz-14">Umar Limber</span>
                                 <img src="assets/img/imgList.svg" alt="">
                             </div>
                         </div>
@@ -463,7 +470,7 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                         <div id="flush-collapse5" class="accordion-collapse collapse" aria-labelledby="flush-heading5"
                             data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body d-flex align-items-start justify-content-between">
-                                <span class="fz-14">Mikail Rakhimi - Ketua Umum</span>
+                                <span class="fz-14">Endro</span>
                                 <img src="assets/img/imgList.svg" alt="">
                             </div>
                         </div>
@@ -482,7 +489,7 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                         <div id="flush-collapse6" class="accordion-collapse collapse" aria-labelledby="flush-heading6"
                             data-bs-parent="#accordionFlushExample2">
                             <div class="accordion-body d-flex align-items-start justify-content-between">
-                                <span class="fz-14">Mikail Rakhimi - Ketua Umum</span>
+                                <span class="fz-14">Alween Ong</span>
                                 <img src="assets/img/imgList.svg" alt="">
                             </div>
                         </div>
@@ -501,6 +508,13 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                                 <img src="assets/img/imgList.svg" alt="">
                             </div>
                         </div>
+                        <div id="flush-collapse7" class="accordion-collapse collapse" aria-labelledby="flush-heading7"
+                            data-bs-parent="#accordionFlushExample2">
+                            <div class="accordion-body d-flex align-items-start justify-content-between">
+                                <span class="fz-14">Ari Setya M - Wakil Ketua Umum</span>
+                                <img src="assets/img/imgList.svg" alt="">
+                            </div>
+                        </div>
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-heading8">
@@ -512,7 +526,14 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                         <div id="flush-collapse8" class="accordion-collapse collapse" aria-labelledby="flush-heading8"
                             data-bs-parent="#accordionFlushExample2">
                             <div class="accordion-body d-flex align-items-start justify-content-between">
-                                <span class="fz-14">Mikail Rakhimi - Ketua Umum</span>
+                                <span class="fz-14">Eka Agus S - Sekretaris Umum</span>
+                                <img src="assets/img/imgList.svg" alt="">
+                            </div>
+                        </div>
+                        <div id="flush-collapse8" class="accordion-collapse collapse" aria-labelledby="flush-heading8"
+                            data-bs-parent="#accordionFlushExample2">
+                            <div class="accordion-body d-flex align-items-start justify-content-between">
+                                <span class="fz-14">Siti Maimunah - Bendahara Umum</span>
                                 <img src="assets/img/imgList.svg" alt="">
                             </div>
                         </div>
@@ -531,7 +552,7 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                         <div id="flush-collapse9" class="accordion-collapse collapse" aria-labelledby="flush-heading9"
                             data-bs-parent="#accordionFlushExample3">
                             <div class="accordion-body d-flex align-items-start justify-content-between">
-                                <span class="fz-14">Mikail Rakhimi - Ketua Umum</span>
+                                <span class="fz-14">Yassir Najih</span>
                                 <img src="assets/img/imgList.svg" alt="">
                             </div>
                         </div>
@@ -547,7 +568,7 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                         <div id="flush-collapse10" class="accordion-collapse collapse" aria-labelledby="flush-heading10"
                             data-bs-parent="#accordionFlushExample3">
                             <div class="accordion-body d-flex align-items-start justify-content-between">
-                                <span class="fz-14">Mikail Rakhimi - Ketua Umum</span>
+                                <span class="fz-14">Angga Brawijaya</span>
                                 <img src="assets/img/imgList.svg" alt="">
                             </div>
                         </div>
@@ -563,7 +584,7 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                         <div id="flush-collapse11" class="accordion-collapse collapse" aria-labelledby="flush-heading11"
                             data-bs-parent="#accordionFlushExample3">
                             <div class="accordion-body d-flex align-items-start justify-content-between">
-                                <span class="fz-14">Mikail Rakhimi - Ketua Umum</span>
+                                <span class="fz-14">Ramzi</span>
                                 <img src="assets/img/imgList.svg" alt="">
                             </div>
                         </div>
@@ -579,7 +600,7 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                         <div id="flush-collapse12" class="accordion-collapse collapse" aria-labelledby="flush-heading12"
                             data-bs-parent="#accordionFlushExample3">
                             <div class="accordion-body d-flex align-items-start justify-content-between">
-                                <span class="fz-14">Mikail Rakhimi - Ketua Umum</span>
+                                <span class="fz-14">Ahmad Farhan</span>
                                 <img src="assets/img/imgList.svg" alt="">
                             </div>
                         </div>
@@ -595,7 +616,7 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                         <div id="flush-collapse13" class="accordion-collapse collapse" aria-labelledby="flush-heading13"
                             data-bs-parent="#accordionFlushExample3">
                             <div class="accordion-body d-flex align-items-start justify-content-between">
-                                <span class="fz-14">Mikail Rakhimi - Ketua Umum</span>
+                                <span class="fz-14">Raden Nanda</span>
                                 <img src="assets/img/imgList.svg" alt="">
                             </div>
                         </div>
@@ -604,21 +625,22 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
             </div>
         </div>
 
+
+
         <!-- Carousel Structure -->
-        <div class="row mt-4 d-block d-md-none">
-            <div id="carouselExampleIndicators3" class="carousel slide" data-bs-ride="carousel">
+        <div class="row mt-5 d-flex justify-content-between mx-auto d-flex d-md-none">
+            <div id="carouselExampleIndicatorsStructure" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="0"
+                    <button type="button" data-bs-target="#carouselExampleIndicatorsStructure" data-bs-slide-to="0"
                         class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="1"
+                    <button type="button" data-bs-target="#carouselExampleIndicatorsStructure" data-bs-slide-to="1"
                         aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="2"
+                    <button type="button" data-bs-target="#carouselExampleIndicatorsStructure" data-bs-slide-to="2"
                         aria-label="Slide 3"></button>
                 </div>
-
                 <div class="carousel-inner">
                     <div class="carousel-item pb-5 bg-1 active">
-                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion accordion-flush" id="accordionFlushMobile">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="flush-heading1">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -628,9 +650,9 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                                     </button>
                                 </h2>
                                 <div id="flush-collapse1" class="accordion-collapse collapse"
-                                    aria-labelledby="flush-heading1" data-bs-parent="#accordionFlushExample">
+                                    aria-labelledby="flush-heading1" data-bs-parent="#accordionFlushMobile">
                                     <div class="accordion-body d-flex align-items-start justify-content-between">
-                                        <span class="fz-14">Mikail Rakhimi - Ketua Umum</span>
+                                        <span class="fz-14">Ali Hosna</span>
                                         <img src="assets/img/imgList.svg" alt="">
                                     </div>
                                 </div>
@@ -644,9 +666,9 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                                     </button>
                                 </h2>
                                 <div id="flush-collapse2" class="accordion-collapse collapse"
-                                    aria-labelledby="flush-heading2" data-bs-parent="#accordionFlushExample">
+                                    aria-labelledby="flush-heading2" data-bs-parent="#accordionFlushMobile">
                                     <div class="accordion-body d-flex align-items-start justify-content-between">
-                                        <span class="fz-14">Mikail Rakhimi - Ketua Umum</span>
+                                        <span class="fz-14">Rifan</span>
                                         <img src="assets/img/imgList.svg" alt="">
                                     </div>
                                 </div>
@@ -660,9 +682,9 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                                     </button>
                                 </h2>
                                 <div id="flush-collapse3" class="accordion-collapse collapse"
-                                    aria-labelledby="flush-heading3" data-bs-parent="#accordionFlushExample">
+                                    aria-labelledby="flush-heading3" data-bs-parent="#accordionFlushMobile">
                                     <div class="accordion-body d-flex align-items-start justify-content-between">
-                                        <span class="fz-14">Mikail Rakhimi - Ketua Umum</span>
+                                        <span class="fz-14">Imam</span>
                                         <img src="assets/img/imgList.svg" alt="">
                                     </div>
                                 </div>
@@ -676,9 +698,9 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                                     </button>
                                 </h2>
                                 <div id="flush-collapse4" class="accordion-collapse collapse"
-                                    aria-labelledby="flush-heading4" data-bs-parent="#accordionFlushExample">
+                                    aria-labelledby="flush-heading4" data-bs-parent="#accordionFlushMobile">
                                     <div class="accordion-body d-flex align-items-start justify-content-between">
-                                        <span class="fz-14">Mikail Rakhimi - Ketua Umum</span>
+                                        <span class="fz-14">Umar Limber</span>
                                         <img src="assets/img/imgList.svg" alt="">
                                     </div>
                                 </div>
@@ -692,9 +714,9 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                                     </button>
                                 </h2>
                                 <div id="flush-collapse5" class="accordion-collapse collapse"
-                                    aria-labelledby="flush-heading5" data-bs-parent="#accordionFlushExample">
+                                    aria-labelledby="flush-heading5" data-bs-parent="#accordionFlushMobile">
                                     <div class="accordion-body d-flex align-items-start justify-content-between">
-                                        <span class="fz-14">Mikail Rakhimi - Ketua Umum</span>
+                                        <span class="fz-14">Endro</span>
                                         <img src="assets/img/imgList.svg" alt="">
                                     </div>
                                 </div>
@@ -702,7 +724,7 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                         </div>
                     </div>
                     <div class="carousel-item pb-5 bg-2">
-                        <div class="accordion accordion-flush" id="accordionFlushExample2">
+                        <div class="accordion accordion-flush" id="accordionFlushMobile2">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="flush-heading6">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -712,9 +734,9 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                                     </button>
                                 </h2>
                                 <div id="flush-collapse6" class="accordion-collapse collapse"
-                                    aria-labelledby="flush-heading6" data-bs-parent="#accordionFlushExample2">
+                                    aria-labelledby="flush-heading6" data-bs-parent="#accordionFlushMobile2">
                                     <div class="accordion-body d-flex align-items-start justify-content-between">
-                                        <span class="fz-14">Mikail Rakhimi - Ketua Umum</span>
+                                        <span class="fz-14">Alween Ong</span>
                                         <img src="assets/img/imgList.svg" alt="">
                                     </div>
                                 </div>
@@ -728,9 +750,16 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                                     </button>
                                 </h2>
                                 <div id="flush-collapse7" class="accordion-collapse collapse"
-                                    aria-labelledby="flush-heading7" data-bs-parent="#accordionFlushExample2">
+                                    aria-labelledby="flush-heading7" data-bs-parent="#accordionFlushMobile2">
                                     <div class="accordion-body d-flex align-items-start justify-content-between">
                                         <span class="fz-14">Mikail Rakhimi - Ketua Umum</span>
+                                        <img src="assets/img/imgList.svg" alt="">
+                                    </div>
+                                </div>
+                                <div id="flush-collapse7" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-heading7" data-bs-parent="#accordionFlushMobile2">
+                                    <div class="accordion-body d-flex align-items-start justify-content-between">
+                                        <span class="fz-14">Ari Setya M - Wakil Ketua Umum</span>
                                         <img src="assets/img/imgList.svg" alt="">
                                     </div>
                                 </div>
@@ -744,17 +773,24 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                                     </button>
                                 </h2>
                                 <div id="flush-collapse8" class="accordion-collapse collapse"
-                                    aria-labelledby="flush-heading8" data-bs-parent="#accordionFlushExample2">
+                                    aria-labelledby="flush-heading8" data-bs-parent="#accordionFlushMobile2">
                                     <div class="accordion-body d-flex align-items-start justify-content-between">
-                                        <span class="fz-14">Mikail Rakhimi - Ketua Umum</span>
+                                        <span class="fz-14">Eka Agus S - Sekretaris Umum</span>
+                                        <img src="assets/img/imgList.svg" alt="">
+                                    </div>
+                                </div>
+                                <div id="flush-collapse8" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-heading8" data-bs-parent="#accordionFlushMobile2">
+                                    <div class="accordion-body d-flex align-items-start justify-content-between">
+                                        <span class="fz-14">Siti Maimunah - Bendahara Umum</span>
                                         <img src="assets/img/imgList.svg" alt="">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item pb-5 bg-2">
-                        <div class="accordion accordion-flush" id="accordionFlushExample3">
+                    <div class="carousel-item pb-5 bg-3">
+                        <div class="accordion accordion-flush" id="accordionFlushMobile3">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="flush-heading9">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -764,9 +800,9 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                                     </button>
                                 </h2>
                                 <div id="flush-collapse9" class="accordion-collapse collapse"
-                                    aria-labelledby="flush-heading9" data-bs-parent="#accordionFlushExample3">
+                                    aria-labelledby="flush-heading9" data-bs-parent="#accordionFlushMobile3">
                                     <div class="accordion-body d-flex align-items-start justify-content-between">
-                                        <span class="fz-14">Mikail Rakhimi - Ketua Umum</span>
+                                        <span class="fz-14">Yassir Najih</span>
                                         <img src="assets/img/imgList.svg" alt="">
                                     </div>
                                 </div>
@@ -780,9 +816,9 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                                     </button>
                                 </h2>
                                 <div id="flush-collapse10" class="accordion-collapse collapse"
-                                    aria-labelledby="flush-heading10" data-bs-parent="#accordionFlushExample3">
+                                    aria-labelledby="flush-heading10" data-bs-parent="#accordionFlushMobile3">
                                     <div class="accordion-body d-flex align-items-start justify-content-between">
-                                        <span class="fz-14">Mikail Rakhimi - Ketua Umum</span>
+                                        <span class="fz-14">Angga Brawijaya</span>
                                         <img src="assets/img/imgList.svg" alt="">
                                     </div>
                                 </div>
@@ -796,9 +832,9 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                                     </button>
                                 </h2>
                                 <div id="flush-collapse11" class="accordion-collapse collapse"
-                                    aria-labelledby="flush-heading11" data-bs-parent="#accordionFlushExample3">
+                                    aria-labelledby="flush-heading11" data-bs-parent="#accordionFlushMobile3">
                                     <div class="accordion-body d-flex align-items-start justify-content-between">
-                                        <span class="fz-14">Mikail Rakhimi - Ketua Umum</span>
+                                        <span class="fz-14">Ramzi</span>
                                         <img src="assets/img/imgList.svg" alt="">
                                     </div>
                                 </div>
@@ -812,9 +848,9 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                                     </button>
                                 </h2>
                                 <div id="flush-collapse12" class="accordion-collapse collapse"
-                                    aria-labelledby="flush-heading12" data-bs-parent="#accordionFlushExample3">
+                                    aria-labelledby="flush-heading12" data-bs-parent="#accordionFlushMobile3">
                                     <div class="accordion-body d-flex align-items-start justify-content-between">
-                                        <span class="fz-14">Mikail Rakhimi - Ketua Umum</span>
+                                        <span class="fz-14">Ahmad Farhan</span>
                                         <img src="assets/img/imgList.svg" alt="">
                                     </div>
                                 </div>
@@ -828,9 +864,9 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                                     </button>
                                 </h2>
                                 <div id="flush-collapse13" class="accordion-collapse collapse"
-                                    aria-labelledby="flush-heading13" data-bs-parent="#accordionFlushExample3">
+                                    aria-labelledby="flush-heading13" data-bs-parent="#accordionFlushMobile3">
                                     <div class="accordion-body d-flex align-items-start justify-content-between">
-                                        <span class="fz-14">Mikail Rakhimi - Ketua Umum</span>
+                                        <span class="fz-14">Raden Nanda</span>
                                         <img src="assets/img/imgList.svg" alt="">
                                     </div>
                                 </div>
@@ -850,7 +886,8 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
             <img src="assets/img/decorOrganization.svg"
                 class="position-absolute decorPrograms d-none d-md-block d-xxl-none" alt="">
             <h3 class="fw-700 text-center">Our Programs</h3>
-            <div class="row mt-5 pt-5 gap-1 d-flex justify-content-center d-none d-md-flex">
+            <div class="row mt-5 pt-5 gap-1 d-flex justify-content-center d-none d-md-flex" data-aos="fade-up"
+                data-aos-once="true">
                 <img src="assets/img/bgGarisProgram.svg" alt="" class="position-absolute w-100 start-0 end-0">
                 <div class="col-md-4 col-xl-3 position-relative mb-5 pb-5">
                     <div class="bg-blue-young px-4 pt-5 pb-3">
@@ -1016,7 +1053,7 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
 
                     <div class="carousel-inner">
                         <div class="carousel-item pb-5 bg-1 active">
-                            <div class="bg-blue-young px-4 pt-5 pb-3">
+                            <div class="bg-blue-young px-4 pt-5 pb-3" data-aos="fade-up" data-aos-once="true">
                                 <img src="assets/img/garisProgram.svg" alt=""
                                     class="position-absolute top-cus start-cus w-100 d-none d-md-flex" />
                                 <p class="fw-600"><img src="assets/img/garisSmallProgram.svg" alt="">&nbsp; First
@@ -1033,7 +1070,7 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                             </div>
                         </div>
                         <div class="carousel-item pb-5 bg-2">
-                            <div class="bg-blue-young px-4 pt-5 pb-3">
+                            <div class="bg-blue-young px-4 pt-5 pb-3" data-aos="fade-up" data-aos-once="true">
                                 <img src="assets/img/garisProgram.svg" alt=""
                                     class="position-absolute top-cus start-cus w-100 d-none d-md-flex" />
                                 <p class="fw-600"><img src="assets/img/garisSmallProgram.svg" alt="">&nbsp; Second
@@ -1050,7 +1087,7 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                             </div>
                         </div>
                         <div class="carousel-item pb-5 bg-2">
-                            <div class="bg-blue-young px-4 pt-5 pb-3">
+                            <div class="bg-blue-young px-4 pt-5 pb-3" data-aos="fade-up" data-aos-once="true">
                                 <img src="assets/img/garisProgram.svg" alt=""
                                     class="position-absolute top-cus start-cus w-100 d-none d-md-flex" />
                                 <p class="fw-600"><img src="assets/img/garisSmallProgram.svg" alt="">&nbsp; Third
@@ -1067,7 +1104,7 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                             </div>
                         </div>
                         <div class="carousel-item pb-5 bg-2">
-                            <div class="bg-blue-young px-4 pt-5 pb-3">
+                            <div class="bg-blue-young px-4 pt-5 pb-3" data-aos="fade-up" data-aos-once="true">
                                 <img src="assets/img/garisProgram.svg" alt=""
                                     class="position-absolute top-cus start-cus w-100 d-none d-md-flex" />
                                 <p class="fw-600"><img src="assets/img/garisSmallProgram.svg" alt="">&nbsp; Fourth
@@ -1084,7 +1121,7 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                             </div>
                         </div>
                         <div class="carousel-item pb-5 bg-2">
-                            <div class="bg-blue-young px-4 pt-5 pb-3">
+                            <div class="bg-blue-young px-4 pt-5 pb-3" data-aos="fade-up" data-aos-once="true">
                                 <img src="assets/img/garisProgram.svg" alt=""
                                     class="position-absolute top-cus start-cus w-100 d-none d-md-flex" />
                                 <p class="fw-600"><img src="assets/img/garisSmallProgram.svg" alt="">&nbsp; Fifth
@@ -1101,7 +1138,7 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                             </div>
                         </div>
                         <div class="carousel-item pb-5 bg-2">
-                            <div class="bg-blue-young px-4 pt-5 pb-3">
+                            <div class="bg-blue-young px-4 pt-5 pb-3" data-aos="fade-up" data-aos-once="true">
                                 <img src="assets/img/garisProgram.svg" alt=""
                                     class="position-absolute top-cus start-cus w-100 d-none d-md-flex" />
                                 <p class="fw-600"><img src="assets/img/garisSmallProgram.svg" alt="">&nbsp; Sixth
@@ -1118,7 +1155,7 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                             </div>
                         </div>
                         <div class="carousel-item pb-5 bg-2">
-                            <div class="bg-blue-young px-4 pt-5 pb-3">
+                            <div class="bg-blue-young px-4 pt-5 pb-3" data-aos="fade-up" data-aos-once="true">
                                 <img src="assets/img/garisProgram.svg" alt=""
                                     class="position-absolute top-cus start-cus w-100 d-none d-md-flex" />
                                 <p class="fw-600"><img src="assets/img/garisSmallProgram.svg" alt="">&nbsp; Seventh
@@ -1135,7 +1172,7 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                             </div>
                         </div>
                         <div class="carousel-item pb-5 bg-2">
-                            <div class="bg-blue-young px-4 pt-5 pb-3">
+                            <div class="bg-blue-young px-4 pt-5 pb-3" data-aos="fade-up" data-aos-once="true">
                                 <img src="assets/img/garisProgram.svg" alt=""
                                     class="position-absolute top-cus start-cus w-100 d-none d-md-flex" />
                                 <p class="fw-600"><img src="assets/img/garisSmallProgram.svg" alt="">&nbsp; Eighth
@@ -1152,7 +1189,7 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                             </div>
                         </div>
                         <div class="carousel-item pb-5 bg-2">
-                            <div class="bg-blue-young px-4 pt-5 pb-3">
+                            <div class="bg-blue-young px-4 pt-5 pb-3" data-aos="fade-up" data-aos-once="true">
                                 <img src="assets/img/garisProgram.svg" alt=""
                                     class="position-absolute top-cus start-cus w-100 d-none d-md-flex" />
                                 <p class="fw-600"><img src="assets/img/garisSmallProgram.svg" alt="">&nbsp; Nineth
@@ -1184,21 +1221,24 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
             <h3 class="fw-700 text-center mb-5">Our Merchandise</h3>
             <img src="assets/img/garisHistory.svg" alt="">
             <div class="row mt-5 pt-5 gap-1 d-flex justify-content-center d-none d-md-flex">
-                <div class="col-md-4 col-xl-3 position-relative mb-5 pb-5">
+                <div class="col-md-4 col-xl-3 position-relative mb-5 pb-5" data-aos="fade-up" data-aos-once="true"
+                    data-aos-duration="500">
                     <a href="pilihMerchan.php">
                         <div class="merchanCard p-3">
                             <img src="assets/img/merchan1.svg" alt="" class="imgMerchan object-cover">
                         </div>
                     </a>
                 </div>
-                <div class="col-md-4 col-xl-3 position-relative mb-5 pb-5">
+                <div class="col-md-4 col-xl-3 position-relative mb-5 pb-5" data-aos="fade-up" data-aos-once="true"
+                    data-aos-duration="1000">
                     <a href="pilihMerchan.php">
                         <div class="merchanCard p-3">
                             <img src="assets/img/merchan2.svg" alt="" class="imgMerchan object-cover">
                         </div>
                     </a>
                 </div>
-                <div class="col-md-4 col-xl-3 position-relative mb-5 pb-5">
+                <div class="col-md-4 col-xl-3 position-relative mb-5 pb-5" data-aos="fade-up" data-aos-once="true"
+                    data-aos-duration="1500">
                     <a href="pilihMerchan.php">
                         <div class="merchanCard p-3">
                             <img src="assets/img/merchan3.svg" alt="" class="imgMerchan object-cover">
@@ -1246,24 +1286,25 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
         </div>
     </section>
 
-    <!-- Activies -->
-    <section id="activies" class="bgRight mx-auto text-center">
+    <!-- Activities -->
+    <section id="activities" class="bgRight mx-auto text-center">
         <div class="position-relative d-flex flex-column align-items-center">
             <img src="assets/img/imgActivies.svg" alt="" class="d-none d-md-block w-100 h-100 imgActivies">
             <img src="assets/img/imgActiviesM.svg" alt="" class="d-block d-md-none w-100 h-200 imgActivies">
-            <a href="gallery.php" class="btn btn-danger fs-6 mt-md-3 position-absolute btn-activies">View More</a>
+            <a href="gallery.php" class="btn btn-danger fs-6 mt-md-3 position-absolute btn-activies"
+                data-aos="flip-down" data-aos-once="true">View More</a>
             <p class="fw-600 mt-5 pt-5">Saat ini kami telah memiliki</p>
         </div>
         <div class="row d-flex justify-content-center mt-4 d-none d-md-flex">
-            <div class="col-md-3 mx-5 px-5">
+            <div class="col-md-3 mx-5 px-5" data-aos="fade-out" data-aos-once="true" data-aos-duration="1000">
                 <h2 class="fw-800 fz-20">28</h2>
                 <p class="fz-14">Dewan Pengurus Wilayah ( DPW ) Provinsi</p>
             </div>
-            <div class="col-md-3 mx-5 px-5">
+            <div class="col-md-3 mx-5 px-5" data-aos="fade-out" data-aos-once="true" data-aos-duration="1500">
                 <h2 class="fw-800 fz-20">12.000</h2>
                 <p class="fz-14">Anggota Aktif FKP se - Indonesia</p>
             </div>
-            <div class="col-md-3 mx-5 px-5">
+            <div class="col-md-3 mx-5 px-5" data-aos="fade-out" data-aos-once="true" data-aos-duration="2000">
                 <h2 class="fw-800 fz-20">148</h2>
                 <p class="fz-14">Dewan Pengurus Daerah ( DPD )
                     Kota & Kabupaten</p>
@@ -1294,7 +1335,7 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                             <p class="fz-14">Anggota Aktif FKP se - Indonesia</p>
                         </div>
                     </div>
-                    <div class="carousel-item pb-5 bg-2">
+                    <div class="carousel-item pb-5 bg-3">
                         <div class="col-md-3 mx-5 px-5">
                             <h2 class="fw-800 fz-20">148</h2>
                             <p class="fz-14">Dewan Pengurus Daerah ( DPD )
@@ -1334,81 +1375,56 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                 </div> -->
                 <?php
                 $news = mysqli_query($koneksi, "SELECT * FROM berita ORDER BY id DESC LIMIT 5");
-                $berita = mysqli_fetch_assoc($news);
-                $i = 0;
-                // foreach ($news as $b) {
-                //     if ($i != 0) {
-                //         var_dump($b);
-                //     }
-                //     $i++;
-                // }
+                $arr = array();
+                while ($row = mysqli_fetch_array($news)) {
+                    $arr[] = $row;
+                }
                 ?>
                 <div class="col-xl-5 col-12 ps-0 ms-0 mt-5">
-                    <p class="fz-14"><?= $berita['oleh'] ?> - <?= tanggal($berita['tanggal']) ?> WIB
+                    <p class="fz-14" data-aos="fade-right" data-aos-once="true"><?= $arr[0]['oleh'] ?> -
+                        <?= tanggal($arr[0]['tanggal']) ?>
+                        WIB
                     </p>
-                    <h4 class="fw-600">Menepis Pandangan Berbisnis yang Menyesatkan
-                    </h4>
-                    <img src="assets/img/imgNews.svg" class="mt-4" alt="">
-                    <p class="fz-14 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit
-                        amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim
-                        praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam
-                        dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in ornare quam viverra</p>
+                    <h4 class="fw-600"><?= $arr[0]['judul'] ?></h4>
+                    <img src="assets/img/imgNews.svg" class="img-fluid mt-4" alt="">
+                    <p class="fz-14 mt-4" data-aos="fade-in" data-aos-once="true">
+                        <?= substr(strip_tags($arr[0]['isi']), 0, 300) ?></p>
                     <a class="text-dark" class="text-dark" href="#">
                         <div class="d-flex-align-items-center">
-                            <a href="news.php" class="text-dark"><span class="fz-14 fw-600">Read More</span>
+                            <a href="news-detail.php?id=<?= $arr[0]['id'] ?>" class="text-dark"><span
+                                    class="fz-14 fw-600">Read
+                                    More</span>
                                 <img src="assets/img/arrowNews.svg" alt="">
                             </a>
                         </div>
                     </a>
                 </div>
                 <div class="col-xl-6 col-12 ps-md-5 pt-5">
-                    <!-- <?php
-                            foreach ($news as $n) {
-                                if ($i != 0) {
-                            ?> -->
+                    <?php
+                    foreach (array_slice($arr, 1) as $a) {
+                    ?>
                     <div class="row mb-4 d-flex align-items-center">
                         <div class="col-12 col-md-4">
                             <img src="assets/img/newsList1.svg" alt="" class="newList">
                         </div>
                         <div class="col-12 col-md-8">
-                            <p class="fz-14">Kompas.com - 08/03/2022, 07:00 WIB</p>
-                            <h6 class="fz-14 fw-600">Cetak Wirausaha Baru Lewat Pesantren, KemenKopUKM Kerjasama dengan
-                                PBNU
+                            <p class="fz-14"><?= $a['oleh'] ?> - <?= tanggal($a['tanggal']) ?> WIB</p>
+                            <h6 class="fz-14 fw-600"><?= $a['judul'] ?>
                             </h6>
                             <a class="text-dark" class="#" href="#">
                                 <div class="d-flex-align-items-center">
-                                    <a href="news.php" class="text-dark"><span class="fz-14 fw-600">Read More</span>
+                                    <a href="news-detail.php?id=<?= $a['id'] ?>" class="text-dark"><span
+                                            class="fz-14 fw-600">Read More</span>
                                         <img src="assets/img/arrowNews.svg" alt="">
                                     </a>
                                 </div>
                             </a>
                         </div>
                     </div>
-                    <!-- <?php
-                                } else {
-                                    $i++;
-                                }
-                            }
-                            ?> -->
-                    <div class="row mb-4 d-flex align-items-center">
-                        <div class="col-12 col-md-4">
-                            <img src="assets/img/newsList1.svg" alt="" class="newList">
-                        </div>
-                        <div class="col-12 col-md-8">
-                            <p class="fz-14">Kompas.com - 08/03/2022, 07:00 WIB</p>
-                            <h6 class="fz-14 fw-600">Cetak Wirausaha Baru Lewat Pesantren, KemenKopUKM Kerjasama dengan
-                                PBNU
-                            </h6>
-                            <a class="text-dark" class="#" href="#">
-                                <div class="d-flex-align-items-center">
-                                    <a href="news.php" class="text-dark"><span class="fz-14 fw-600">Read More</span>
-                                        <img src="assets/img/arrowNews.svg" alt="">
-                                    </a>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row mb-4 d-flex align-items-center">
+                    <?php
+                    }
+                    ?>
+                    <!-- <div class="row mb-4 d-flex align-items-center">
                         <div class="col-12 col-md-4">
                             <img src="assets/img/newsList1.svg" alt="" class="newList">
                         </div>
@@ -1444,6 +1460,24 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                             </a>
                         </div>
                     </div>
+                    <div class="row mb-4 d-flex align-items-center">
+                        <div class="col-12 col-md-4">
+                            <img src="assets/img/newsList1.svg" alt="" class="newList">
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <p class="fz-14">Kompas.com - 08/03/2022, 07:00 WIB</p>
+                            <h6 class="fz-14 fw-600">Cetak Wirausaha Baru Lewat Pesantren, KemenKopUKM Kerjasama dengan
+                                PBNU
+                            </h6>
+                            <a class="text-dark" class="#" href="#">
+                                <div class="d-flex-align-items-center">
+                                    <a href="news.php" class="text-dark"><span class="fz-14 fw-600">Read More</span>
+                                        <img src="assets/img/arrowNews.svg" alt="">
+                                    </a>
+                                </div>
+                            </a>
+                        </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -1456,7 +1490,7 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
         <div class="container">
             <h3 class="fw-700 text-center">Contact Us</h3>
             <div class="row mt-5 pt-3">
-                <div class="col-md-6">
+                <div class="col-md-6" data-aos="fade-in" data-aos-once="true">
                     <div class="d-flex my-4">
                         <img src="assets/img/telpContact.svg" class="me-3" alt="">
                         <span class="fz-14 me-3">+62 812 6909 7223</span>
@@ -1479,7 +1513,7 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                         <a class="me-4" href="#"><img src="assets/img/igContact.svg" alt=""></a>
                     </div>
                 </div>
-                <div class="col-md-6 mt-5">
+                <div class="col-md-6 mt-5" data-aos="fade-in" data-aos-once="true">
                     <form class="fz-14" action="server/pesan.php" method="post">
                         <div class="mb-3">
                             <label for="text" class="form-label">Your Name</label>
@@ -1511,11 +1545,16 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
     <div class="position-relative d-flex flex-column align-items-center mt-5">
         <img src="assets/img/imgKontak.png" alt="" class="img-fluid object-cover d-none d-md-block">
         <img src="assets/img/imgKontakM.svg" alt="" class="img-fluid object-cover w-100 d-block d-md-none">
-        <a href="admin/regis.php" class="btn btn-danger fs-6 mt-md-3 position-absolute btn-contact">Gabung Sekarang</a>
+        <a href="admin/regis.php" class="btn btn-danger fs-6 mt-md-3 position-absolute btn-contact" data-aos="flip-down"
+            data-aos-once="true">Gabung Sekarang</a>
     </div>
 
     <?php include "components/Footer.php"; ?>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>

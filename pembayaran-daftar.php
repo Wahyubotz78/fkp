@@ -1,3 +1,8 @@
+<?php
+include "server/koneksi.php";
+$data = mysqli_query($koneksi, "SELECT * FROM regisTrx WHERE id_user='$_GET[id]'");
+$r = mysqli_fetch_array($data);
+?>
 <!doctype html>
 <html lang="en">
 
@@ -39,7 +44,7 @@
                         <p class="fz-14">Daftar Member</p>
                     </div>
                     <div class="col-6">
-                        <p class="fz-14 fw-600 text-end">Rp100.000,-</p>
+                        <p class="fz-14 fw-600 text-end">Rp100.<?= $r['unix'] ?>,-</p>
                     </div>
                 </div>
                 <hr class="w-100">
@@ -58,7 +63,7 @@
                 <p class="fz-14">Jumlah yang harus dibayar</p>
                 <div class="row d-flex align-items-center">
                     <div class="col-12">
-                        <h5 class="fw-600">Rp100.000,-</h5>
+                        <h5 class="fw-600">Rp100.<?= $r['unix'] ?>,-</h5>
                     </div>
                 </div>
                 <hr class="w-100 my-4">

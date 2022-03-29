@@ -1,3 +1,10 @@
+<?php
+include('server/koneksi.php');
+$sql = "SELECT * FROM orderan WHERE id = '$_GET[key]'";
+$query = mysqli_query($koneksi, $sql);
+$data = mysqli_fetch_assoc($query);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

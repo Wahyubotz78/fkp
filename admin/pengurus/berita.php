@@ -60,21 +60,11 @@ if (isset($_GET['key'])) {
     <link rel="stylesheet" href="../assets/css/style-signup.css?<?php echo time() ?>">
     <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.0.0" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/trix.css">
-    <script type="text/javascript" src="../assets/js/trix.js"></script>
+    <!-- Tiny -->
+    <script src="https://cdn.tiny.cloud/1/ycgfg1fcvxletn79z2v832p33904r3weqhuxaf7polouzn3l/tinymce/5/tinymce.min.js"
+        referrerpolicy="origin"></script>
 
 </head>
-<style>
-.trix-editor img {
-    height: 200px;
-    width: 200px;
-
-}
-
-progress {
-    display: none;
-}
-</style>
 
 <body class="g-sidenav-show bg-gray-200">
     <aside
@@ -279,121 +269,115 @@ progress {
         <div class="container-fluid py-4">
             <div class="row">
                 <div class="col-lg-12 col-md-12 mb-md-0 mb-4">
-                    <div class="card">
-                        <div class="card-header pb-0">
-                            <div class="row">
-                                <div class="col-lg-6 col-7">
-                                    <h6>Berita Terbaru</h6>
+                    <form action="/server/tambahBerita.php" method="post" enctype="multipart/form-data">
+                        <div class="card">
+                            <div class="card-header pb-0">
+                                <div class="row">
+                                    <div class="col-lg-6 col-7">
+                                        <h6>Berita Terbaru</h6>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <form action="/server/tambahBerita.php" method="post" enctype="multipart/form-data">
                             <div class="card-body pb-2">
                                 <div class="input-group input-group-outline">
                                     <label class="form-label">Judul</label>
-                                    <input type="text" name="judul" class="form-control">
+                                    <input type="text" name="judul" class="form-control" style="z-index: 0;">
                                 </div>
                             </div>
-                            <div class="card-body pb-2">
-
-                                <input type=" hidden" name="isi" id="editor">
-                                <trix-editor class="trix-editor" input="editor"></trix-editor>
-                                <div class="trix-editor">
-
-                                </div>
-                            </div>
-                            <div class="d-flex mx-4">
-
-                                <div class="col-lg-5 pt-4 d-flex">
-                                    <div class="file-input">
-                                        <p class="fw-bold">Thumbnail</p>
-                                        <input type="file" id="file" class="file" name="foto"
-                                            onchange="loadFoto(event)">
-                                        <label for="file" class="label-1">
-                                            <img src="" id="foto" width="100px" height="100px"
-                                                style="display: none; border-radius: 10px;">
-                                            <i class="ri-add-circle-fill fs-1 text-danger" id="tambah"></i>
-                                        </label>
-                                    </div>
-                                    <small>
-                                        <p class="pt-4 mt-3 ms-2" id="max">*max ukurun file 2mb
-                                        </p>
-                                        <p class="pt-4 mt-3 ms-2" id="file-name"></p>
-                                    </small>
-
-                                </div>
-                            </div>
-                            <button class="btn bg-gradient-success mx-4 float-end" name="submit">Submit</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-3">
-                <div class="col-lg-12 col-md-12 mb-md-0 mb-4">
-                    <div class="card">
-                        <div class="card-header pb-0">
-                            <div class="row">
-                                <div class="col-lg-6 col-7">
-                                    <h6>Berita Terbaru</h6>
-                                </div>
+                            <div class="card-body pb-2 ">
+                                <textarea name="isi" id="isi">
+                                </textarea>
                             </div>
                         </div>
-                        <div class="card-body pb-2">
-                            <?php
-                            $data_berita = mysqli_query($koneksi, "SELECT * FROM berita ORDER BY id DESC");
-                            while ($berita = mysqli_fetch_array($data_berita)) {
-                            ?>
-                            <div class="row mb-2">
-                                <div class="col-12 d-flex">
-                                    <img src="../../server/berita/img/<?php echo $berita['foto']; ?>" alt="news-img"
-                                        class="rounded">
-                                    <div class="text-wrapper mx-2">
-                                        <a href="#">
-                                            <h5 class="mb-0"><?= $berita['judul']; ?></h5>
-                                        </a>
-                                        <p class="text-sm mb-0">
-                                            <?php
-                                                if (strlen($berita['isi']) >= 200) {
-                                                    echo substr(strip_tags($berita['isi']), 0, 100) . "...";
-                                                } else {
-                                                    echo strip_tags($berita['isi']);
-                                                }
-                                                ?>
-                                        </p>
-                                        <div class="col-4 mt-1">
-                                            <a href="../../server/hapusBerita.php?id=<?= $berita['id'] ?>"
-                                                class="badge bg-gradient-danger">Hapus</a>
-                                            <a href="../../news-detail.php?id=<?= $berita['id'] ?>"
-                                                class="badge bg-gradient-success">baca</a>
-                                        </div>
+                        <div class="d-flex mx-4">
+                            <div class="col-lg-5 pt-4 d-flex">
+                                <div class="file-input">
+                                    <p class="fw-bold">Thumbnail</p>
+                                    <input type="file" id="file" class="file" name="foto" onchange="loadFoto(event)">
+                                    <label for="file" class="label-1">
+                                        <img src="" id="foto" width="100px" height="100px"
+                                            style="display: none; border-radius: 10px;">
+                                        <i class="ri-add-circle-fill fs-1 text-danger" id="tambah"></i>
+                                    </label>
+                                </div>
+                                <small>
+                                    <p class="pt-4 mt-3 ms-2" id="max">*max ukurun file 2mb
+                                    </p>
+                                    <p class="pt-4 mt-3 ms-2" id="file-name"></p>
+                                </small>
+                            </div>
+                        </div>
+                        <button class="btn bg-gradient-success mx-4 float-end" name="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-lg-12 col-md-12 mb-md-0 mb-4">
+                <div class="card">
+                    <div class="card-header pb-0">
+                        <div class="row">
+                            <div class="col-lg-6 col-7">
+                                <h6>Berita Terbaru</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body pb-2">
+                        <?php
+                        $data_berita = mysqli_query($koneksi, "SELECT * FROM berita ORDER BY id DESC");
+                        while ($berita = mysqli_fetch_array($data_berita)) {
+                        ?>
+                        <div class="row mb-2">
+                            <div class="col-12 d-flex">
+                                <img src="../../server/berita/img/<?php echo $berita['foto']; ?>" alt="news-img"
+                                    class="rounded" width="100px">
+                                <div class="text-wrapper mx-2">
+                                    <a href="#">
+                                        <h5 class="mb-0"><?= $berita['judul']; ?></h5>
+                                    </a>
+                                    <p class="text-sm mb-0">
+                                        <?php
+                                            if (strlen($berita['isi']) >= 200) {
+                                                echo substr(strip_tags($berita['isi']), 0, 100) . "...";
+                                            } else {
+                                                echo strip_tags($berita['isi']);
+                                            }
+                                            ?>
+                                    </p>
+                                    <div class="col-4 mt-1">
+                                        <a href="../../server/hapusBerita.php?id=<?= $berita['id'] ?>"
+                                            class="badge bg-gradient-danger">Hapus</a>
+                                        <a href="../../news-detail.php?id=<?= $berita['id'] ?>"
+                                            class="badge bg-gradient-success">baca</a>
                                     </div>
                                 </div>
                             </div>
-                            <?php
-                            }
-                            ?>
+                        </div>
+                        <?php
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer py-4">
+            <div class="container-fluid">
+                <div class="row align-items-center justify-content-lg-between">
+                    <div class="col-lg-6 mb-lg-0 mb-4">
+                        <div class="copyright text-center text-sm text-muted text-lg-start">
+                            ©
+                            <script>
+                            document.write(new Date().getFullYear());
+                            </script>
+                            , made with <i class="fa fa-heart"></i> by
+                            <a href="https://www.instagram.com/egdev" class="font-weight-bold" target="_blank">Eg
+                                Developer</a>
+                            for a better web.
                         </div>
                     </div>
                 </div>
             </div>
-            <footer class="footer py-4">
-                <div class="container-fluid">
-                    <div class="row align-items-center justify-content-lg-between">
-                        <div class="col-lg-6 mb-lg-0 mb-4">
-                            <div class="copyright text-center text-sm text-muted text-lg-start">
-                                ©
-                                <script>
-                                document.write(new Date().getFullYear());
-                                </script>
-                                , made with <i class="fa fa-heart"></i> by
-                                <a href="https://www.instagram.com/egdev" class="font-weight-bold" target="_blank">Eg
-                                    Developer</a>
-                                for a better web.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+        </footer>
         </div>
     </main>
 
@@ -425,6 +409,20 @@ progress {
             URL.revokeObjectURL(output.src) // free memory
         }
     };
+    </script>
+    <script>
+    tinymce.init({
+        selector: '#isi',
+        menubar: false,
+        plugins: "link image code",
+        toolbar: 'undo redo | styleselect | forecolor | bold italic | alignleft aligncenter alignright alignjustify | outdent indent | link image | code'
+    });
+    </script>
+
+    <form method="post" action="dump.php">
+        <textarea name="content"></textarea>
+    </form>
+    });
     </script>
     <!-- Github buttons -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>

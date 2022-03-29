@@ -11,26 +11,26 @@
 
         <!-- Desktop -->
         <ul class="pt-3 ps-0 ms-0 d-none d-xl-flex menu-desktop" id="nav">
-            <li><a class="me-3 menu-desktop-list" href="#">Home</a></li>
-            <li><a class="me-3 menu-desktop-list" href="#history">History</a></li>
-            <li><a class="me-3 menu-desktop-list" href="#program">Program</a></li>
-            <li><a class="me-3 menu-desktop-list" href="#news">News</a></li>
-            <li><a class="me-3 menu-desktop-list" href="#activies">Activies</a></li>
-            <li><a class="me-3 menu-desktop-list" href="#organization">Organization Values</a></li>
-            <li><a class="me-3 menu-desktop-list" href="#structure">Structure</a></li>
-            <li><a class="me-3 menu-desktop-list" href="#contact">Contact Us</a></li>
+            <li><a class="me-3 menu-desktop-list" href="index.php#">Home</a></li>
+            <li><a class="me-3 menu-desktop-list" href="index.php#history">History</a></li>
+            <li><a class="me-3 menu-desktop-list" href="index.php#program">Program</a></li>
+            <li><a class="me-3 menu-desktop-list" href="index.php#news">News</a></li>
+            <li><a class="me-3 menu-desktop-list" href="index.php#activities">Activities</a></li>
+            <li><a class="me-3 menu-desktop-list" href="index.php#organization">Organization Values</a></li>
+            <li><a class="me-3 menu-desktop-list" href="index.php#structure">Structure</a></li>
+            <li><a class="me-3 menu-desktop-list" href="index.php#contact">Contact Us</a></li>
         </ul>
 
         <!-- Mobile -->
         <ul class="pt-3 ps-0 ms-0 d-block d-xl-none menu-mobile">
-            <li><a class="me-3" href="#">Home</a></li>
-            <li><a class="me-3" href="#history">History</a></li>
-            <li><a class="me-3" href="#organization">Organization Values</a></li>
-            <li><a class="me-3" href="#structure">Structure</a></li>
-            <li><a class="me-3" href="#program">Program</a></li>
-            <li><a class="me-3" href="#news">News</a></li>
-            <li><a class="me-3" href="#activies">Activies</a></li>
-            <li><a class="me-3" href="#contact">Contact Us</a></li>
+            <li><a class="me-3" href="index.php#">Home</a></li>
+            <li><a class="me-3" href="index.php#history">History</a></li>
+            <li><a class="me-3" href="index.php#organization">Organization Values</a></li>
+            <li><a class="me-3" href="index.php#structure">Structure</a></li>
+            <li><a class="me-3" href="index.php#program">Program</a></li>
+            <li><a class="me-3" href="index.php#news">News</a></li>
+            <li><a class="me-3" href="index.php#activities">Activities</a></li>
+            <li><a class="me-3" href="index.php#contact">Contact Us</a></li>
             <a href="admin/login.php" class="btn btn-danger">Login</a>
         </ul>
 

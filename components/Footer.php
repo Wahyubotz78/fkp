@@ -6,27 +6,30 @@
             <div class="mt-3 fz-14 d-none d-md-block">FKP, 2022 Allright reserved</div>
             <img src="assets/img/arrowFooter.svg" class="position-absolute start-0 d-none d-md-block" alt="">
         </div>
-        <div class="col-5 col-md-3 fz-14">
+        <div class="col-4 col-md-3 fz-14">
             <ul class="ps-0" style="list-style: none; line-height: 40px">
-                <li class="fw-600">Home</li>
-                <li>History</li>
-                <li>Organization Values</li>
-                <li>Structure</li>
-                <li>Programs</li>
-                <li>News</li>
-                <li>Activies</li>
+                <li class="fw-600"><a class="text-dark" href="index.php#">Home</a></li>
+                <li><a class="text-dark" href="index.php#">History</a></li>
+                <li class="d-none d-md-block"><a class="text-dark" href="index.php#">Organization Values</a></li>
+                <li class="d-block d-md-none"><a class="text-dark" href="index.php#">Organization</a></li>
+                <li><a class="text-dark" href="index.php#">Structure</a></li>
+                <li><a class="text-dark" href="index.php#">Programs</a></li>
+                <li><a class="text-dark" href="index.php#">News</a></li>
+                <li><a class="text-dark" href="index.php#">Activities</a></li>
             </ul>
         </div>
-        <div class="col-5 col-md-3 fz-14">
+        <div class="col-8 col-md-3 fz-14">
             <ul class="ps-0" style="list-style: none; line-height: 40px">
                 <li class="fw-600">Contact Us</li>
                 <li>+62 812 6909 7223</li>
                 <li>+62 813 1094 7775</li>
                 <li>fkppusat@gmail.com</li>
-                <li>Komplek Departemen Keuangan C70, Kembangan Jakarta Barat, Indonesia 11610</li>
+                <li style="line-height: 20px;" class="mt-3">Komplek Departemen Keuangan C70, Kembangan Jakarta Barat,
+                    Indonesia 11610
+                </li>
             </ul>
         </div>
-        <div class="col-12 col-md-3 fz-14 text-center text-md-start">
+        <div class="col-12 col-md-3 fz-14 text-center text-md-start mb-4">
             <ul class="ps-0" style="list-style: none; line-height: 40px">
                 <li class="fw-600">Social Media</li>
                 <li>

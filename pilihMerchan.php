@@ -8,11 +8,9 @@
     <title>Pilih Produk</title>
     <link rel="stylesheet" href="assets/css/style.css?<?php echo time(); ?>">
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="icon" type="image/" href="assets/img/logoFkp.svg">
 </head>
@@ -24,37 +22,30 @@
                 <a href="index.php"><img src="assets/img/logoFkp.svg" class="mt-5" alt=""></a>
                 <h3 class="fw-600 mt-5">Order Merchandise</h3>
                 <p class="fw-400">Pastikan Informasi kamu sesuai ya!!</p>
-                <form id="my_form" class="mt-5" action="regis2.php" method="post" enctype="multipart/form-data">
+                <form id="my_form" class="mt-5" action="detail-produk.php" method="post" enctype="multipart/form-data">
                     <div class="d-flex flex-wrap row">
                         <div class="col-12 col-xl-6 mt-4">
                             <label for="nama" class="form-label fw-bold">Nama Lengkap</label>
-                            <input type="text" class="form-control form-control-signup f-14" id="inputNama"
-                                aria-describedby="nama" name="nama" required>
+                            <input type="text" class="form-control form-control-signup f-14" id="inputNama" aria-describedby="nama" name="nama" required>
                         </div>
                         <div class="col-12 col-xl-6 mt-4">
                             <label for="ex1" class="form-label fw-bold">Nomor Telp.</label>
-                            <input type="email" class="form-control f-14" id="ex1" aria-describedby="emailHelp"
-                                name="email">
+                            <input type="number" class="form-control f-14" id="ex1" aria-describedby="emailHelp" name="nomor">
                         </div>
                     </div>
                     <div class="d-flex flex-wrap row">
                         <div class="col-12 col-xl-12 mt-4">
                             <label for="ex2" class="form-label fw-bold">Alamat</label>
-                            <textarea type="text" class="form-control form-lebih" aria-label="alamat"
-                                aria-describedby="button-addon2" id="ex2" name="alamat"></textarea>
+                            <textarea type="text" class="form-control form-lebih" aria-label="alamat" aria-describedby="button-addon2" id="ex2" name="alamat"></textarea>
                         </div>
                     </div>
                     <div class="col-12 col-xl-12 mt-4">
                         <label for="ex3" class="form-label fw-bold">Pilih
                             Barang</label>
-                        <select class="form-control" id="ex3" name="tempat" placeholder="Pilih Barang..." required>
+                        <select class="form-control" id="//barang" name="idbarang" placeholder="Pilih Barang..." required>
                             <option value=""></option>
-                            <?php
-                            $sql = mysqli_query($koneksi, "SELECT name FROM regencies");
-                            while ($data = mysqli_fetch_array($sql)) {
-                                echo "<option value='" . $data['name'] . "'>" . $data['name'] . "</option>";
-                            }
-                            ?>
+                            <option value="1">Barang 1</option>
+                            <option value="2">Barang 2</option>
                         </select>
                     </div>
                     <div class="d-flex flex-wrap row">
@@ -62,37 +53,27 @@
                             <label for="exampleInputEmail1" class="form-label fw-bold">Ukuran</label>
                             <select class="form-control" name="ukuran" placeholder="Ukuran..." required>
                                 <option value=""></option>
-                                <?php
-                                $sql = mysqli_query($koneksi, "SELECT name FROM regencies");
-                                while ($data = mysqli_fetch_array($sql)) {
-                                    echo "<option value='" . $data['name'] . "'>" . $data['name'] . "</option>";
-                                }
-                                ?>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
                             </select>
                         </div>
                         <div class="col-8 col-xl-6 mt-4">
                             <label for="exampleInputEmail1" class="form-label fw-bold">Jumlah
                                 Pembelian</label>
-                            <select style="background-color: #f3f3f4 !important" class="form-control" name="tempat"
-                                placeholder="Jumlah Pembelian..." required>
-                                <option value=""></option>
-                                <?php
-                                $sql = mysqli_query($koneksi, "SELECT name FROM regencies");
-                                while ($data = mysqli_fetch_array($sql)) {
-                                    echo "<option value='" . $data['name'] . "'>" . $data['name'] . "</option>";
-                                }
-                                ?>
-                            </select>
+                            <input type="text" class="form-control form-control-signup f-14" id="jumlah" aria-describedby="jumlah" name="jumlah" required>
                         </div>
                     </div>
                     <div class="col-12 pt-5">
-                        <a href="detail-produk.php" class="w-100 btn btn-danger">Selanjutnya</a>
+                        <!-- <a href="detail-produk.php" class="w-100 btn btn-danger">Selanjutnya</a> -->
+                        <button type="submit" class="w-100 btn btn-danger">Selanjutnya</button>
                     </div>
                 </form>
             </div>
-            <div
-                class="rightProduct d-none d-xl-flex align-items-center justify-content-center col-xl-5 pe-0 me-0 bg-biru position-fixed end-0 top-0 bottom-0">
-                <div class="d-flex flex-column">
+            <div class="rightProduct d-none d-xl-flex align-items-center justify-content-center col-xl-5 pe-0 me-0 bg-biru position-fixed end-0 top-0 bottom-0">
+                <div class="d-flex flex-column" id="//detailProduk">
                     <div class="bg-abuMerchan d-flex flex-column align-items-center">
                         <img src="assets/img/merchanProduct.png" alt="">
                     </div>
@@ -114,8 +95,24 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    <script>
+        $(document).ready(function() {
+            $('body').on("change", "#barang", function() {
+                var id = $(this).val();
+                var data = "id=" + id + "&data=kabupaten";
+                $.ajax({
+                    type: 'POST',
+                    url: "/server/getDetailProduk.php",
+                    data: data,
+                    success: function(hasil) {
+                        $("#detailProduk").html(hasil);
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

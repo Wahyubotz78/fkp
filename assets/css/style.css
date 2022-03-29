@@ -766,6 +766,11 @@ input[type="checkbox"] {
 
 .imgMerchan {
   width: 100%;
+  transition: 0.3s ease-in-out;
+}
+
+.imgMerchan:hover {
+  transform: scale(1.1);
 }
 
 .imgMerchanLeft {

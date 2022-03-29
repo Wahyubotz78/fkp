@@ -57,45 +57,7 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg p-4 fixed-top" id="dynamic">
-        <div class="container d-flex align-items-center justify-content-between gap-4">
-            <div class="logo">
-                <a href="index.php"><img src="assets/img/logoFkp.svg" alt=""></a>
-            </div>
-            <input type="checkbox" id="click">
-            <label for="click" class="menu-btn">
-                <i class="fas fa-bars"></i>
-            </label>
-
-            <!-- Desktop -->
-            <ul class="pt-3 ps-0 ms-0 d-none d-xl-flex menu-desktop" id="nav">
-                <li><a class="me-3 menu-desktop-list" href="index.php#">Home</a></li>
-                <li><a class="me-3 menu-desktop-list" href="index.php#history">History</a></li>
-                <li><a class="me-3 menu-desktop-list" href="index.php#program">Program</a></li>
-                <li><a class="me-3 menu-desktop-list" href="index.php#news">News</a></li>
-                <li><a class="me-3 menu-desktop-list" href="index.php#activies">Activies</a></li>
-                <li><a class="me-3 menu-desktop-list" href="index.php#organization">Organization Values</a></li>
-                <li><a class="me-3 menu-desktop-list" href="index.php#structure">Structure</a></li>
-                <li><a class="me-3 menu-desktop-list" href="index.php#contact">Contact Us</a></li>
-            </ul>
-
-            <!-- Mobile -->
-            <ul class="pt-3 ps-0 ms-0 d-block d-xl-none menu-mobile">
-                <li><a class="me-3" href="index.php#">Home</a></li>
-                <li><a class="me-3" href="index.php#">History</a></li>
-                <li><a class="me-3" href="index.php#">Organization Values</a></li>
-                <li><a class="me-3" href="index.php#">Structure</a></li>
-                <li><a class="me-3" href="index.php#">Program</a></li>
-                <li><a class="me-3" href="index.php#">News</a></li>
-                <li><a class="me-3" href="index.php#">Activies</a></li>
-                <li><a class="me-3" href="index.php#">Contact Us</a></li>
-                <a href="admin/login.php" class="btn btn-danger">Login</a>
-            </ul>
-
-            <a href="admin/login.php" class="btn btn-danger d-none d-xl-flex">Login</a>
-
-        </div>
-    </nav>
+    <?php include "components/Navbar.php" ?>
 
     <!-- News -->
     <section id="news" class="bgLeft mx-auto position-relative">
@@ -104,13 +66,6 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                 <?php
                 $news = mysqli_query($koneksi, "SELECT * FROM berita ORDER BY id DESC LIMIT 6");
                 $berita = mysqli_fetch_assoc($news);
-                $i = 0;
-                // foreach ($news as $b) {
-                //     if ($i != 0) {
-                //         var_dump($b);
-                //     }
-                //     $i++;
-                // }
                 ?>
                 <div class="col-xl-5 col-12 ps-0 ms-0 mt-5">
                     <p class="fz-14"><?= $berita['oleh'] ?> - <?= tanggal($berita['tanggal']) ?> WIB
@@ -143,10 +98,6 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                         </div>
                     </div>
                     <div class="p-3">
-                        <!-- <?php
-                                foreach ($news as $n) {
-                                    if ($i != 0) {
-                                ?> -->
                         <div class="row mb-4 d-flex align-items-center">
                             <div class="col-12 col-md-4">
                                 <img src="assets/img/newsList1.svg" alt="" class="newList">
@@ -165,12 +116,6 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                                 </a>
                             </div>
                         </div>
-                        <!-- <?php
-                                    } else {
-                                        $i++;
-                                    }
-                                }
-                                ?> -->
                         <div class="row mb-4 d-flex align-items-center">
                             <div class="col-12 col-md-4">
                                 <img src="assets/img/newsList1.svg" alt="" class="newList">
@@ -234,16 +179,19 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                     <h5 class="fw-600">Berita Terbaru</h5>
                     <img src="assets/img/garisMerah.png" alt="">
                 </div>
+                <?php
+                $news = mysqli_query($koneksi, "SELECT * FROM berita ORDER BY id DESC LIMIT 6");
+                $align = "left";
+                foreach ($news as $berita) {
+                    if ($align == "left") {
+                ?>
                 <div class="col-xl-5 col-12 ps-0 ms-0 mt-5">
                     <div class="d-flex">
                         <img src="assets/img/newsList1.svg" alt="" class="newList">
                         <div class="d-flex flex-column ms-4">
-                            <p class="fz-14">Kompas.com - 08/03/2022, 07:00 WIB</p>
-                            <h6 class="fz-14 fw-600">Cetak Wirausaha Baru Lewat Pesantren, KemenKopUKM Kerjasama
-                                dengan
-                                PBNU
-                            </h6>
-                            <a class="text-dark" class="#" href="#">
+                            <p class="fz-14"><?= $berita['oleh'] ?> - 08/03/2022, 07:00 WIB</p>
+                            <h6 class="fz-14 fw-600"><?= $berita['judul'] ?></h6>
+                            <a class="text-dark" class="#" href="news-detail.php?id=<?= $berita['id'] ?>">
                                 <div class="d-flex-align-items-center">
                                     <span class="fz-14 fw-600">Read More</span>
                                     <img src="assets/img/arrowNews.svg" alt="">
@@ -252,18 +200,19 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                         </div>
                     </div>
                 </div>
+                <?php
+                        $align = "right";
+                    } else {
+                    ?>
                 <div class="col-xl-6 col-12 ps-md-5 pt-5">
                     <div class="row mb-4 d-flex align-items-center">
                         <div class="col-12 col-md-4">
                             <img src="assets/img/newsList1.svg" alt="" class="newList">
                         </div>
                         <div class="col-12 col-md-8">
-                            <p class="fz-14">Kompas.com - 08/03/2022, 07:00 WIB</p>
-                            <h6 class="fz-14 fw-600">Cetak Wirausaha Baru Lewat Pesantren, KemenKopUKM Kerjasama
-                                dengan
-                                PBNU
-                            </h6>
-                            <a class="text-dark" class="#" href="#">
+                            <p class="fz-14"><?= $berita['oleh'] ?> - 08/03/2022, 07:00 WIB</p>
+                            <h6 class="fz-14 fw-600"><?= $berita['judul'] ?></h6>
+                            <a class="text-dark" class="#" href="news-detail.php?id=<?= $berita['id'] ?>">
                                 <div class="d-flex-align-items-center">
                                     <span class="fz-14 fw-600">Read More</span>
                                     <img src="assets/img/arrowNews.svg" alt="">
@@ -272,82 +221,11 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-5 col-12 ps-0 ms-0 mt-5">
-                    <div class="d-flex">
-                        <img src="assets/img/newsList1.svg" alt="" class="newList">
-                        <div class="d-flex flex-column ms-4">
-                            <p class="fz-14">Kompas.com - 08/03/2022, 07:00 WIB</p>
-                            <h6 class="fz-14 fw-600">Cetak Wirausaha Baru Lewat Pesantren, KemenKopUKM Kerjasama
-                                dengan
-                                PBNU
-                            </h6>
-                            <a class="text-dark" class="#" href="#">
-                                <div class="d-flex-align-items-center">
-                                    <span class="fz-14 fw-600">Read More</span>
-                                    <img src="assets/img/arrowNews.svg" alt="">
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-6 col-12 ps-md-5 pt-5">
-                    <div class="row mb-4 d-flex align-items-center">
-                        <div class="col-12 col-md-4">
-                            <img src="assets/img/newsList1.svg" alt="" class="newList">
-                        </div>
-                        <div class="col-12 col-md-8">
-                            <p class="fz-14">Kompas.com - 08/03/2022, 07:00 WIB</p>
-                            <h6 class="fz-14 fw-600">Cetak Wirausaha Baru Lewat Pesantren, KemenKopUKM Kerjasama
-                                dengan
-                                PBNU
-                            </h6>
-                            <a class="text-dark" class="#" href="#">
-                                <div class="d-flex-align-items-center">
-                                    <span class="fz-14 fw-600">Read More</span>
-                                    <img src="assets/img/arrowNews.svg" alt="">
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-5 col-12 ps-0 ms-0 mt-5">
-                    <div class="d-flex">
-                        <img src="assets/img/newsList1.svg" alt="" class="newList">
-                        <div class="d-flex flex-column ms-4">
-                            <p class="fz-14">Kompas.com - 08/03/2022, 07:00 WIB</p>
-                            <h6 class="fz-14 fw-600">Cetak Wirausaha Baru Lewat Pesantren, KemenKopUKM Kerjasama
-                                dengan
-                                PBNU
-                            </h6>
-                            <a class="text-dark" class="#" href="#">
-                                <div class="d-flex-align-items-center">
-                                    <span class="fz-14 fw-600">Read More</span>
-                                    <img src="assets/img/arrowNews.svg" alt="">
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-6 col-12 ps-md-5 pt-5">
-                    <div class="row mb-4 d-flex align-items-center">
-                        <div class="col-12 col-md-4">
-                            <img src="assets/img/newsList1.svg" alt="" class="newList">
-                        </div>
-                        <div class="col-12 col-md-8">
-                            <p class="fz-14">Kompas.com - 08/03/2022, 07:00 WIB</p>
-                            <h6 class="fz-14 fw-600">Cetak Wirausaha Baru Lewat Pesantren, KemenKopUKM Kerjasama
-                                dengan
-                                PBNU
-                            </h6>
-                            <a class="text-dark" class="#" href="#">
-                                <div class="d-flex-align-items-center">
-                                    <span class="fz-14 fw-600">Read More</span>
-                                    <img src="assets/img/arrowNews.svg" alt="">
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                        $align = "left";
+                    }
+                }
+                ?>
             </div>
             <hr>
         </div>
