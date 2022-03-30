@@ -1386,7 +1386,8 @@ $viewer = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM viewer"));
                         WIB
                     </p>
                     <h4 class="fw-600"><?= $arr[0]['judul'] ?></h4>
-                    <img src="assets/img/imgNews.svg" class="img-fluid mt-4" alt="">
+                    <img src="server/berita/img/<?= $arr[0]['foto'] ?>" class="img-fluid mt-4" style="height:80%;width:80%;" alt="">
+                    
                     <p class="fz-14 mt-4" data-aos="fade-in" data-aos-once="true">
                         <?= substr(strip_tags($arr[0]['isi']), 0, 300) ?></p>
                     <a class="text-dark" class="text-dark" href="#">

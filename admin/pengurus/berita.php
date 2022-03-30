@@ -47,8 +47,7 @@ if (isset($_GET['key'])) {
     <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
     <title>Forum Kewirausahaan Pemuda</title>
     <!--     Fonts and icons     -->
-    <link rel="stylesheet" type="text/css"
-        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
     <!-- Nucleo Icons -->
     <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
     <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
@@ -61,20 +60,15 @@ if (isset($_GET['key'])) {
     <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.0.0" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
     <!-- Tiny -->
-    <script src="https://cdn.tiny.cloud/1/ycgfg1fcvxletn79z2v832p33904r3weqhuxaf7polouzn3l/tinymce/5/tinymce.min.js"
-        referrerpolicy="origin"></script>
+    <script src="https://cdn.tiny.cloud/1/ycgfg1fcvxletn79z2v832p33904r3weqhuxaf7polouzn3l/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
 </head>
 
 <body class="g-sidenav-show bg-gray-200">
-    <aside
-        class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-white"
-        id="sidenav-main">
+    <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-white" id="sidenav-main">
         <div class="sidenav-header">
-            <i class="fas fa-times p-3 cursor-pointer text-dark opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
-                aria-hidden="true" id="iconSidenav"></i>
-            <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard "
-                target="_blank">
+            <i class="fas fa-times p-3 cursor-pointer text-dark opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+            <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard " target="_blank">
                 <!-- <img
             src="/public/eg../assets/img/egame-sm-logo.png"
             class="navbar-brand-img h-100"
@@ -124,8 +118,7 @@ if (isset($_GET['key'])) {
     </aside>
     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg">
         <!-- Navbar -->
-        <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur"
-            navbar-scroll="true">
+        <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
             <div class="container-fluid py-1 px-3">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
@@ -147,13 +140,11 @@ if (isset($_GET['key'])) {
                     </div>
                     <ul class="navbar-nav justify-content-end">
                         <li class="nav-item dropdown pe-2 px-3 d-flex align-items-center">
-                            <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fa fa-user me-sm-1"></i>
                                 <span class="d-sm-inline d-none">Admin</span>
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-end px-2 py-3 me-sm-n4"
-                                aria-labelledby="dropdownMenuButton">
+                            <ul class="dropdown-menu dropdown-menu-end px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
                                 <li>
                                     <a class="dropdown-item border-radius-md" href="../../server/logout.php">
                                         <div class="d-flex py-1">
@@ -177,12 +168,10 @@ if (isset($_GET['key'])) {
                             </a>
                         </li>
                         <li class="nav-item dropdown pe-2 px-3 d-flex align-items-center">
-                            <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fa fa-bell cursor-pointer"></i>
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-end px-2 py-3 me-sm-n4"
-                                aria-labelledby="dropdownMenuButton">
+                            <ul class="dropdown-menu dropdown-menu-end px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
                                 <li class="mb-2">
                                     <a class="dropdown-item border-radius-md" href="javascript:;">
                                         <div class="d-flex py-1">
@@ -206,8 +195,7 @@ if (isset($_GET['key'])) {
                                     <a class="dropdown-item border-radius-md" href="javascript:;">
                                         <div class="d-flex py-1">
                                             <div class="my-auto">
-                                                <img src="../assets/img/small-logos/logo-spotify.svg"
-                                                    class="avatar avatar-sm bg-gradient-dark me-3" />
+                                                <img src="../assets/img/small-logos/logo-spotify.svg" class="avatar avatar-sm bg-gradient-dark me-3" />
                                             </div>
                                             <div class="d-flex flex-column justify-content-center">
                                                 <h6 class="text-sm font-weight-normal mb-1">
@@ -226,20 +214,14 @@ if (isset($_GET['key'])) {
                                     <a class="dropdown-item border-radius-md" href="javascript:;">
                                         <div class="d-flex py-1">
                                             <div class="avatar avatar-sm bg-gradient-secondary me-3 my-auto">
-                                                <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                                     <title>credit-card</title>
                                                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                        <g transform="translate(-2169.000000, -745.000000)"
-                                                            fill="#FFFFFF" fill-rule="nonzero">
+                                                        <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF" fill-rule="nonzero">
                                                             <g transform="translate(1716.000000, 291.000000)">
                                                                 <g transform="translate(453.000000, 454.000000)">
-                                                                    <path class="color-background"
-                                                                        d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z"
-                                                                        opacity="0.593633743"></path>
-                                                                    <path class="color-background"
-                                                                        d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z">
+                                                                    <path class="color-background" d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z" opacity="0.593633743"></path>
+                                                                    <path class="color-background" d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z">
                                                                     </path>
                                                                 </g>
                                                             </g>
@@ -288,26 +270,27 @@ if (isset($_GET['key'])) {
                                 <textarea name="isi" id="isi">
                                 </textarea>
                             </div>
-                        </div>
-                        <div class="d-flex mx-4">
-                            <div class="col-lg-5 pt-4 d-flex">
-                                <div class="file-input">
-                                    <p class="fw-bold">Thumbnail</p>
-                                    <input type="file" id="file" class="file" name="foto" onchange="loadFoto(event)">
-                                    <label for="file" class="label-1">
-                                        <img src="" id="foto" width="100px" height="100px"
-                                            style="display: none; border-radius: 10px;">
-                                        <i class="ri-add-circle-fill fs-1 text-danger" id="tambah"></i>
-                                    </label>
+                            <div class="card-body pb-2 ">
+                                <div class="d-flex mx-4">
+                                    <div class="col-lg-5 pt-4 d-flex">
+                                        <div class="file-input">
+                                            <p class="fw-bold">Thumbnail</p>
+                                            <input type="file" id="file" class="file" name="foto" onchange="loadFoto(event)">
+                                            <label for="file" class="label-1">
+                                                <img src="" id="foto" width="100px" height="100px" style="display: none; border-radius: 10px;">
+                                                <i class="ri-add-circle-fill fs-1 text-danger" id="tambah"></i>
+                                            </label>
+                                        </div>
+                                        <small>
+                                            <p class="pt-4 mt-3 ms-2" id="max">*max ukurun file 2mb
+                                            </p>
+                                            <p class="pt-4 mt-3 ms-2" id="file-name"></p>
+                                        </small>
+                                    </div>
                                 </div>
-                                <small>
-                                    <p class="pt-4 mt-3 ms-2" id="max">*max ukurun file 2mb
-                                    </p>
-                                    <p class="pt-4 mt-3 ms-2" id="file-name"></p>
-                                </small>
+                                <button class="btn bg-gradient-success mx-4 float-end" name="submit">Submit</button>
                             </div>
                         </div>
-                        <button class="btn bg-gradient-success mx-4 float-end" name="submit">Submit</button>
                     </form>
                 </div>
             </div>
@@ -327,32 +310,29 @@ if (isset($_GET['key'])) {
                         $data_berita = mysqli_query($koneksi, "SELECT * FROM berita ORDER BY id DESC");
                         while ($berita = mysqli_fetch_array($data_berita)) {
                         ?>
-                        <div class="row mb-2">
-                            <div class="col-12 d-flex">
-                                <img src="../../server/berita/img/<?php echo $berita['foto']; ?>" alt="news-img"
-                                    class="rounded" width="100px">
-                                <div class="text-wrapper mx-2">
-                                    <a href="#">
-                                        <h5 class="mb-0"><?= $berita['judul']; ?></h5>
-                                    </a>
-                                    <p class="text-sm mb-0">
-                                        <?php
+                            <div class="row mb-2">
+                                <div class="col-12 d-flex">
+                                    <img src="../../server/berita/img/<?php echo $berita['foto']; ?>" alt="news-img" class="rounded" width="100px">
+                                    <div class="text-wrapper mx-2">
+                                        <a href="#">
+                                            <h5 class="mb-0"><?= $berita['judul']; ?></h5>
+                                        </a>
+                                        <p class="text-sm mb-0">
+                                            <?php
                                             if (strlen($berita['isi']) >= 200) {
                                                 echo substr(strip_tags($berita['isi']), 0, 100) . "...";
                                             } else {
                                                 echo strip_tags($berita['isi']);
                                             }
                                             ?>
-                                    </p>
-                                    <div class="col-4 mt-1">
-                                        <a href="../../server/hapusBerita.php?id=<?= $berita['id'] ?>"
-                                            class="badge bg-gradient-danger">Hapus</a>
-                                        <a href="../../news-detail.php?id=<?= $berita['id'] ?>"
-                                            class="badge bg-gradient-success">baca</a>
+                                        </p>
+                                        <div class="col-4 mt-1">
+                                            <a href="../../server/hapusBerita.php?id=<?= $berita['id'] ?>" class="badge bg-gradient-danger">Hapus</a>
+                                            <a href="../../news-detail.php?id=<?= $berita['id'] ?>" class="badge bg-gradient-success">baca</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
                         <?php
                         }
                         ?>
@@ -367,7 +347,7 @@ if (isset($_GET['key'])) {
                         <div class="copyright text-center text-sm text-muted text-lg-start">
                             ©
                             <script>
-                            document.write(new Date().getFullYear());
+                                document.write(new Date().getFullYear());
                             </script>
                             , made with <i class="fa fa-heart"></i> by
                             <a href="https://www.instagram.com/egdev" class="font-weight-bold" target="_blank">Eg
@@ -389,34 +369,34 @@ if (isset($_GET['key'])) {
     <script src="../assets/js/plugins/chartjs.min.js"></script>
 
     <script>
-    var win = navigator.platform.indexOf("Win") > -1;
-    if (win && document.querySelector("#sidenav-scrollbar")) {
-        var options = {
-            damping: "0.5",
-        };
-        Scrollbar.init(document.querySelector("#sidenav-scrollbar"), options);
-    }
-    </script>
-    <script>
-    var loadFoto = function(event) {
-        var output = document.getElementById('foto');
-        var icon = document.getElementById('tambah');
-        icon.style.display = "none";
-        output.style.display = "block";
-
-        output.src = URL.createObjectURL(event.target.files[0]);
-        output.onload = function() {
-            URL.revokeObjectURL(output.src) // free memory
+        var win = navigator.platform.indexOf("Win") > -1;
+        if (win && document.querySelector("#sidenav-scrollbar")) {
+            var options = {
+                damping: "0.5",
+            };
+            Scrollbar.init(document.querySelector("#sidenav-scrollbar"), options);
         }
-    };
     </script>
     <script>
-    tinymce.init({
-        selector: '#isi',
-        menubar: false,
-        plugins: "link image code",
-        toolbar: 'undo redo | styleselect | forecolor | bold italic | alignleft aligncenter alignright alignjustify | outdent indent | link image | code'
-    });
+        var loadFoto = function(event) {
+            var output = document.getElementById('foto');
+            var icon = document.getElementById('tambah');
+            icon.style.display = "none";
+            output.style.display = "block";
+
+            output.src = URL.createObjectURL(event.target.files[0]);
+            output.onload = function() {
+                URL.revokeObjectURL(output.src) // free memory
+            }
+        };
+    </script>
+    <script>
+        tinymce.init({
+            selector: '#isi',
+            menubar: false,
+            plugins: "link image code",
+            toolbar: 'undo redo | styleselect | forecolor | bold italic | alignleft aligncenter alignright alignjustify | outdent indent | link image | code'
+        });
     </script>
 
     <form method="post" action="dump.php">
